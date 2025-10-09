@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import { Navbar } from "@/components/layout/navigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="flex flex-col min-h-screen">
-          <Navbar/>
+          <Header/>
           <main className="flex-1">
           <div className="min-h-screen w-full bg-white relative overflow-hidden">
           {/* Blue Corner Glow Background */}

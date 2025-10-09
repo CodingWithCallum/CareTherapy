@@ -1,17 +1,17 @@
-import Image from "next/image";
 import { HeroSectionOne } from "@/components/home/HeroSection";
-import {MarqueeDemo} from "@/components/home/TestimonialHome";
+import InfoSection from "@/components/home/InfoSection";
+import ServicesOverview from "@/components/home/ServicesOverview";
+import FeaturedBlogPost from "@/components/home/FeaturedBlogPost";
+import TestimonialSection from "@/components/home/TestimonialHome";
 
 export default function Home() {
   return (
-    <div >
-      <main >
-        <HeroSectionOne/>
-        <MarqueeDemo/>
-      </main>
-      <footer >
-
-      </footer>
+    <div className="w-full">
+      <HeroSectionOne/>
+      <InfoSection/>
+      <ServicesOverview/>
+      <TestimonialSection/>
+      <FeaturedBlogPost/>
     </div>
   );
 }

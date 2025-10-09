@@ -1,98 +1,61 @@
-import { cn } from "@/lib/utils"
-import { Marquee } from "@/components/ui/marquee"
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
-const reviews = [
-  {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://avatar.vercel.sh/jack",
-  },
-  {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://avatar.vercel.sh/jill",
-  },
-  {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/john",
-  },
-  {
-    name: "Jane",
-    username: "@jane",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jane",
-  },
-  {
-    name: "Jenny",
-    username: "@jenny",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jenny",
-  },
-  {
-    name: "James",
-    username: "@james",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/james",
-  },
-]
+export default function TestimonialSection() {
+    const testimonials = [
+        {
+            name: 'Nick Rogan',
+            role: 'Account Executive',
+            avatar: 'NR',
+            content: 'I had an excellent experience with CARE Therapy. I worked with Cameron on a tailored rehabilitation program for my leg, after a fall whilst running, and the results have been outstanding. Their evidence based approach and attention to detail made a significant difference in my recovery. The exercises were well structured, easy to follow, and adapted to my specific needs. My leg feels much better, and I’ve gained both strength and confidence in my movement. I highly recommend CARE Therapy for anyone seeking professional, personalized rehabilitative care',
+        },
+        {
+            name: 'Callum Barry',
+            role: 'Software Developer',
+            avatar: 'CB',
+            content: "Cameron helped me start my training plan to rebuild my running strength after a period of time away from running due to injury. Within weeks, I noticed significant improvements and recently started to run more freely with less pain. His insights into running form and strength training have been invaluable. I highly recommend him to anyone looking to improve their performance or return from injury.",
+        },
+        {
+            name: 'Joan',
+            role: 'Retired',
+            avatar: 'J',
+            content: 'Before working with Cameron, I had been living with vertigo and drop foot. I was unsteady and becoming increasingly reliant on my cane for walking. Since starting our Adapted Exercise sessions, my balance and walking have improved so much that I now only use my cane occasionally. I feel stronger, more stable, and more confident moving throughout my day. I’m also sleeping better, feeling more positive, and experiencing far less pain.',
+        },
+        {
+            name: 'Tara Pohl',
+            role: 'Medical Officer - Intern',
+            avatar: 'TP',
+            content: 'Cameron has been instrumental in my recovery from a sports injury. His expertise in rehabilitation and personalized training plans have made a significant difference in my progress readying myself for my next trail run later this year. I highly recommend him to anyone looking to improve their fitness or recover from an injury.',
+        },
+    ]
 
-const firstRow = reviews.slice(0, reviews.length / 2)
-const secondRow = reviews.slice(reviews.length / 2)
-
-const ReviewCard = ({
-  img,
-  name,
-  username,
-  body,
-}: {
-  img: string
-  name: string
-  username: string
-  body: string
-}) => {
-  return (
-    <figure
-      className={cn(
-        "relative h-full w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
-        // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
-      )}
-    >
-      <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
-        <div className="flex flex-col">
-          <figcaption className="text-sm font-medium dark:text-white">
-            {name}
-          </figcaption>
-          <p className="text-xs font-medium dark:text-white/40">{username}</p>
-        </div>
-      </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
-    </figure>
-  )
-}
-
-export function MarqueeDemo() {
-  return (
-    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-      <Marquee pauseOnHover className="[--duration:20s]">
-        {firstRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:20s]">
-        {secondRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
-      <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
-    </div>
-  )
+    return (
+        <section>
+            <div className="py-10">
+                <div className="@container mx-auto w-full max-w-7xl px-6">
+                    <div className="mb-12">
+                        <h2 className="text-foreground text-4xl font-semibold">What Our Clients Say</h2>
+                        <p className="text-muted-foreground my-4 text-balance text-lg">Discover why our clients love working with us. Read their testimonials about our dedication to excellence, innovative approach, and exceptional customer service.</p>
+                    </div>
+                    <div className="@lg:grid-cols-2 @3xl:grid-cols-4 grid gap-4">
+                        {testimonials.map((testimonial, index) => (
+                            <div key={index}>
+                                <div className="bg-background ring-foreground/10 rounded-2xl rounded-bl border border-transparent px-4 py-3 ring-1">
+                                    <p className="text-foreground line-clamp-4">{testimonial.content}</p>
+                                </div>
+                                <div className="mt-4 flex items-center gap-2">
+                                    {/* <Avatar className="ring-foreground/10 size-6 border border-transparent shadow ring-1">
+                                        <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
+                                        <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
+                                    </Avatar> */}
+                                    <div className="text-foreground text-sm font-medium">{testimonial.name}</div>
+                                    <span aria-hidden className="bg-foreground/25 size-1 rounded-full"></span>
+                                    <span className="text-muted-foreground text-sm">{testimonial.role}</span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
 }

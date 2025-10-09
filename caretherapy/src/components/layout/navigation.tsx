@@ -3,7 +3,7 @@
 import * as React from 'react';
 import Image from 'next/image';
 import { useEffect, useState, useRef } from 'react';
-import { BookOpenIcon, InfoIcon, LifeBuoyIcon } from 'lucide-react';
+import { BookAlert, Rss, MessageCircleHeart  } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink,
   NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from '@/components/ui/navigation-menu';
@@ -80,10 +80,10 @@ const defaultNavigationLinks: NavbarNavItem[] = [
     submenu: true,
     type: 'simple',
     items: [
-      { href: '#product-a', label: 'Our Services', description: 'An overview of the services at Care Therapy.' },
-      { href: '#product-b', label: 'Service Pricing', description: 'Our pricing for our services and packages.' },
-      { href: '#product-c', label: 'Service Benefits', description: 'Learn which service or package suits you best.' },
-      { href: '#product-d', label: 'Service FAQs', description: 'Confused? Want to know more? Visit our FAQ.' },
+      { href: '/services', label: 'Our Services', description: 'An overview of the services at Care Therapy.' },
+      { href: '/services', label: 'Service Pricing', description: 'Our pricing for our services and packages.' },
+      { href: '/services', label: 'Service Benefits', description: 'Learn which service or package suits you best.' },
+      { href: '/services', label: 'Service FAQs', description: 'Confused? Want to know more? Visit our FAQ.' },
     ],
   },
   {
@@ -91,9 +91,9 @@ const defaultNavigationLinks: NavbarNavItem[] = [
     submenu: true,
     type: 'icon',
     items: [
-      { href: '#getting-started', label: 'Testimonials', icon: 'BookOpenIcon' },
-      { href: '#tutorials', label: 'Blog', icon: 'LifeBuoyIcon' },
-      { href: '#about-us', label: 'Disclaimer', icon: 'InfoIcon' },
+      { href: '/Testimonials', label: 'Testimonials', icon: 'BookOpenIcon' },
+      { href: '/Blog', label: 'Blog', icon: 'Rss' },
+      { href: '/Disclaimer', label: 'Disclaimer', icon: 'InfoIcon' },
     ],
   },
 ];
@@ -147,12 +147,12 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
 
     const renderIcon = (iconName: string) => {
       switch (iconName) {
-        case 'BookOpenIcon':
-          return <BookOpenIcon size={16} className="text-foreground opacity-60" aria-hidden={true} />;
-        case 'LifeBuoyIcon':
-          return <LifeBuoyIcon size={16} className="text-foreground opacity-60" aria-hidden={true} />;
-        case 'InfoIcon':
-          return <InfoIcon size={16} className="text-foreground opacity-60" aria-hidden={true} />;
+        case 'MessageCircleHeart':
+          return <MessageCircleHeart size={32} className="text-foreground opacity-60" aria-hidden={true} />;
+        case 'Rss':
+          return <Rss size={32} className="text-foreground opacity-60" aria-hidden={true} />;
+        case 'BookAlert':
+          return <BookAlert size={32} className="text-foreground opacity-60" aria-hidden={true} />;
         default:
           return null;
       }
@@ -322,11 +322,11 @@ const ListItem = React.forwardRef<
     if (!iconName) return null;
     switch (iconName) {
       case 'BookOpenIcon':
-        return <BookOpenIcon className="h-5 w-5" />;
+        return <MessageCircleHeart className="h-20 w-20" />;
       case 'LifeBuoyIcon':
-        return <LifeBuoyIcon className="h-5 w-5" />;
+        return <Rss className="h-20 w-20" />;
       case 'InfoIcon':
-        return <InfoIcon className="h-5 w-5" />;
+        return <BookAlert className="h-20 w-20" />;
       default:
         return null;
     }
@@ -337,7 +337,7 @@ const ListItem = React.forwardRef<
       <a ref={ref} onClick={(e) => e.preventDefault()} className={cn('block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground cursor-pointer', className)} {...props} >
         {type === 'icon' && icon ? (
           <div className="flex items-start space-x-4">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-muted">
+            <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-lg bg-muted">
               {renderIconComponent(icon)}
             </div>
             <div className="space-y-1">
