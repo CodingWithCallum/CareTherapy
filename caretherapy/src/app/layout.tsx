@@ -31,7 +31,11 @@ export default function RootLayout({
         <div className="flex flex-col min-h-screen">
           <Navbar/>
           <main className="flex-1">
+          <div className="min-h-screen w-full bg-white relative overflow-hidden">
+          {/* Blue Corner Glow Background */}
+            <div className="absolute inset-0 z-0" style={{backgroundImage: `radial-gradient(circle 600px at 0% 200px, #bfdbfe, transparent), radial-gradient(circle 600px at 100% 200px, #bfdbfe, transparent)`,}}/>
             {children}
+          </div>
           </main>
           <Footer/>
         </div>
