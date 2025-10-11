@@ -5,24 +5,18 @@ import { motion } from "motion/react";
 import { Calendar, Clock, ArrowRight, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
-// This would eventually come from your CMS or database
-const featuredPost = {
-  slug: "understanding-anxiety-triggers",
-  title: "Understanding Anxiety: Common Triggers and Coping Strategies",
-  excerpt: "Anxiety affects millions of people worldwide. Learn how to identify your triggers and develop effective coping mechanisms to manage anxiety in your daily life.",
-  author: {
-    name: "Dr. Sarah Johnson",
-    role: "Clinical Psychologist",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
-  },
-  publishedAt: "March 15, 2024",
-  readTime: "8 min read",
-  category: "Mental Health",
-  featuredImage: "https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800&auto=format&fit=crop&q=60",
-};
+// Import data from centralized data file
+import { getFeaturedPost } from "@/data";
 
 export default function FeaturedBlogPost() {
+  // Get featured post from data file
+  const featuredPost = getFeaturedPost();
+
+  // If no featured post, don't render this section
+  if (!featuredPost) {
+    return null;
+  }
+
   return (
     <section className="relative py-20 px-4">
       <div className="container mx-auto max-w-7xl">
@@ -83,12 +77,20 @@ export default function FeaturedBlogPost() {
                   <div className="flex flex-wrap items-center gap-4 mb-6 text-sm text-muted-foreground">
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
-                      <span>{featuredPost.publishedAt}</span>
+                      <span>
+                        {new Date(featuredPost.publishedAt).toLocaleDateString('en-US', { 
+                          month: 'short', 
+                          day: 'numeric', 
+                          year: 'numeric' 
+                        })}
+                      </span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="w-4 h-4" />
-                      <span>{featuredPost.readTime}</span>
-                    </div>
+                    {featuredPost.readTime && (
+                      <div className="flex items-center gap-2">
+                        <Clock className="w-4 h-4" />
+                        <span>{featuredPost.readTime}</span>
+                      </div>
+                    )}
                   </div>
 
                   {/* Author Info */}
@@ -101,7 +103,9 @@ export default function FeaturedBlogPost() {
                     </Avatar>
                     <div>
                       <p className="font-semibold text-sm">{featuredPost.author.name}</p>
-                      <p className="text-xs text-muted-foreground">{featuredPost.author.role}</p>
+                      {featuredPost.author.role && (
+                        <p className="text-xs text-muted-foreground">{featuredPost.author.role}</p>
+                      )}
                     </div>
                   </div>
                 </div>

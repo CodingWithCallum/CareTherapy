@@ -2,37 +2,23 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import { User, Users, Home, UsersRound, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const services = [
-  {
-    icon: User,
-    title: "Individual Therapy",
-    description: "One-on-one sessions focused on your personal growth, mental health, and well-being.",
-    features: ["Anxiety & Depression", "Stress Management", "Personal Development"],
-  },
-  {
-    icon: Users,
-    title: "Couples Therapy",
-    description: "Strengthen your relationship through improved communication and conflict resolution.",
-    features: ["Communication Skills", "Conflict Resolution", "Intimacy Building"],
-  },
-  {
-    icon: Home,
-    title: "Family Therapy",
-    description: "Create harmony and understanding within your family dynamic and relationships.",
-    features: ["Family Dynamics", "Parenting Support", "Generational Healing"],
-  },
-  {
-    icon: UsersRound,
-    title: "Group Therapy",
-    description: "Connect with others facing similar challenges in a supportive group environment.",
-    features: ["Peer Support", "Shared Experiences", "Community Building"],
-  },
-];
+// Import data from centralized data file
+import { getFeaturedServices } from "@/data";
+// Import Lucide icons dynamically
+import * as Icons from "lucide-react";
 
 export default function ServicesOverview() {
+  // Get first 4 services for home page overview
+  const services = getFeaturedServices(4);
+
+  // Helper to get icon component by name
+  const getIconComponent = (iconName: string) => {
+    const IconComponent = Icons[iconName as keyof typeof Icons] as any;
+    return IconComponent || Icons.Activity;
+  };
+
   return (
     <section className="relative py-20 px-4 bg-muted/30">
       <div className="container mx-auto max-w-7xl">
@@ -55,47 +41,55 @@ export default function ServicesOverview() {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group"
-            >
-              <div className="bg-card border rounded-xl p-8 h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors flex-shrink-0">
-                    <service.icon className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                    <p className="text-muted-foreground mb-4">{service.description}</p>
-                  </div>
-                </div>
-                
-                {/* Features List */}
-                <ul className="space-y-2 mb-4">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+          {services.map((service, index) => {
+            const IconComponent = getIconComponent(service.icon || "Activity");
 
-                {/* Learn More Link */}
-                <Link 
-                  href="/services" 
-                  className="inline-flex items-center text-primary hover:text-primary/80 transition-colors text-sm font-medium group"
-                >
-                  Learn more
-                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </motion.div>
-          ))}
+            return (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group"
+              >
+                <div className="bg-card border rounded-xl p-8 h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors flex-shrink-0">
+                      <IconComponent className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                      <p className="text-muted-foreground mb-4">
+                        {service.shortDescription || service.description}
+                      </p>
+                    </div>
+                  </div>
+                  
+                  {/* Features List */}
+                  {service.features && (
+                    <ul className="space-y-2 mb-4">
+                      {service.features.slice(0, 3).map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-muted-foreground">
+                          <div className="w-1.5 h-1.5 rounded-full bg-primary mr-2" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  {/* Learn More Link */}
+                  <Link 
+                    href="/services" 
+                    className="inline-flex items-center text-primary hover:text-primary/80 transition-colors text-sm font-medium group"
+                  >
+                    Learn more
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
 
         {/* CTA Button */}
