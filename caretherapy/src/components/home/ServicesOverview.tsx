@@ -20,7 +20,7 @@ export default function ServicesOverview() {
   };
 
   return (
-    <section className="relative py-20 px-4 bg-muted/30">
+    <section className="relative py-20 px-4 ">
       <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <motion.div
@@ -31,11 +31,11 @@ export default function ServicesOverview() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
-            Our Therapy Services
+            Our Services
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We offer a range of therapeutic services designed to meet you where you are 
-            and support your unique journey toward healing and growth.
+            We offer a range of exercise and rehabilitative services designed to meet you where you are 
+            and support your unique journey toward healing, growth, and recovery.
           </p>
         </motion.div>
 

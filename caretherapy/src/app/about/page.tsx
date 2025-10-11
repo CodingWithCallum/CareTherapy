@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Target, Heart, TrendingUp, MapPin, Award, Users } from "lucide-react";
+import { Target, Heart, TrendingUp, MapPin, Award, Users, Medal, HeartPlus, UsersRound } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
@@ -213,32 +213,38 @@ export default function AboutPage() {
               {
                 title: "Elderly Individuals",
                 description: "Improving mobility, balance, and independence for a better quality of life.",
-                emoji: "👵",
+                icon: UsersRound,
               },
               {
                 title: "Post-Injury Recovery",
                 description: "Guided rehabilitation to restore function and prevent future injuries.",
-                emoji: "🏥",
+                icon: HeartPlus,
               },
               {
                 title: "Young Athletes",
                 description: "Performance enhancement and injury prevention for competitive edge.",
-                emoji: "⚽",
+                icon: Medal,
               },
-            ].map((group, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-card border rounded-xl p-8 text-center hover:shadow-lg transition-all duration-300"
-              >
-                <div className="text-5xl mb-4">{group.emoji}</div>
-                <h3 className="text-xl font-semibold mb-3">{group.title}</h3>
-                <p className="text-muted-foreground">{group.description}</p>
-              </motion.div>
-            ))}
+            ].map((group, index) => {
+              const Icon = group.icon; 
+              
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-card border rounded-xl p-8 text-center hover:shadow-lg transition-all duration-300"
+                >
+                  <div className="text-5xl mb-4">
+                    <Icon className="mx-auto" size={48} /> 
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{group.title}</h3>
+                  <p className="text-muted-foreground">{group.description}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>

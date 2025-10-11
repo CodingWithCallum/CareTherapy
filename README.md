@@ -1,4 +1,4 @@
-# CareTherapy Website - Complete Build Summary
+# CareTherapy Website 2.0 - Complete Build Summary
 
 ## 🎉 Project Overview
 

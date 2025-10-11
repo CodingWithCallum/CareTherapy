@@ -9,17 +9,17 @@ const features = [
   {
     icon: Heart,
     title: "Compassionate Care",
-    description: "We provide empathetic, personalized therapy tailored to your unique needs.",
+    description: "We provide evidence-based, personalized therapy tailored to your unique needs.",
   },
   {
     icon: Users,
     title: "Experienced Team",
-    description: "Our licensed therapists have years of experience helping clients thrive.",
+    description: "Our experts with international accreditation have years of experience helping clients thrive.",
   },
   {
     icon: Award,
     title: "Evidence-Based",
-    description: "We use proven therapeutic approaches backed by scientific research.",
+    description: "We use proven approaches backed by scientific research to guide you through your recovery.",
   },
   {
     icon: Shield,
@@ -44,8 +44,7 @@ export default function InfoSection() {
             Why Choose CareTherapy?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We're committed to providing exceptional mental health care in a supportive, 
-            judgment-free environment where you can grow and heal.
+            We're committed to providing exceptional exercise and rehabilitative care in studio or at in your home environment where you can grow, heal, and recover at your own comfort.
           </p>
         </motion.div>
 
@@ -85,7 +84,7 @@ export default function InfoSection() {
             </h3>
             <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
               Learn more about our approach, meet our team, and discover how we can 
-              support you on your path to wellness.
+              support you on your path to excellence.
             </p>
             <Link href="/about">
               <Button size="lg" className="text-base">
