@@ -5,19 +5,18 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-muted/50 border-t">
+    <footer className="bg-muted/80 border-t">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
             <h3 className="text-lg font-bold mb-4">CareTherapy</h3>
             <p className="text-sm text-muted-foreground mb-4">
-              Providing compassionate and professional therapy services to help
-              you live your best life.
+              Bridging the gap between rehabilitation and fitness through expert-guided, proactive exercise therapy in real-world settings.
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://facebook.com"
+                href="https://facebook.com/CareTherapy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -26,7 +25,7 @@ export default function Footer() {
                 <Facebook size={20} />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/CareTherapy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -35,7 +34,7 @@ export default function Footer() {
                 <Instagram size={20} />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://twitter.com/CareTherapy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -44,7 +43,7 @@ export default function Footer() {
                 <Twitter size={20} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/CareTherapy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -103,7 +102,7 @@ export default function Footer() {
                   href="/services"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Individual Therapy
+                  Therapeutic Exercise
                 </Link>
               </li>
               <li>
@@ -111,7 +110,7 @@ export default function Footer() {
                   href="/services"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Couples Therapy
+                  Post-Injury Rehab
                 </Link>
               </li>
               <li>
@@ -119,7 +118,7 @@ export default function Footer() {
                   href="/services"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Family Therapy
+                  Movement Assessment
                 </Link>
               </li>
               <li>
@@ -127,7 +126,7 @@ export default function Footer() {
                   href="/services"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Group Therapy
+                  Elderly Care
                 </Link>
               </li>
             </ul>
@@ -150,7 +149,7 @@ export default function Footer() {
                   href="tel:+1234567890"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  (123) 456-7890
+                  (+27) 76-456-7890
                 </a>
               </li>
               <li className="flex items-center space-x-2">
