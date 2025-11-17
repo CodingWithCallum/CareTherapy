@@ -450,10 +450,8 @@ export default function AboutPage() {
       <section className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, }} animate={{ opacity: 1, }} transition={{ duration: 0.3, delay: 0.75, }}
+            style={{ pointerEvents: 'auto' }}
             className="bg-primary/5 border border-primary/20 rounded-2xl p-12 text-center"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -466,7 +464,7 @@ export default function AboutPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/services">
                 <Button size="lg" className="text-base">
-                  View Our Services
+                  View Our Services?
                 </Button>
               </Link>
               <Link href="/contact">
