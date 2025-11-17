@@ -1,15 +1,23 @@
 "use client";
 
 import { motion } from "motion/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Calendar, Clock, ArrowRight, Search, User, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 // Import data from centralized data file
-import { getAllPosts, getFeaturedPost, getAllCategories } from "@/data";
+import { 
+  getAllPosts, 
+  getFeaturedPost, 
+  getAllCategories, 
+  getRandomPost,
+  getPopularPosts 
+} from "@/data";
 
 export default function BlogPage() {
+  const router = useRouter();
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -18,6 +26,33 @@ export default function BlogPage() {
   const categories = getAllCategories();
   const featuredPost = getFeaturedPost();
 
+  // Handle hash-based navigation for random and popular
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      
+      if (hash === '#random') {
+        const randomPost = getRandomPost();
+        if (randomPost) {
+          router.push(`/blog/${randomPost.slug}`);
+        }
+      } else if (hash === '#popular') {
+        // Scroll to popular posts section
+        const element = document.getElementById('popular-posts');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    };
+
+    // Check on mount
+    handleHashChange();
+    
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, [router]);
+
   // Filter posts based on category and search
   const filteredPosts = allPosts.filter(post => {
     const matchesCategory = selectedCategory === "All" || post.category === selectedCategory;
@@ -25,6 +60,8 @@ export default function BlogPage() {
                          post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+
+  const popularPosts = getPopularPosts(6);
 
   return (
     <div className="w-full">
@@ -244,6 +281,59 @@ export default function BlogPage() {
           )}
         </div>
       </section>
+
+      {/* Popular Posts Section */}
+      {selectedCategory === "All" && !searchQuery && (
+        <section id="popular-posts" className="py-20 px-4 bg-muted/30 scroll-mt-24">
+          <div className="container mx-auto max-w-7xl">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="flex items-center gap-2 mb-6">
+                <div className="h-1 w-12 bg-primary rounded-full" />
+                <span className="text-sm font-semibold text-primary uppercase tracking-wider">
+                  Most Popular
+                </span>
+              </div>
+              <h2 className="text-3xl font-bold mb-8">Our Most-Read Articles</h2>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {popularPosts.map((post, index) => (
+                  <motion.div
+                    key={post.slug}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                  >
+                    <Link href={`/blog/${post.slug}`}>
+                      <div className="bg-card border rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group">
+                        <div className="relative h-40 overflow-hidden">
+                          <div 
+                            className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                            style={{ backgroundImage: `url(${post.featuredImage})` }}
+                          />
+                        </div>
+                        <div className="p-5">
+                          <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-3">
+                            {post.category}
+                          </span>
+                          <h3 className="font-semibold group-hover:text-primary transition-colors line-clamp-2">
+                            {post.title}
+                          </h3>
+                        </div>
+                      </div>
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      )}
 
       {/* Newsletter CTA */}
       <section className="py-20 px-4 bg-muted/30">

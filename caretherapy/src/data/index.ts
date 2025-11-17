@@ -17,7 +17,10 @@ export {
   getPostsByCategory,
   getAllCategories,
   getRelatedPosts,
-  searchPosts
+  searchPosts,
+  getRandomPost,
+  getPopularPosts,
+  getRecentPosts
 } from './blog-posts';
 
 // Services

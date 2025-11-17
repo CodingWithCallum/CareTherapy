@@ -365,6 +365,37 @@ export const getRelatedPosts = (currentSlug: string, limit: number = 3): BlogPos
     .slice(0, limit);
 };
 
+/**
+ * Get a random blog post for "I'm Feeling Lucky"
+ */
+export const getRandomPost = (): BlogPost | undefined => {
+  if (blogPosts.length === 0) return undefined;
+  const randomIndex = Math.floor(Math.random() * blogPosts.length);
+  return blogPosts[randomIndex];
+};
+
+/**
+ * Get most popular posts (currently returns most recent, but you can add view tracking later)
+ * @param limit - Number of posts to return
+ */
+export const getPopularPosts = (limit: number = 6): BlogPost[] => {
+  // For now, return most recent posts
+  // In the future, you could track views and sort by popularity
+  return blogPosts
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+    .slice(0, limit);
+};
+
+/**
+ * Get recent posts
+ * @param limit - Number of posts to return
+ */
+export const getRecentPosts = (limit: number = 6): BlogPost[] => {
+  return blogPosts
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+    .slice(0, limit);
+};
+
 // Search posts by query
 export const searchPosts = (query: string): BlogPost[] => {
   const lowercaseQuery = query.toLowerCase();
@@ -374,3 +405,4 @@ export const searchPosts = (query: string): BlogPost[] => {
     post.tags?.some(tag => tag.toLowerCase().includes(lowercaseQuery))
   );
 };
+
