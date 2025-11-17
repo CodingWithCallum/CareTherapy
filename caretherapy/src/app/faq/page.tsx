@@ -57,7 +57,7 @@ export default function FAQPage() {
     {
       category: "Services",
       question: "Which package is right for me?",
-      answer: "It depends on your goals and needs:\n\n• **Intro Session (R600)**: Perfect if you're new and want to try before committing\n• **CARE Mobility Package (R4,400/month)**: Ideal for long-term recovery, chronic conditions, or maintaining independence with 2x/week sessions\n• **CARE Elite Program (R6,500/month)**: Best for stroke recovery, post-op rehabilitation, or clients wanting maximum results with 3x/week intensive support\n\nWe'll help you choose the right option during your intro session."
+      answer: "It depends on your goals and needs:\n\n• **Intro Session (R600)**: Perfect if you\'re new and want to try before committing\n• **CARE Mobility Package (R4,400/month)**: Ideal for long-term recovery, chronic conditions, or maintaining independence with 2x/week sessions\n• **CARE Elite Program (R6,500/month)**: Best for stroke recovery, post-op rehabilitation, or clients wanting maximum results with 3x/week intensive support\n\nWe\'ll help you choose the right option during your intro session."
     },
     {
       category: "Services",
@@ -67,7 +67,7 @@ export default function FAQPage() {
     {
       category: "Services",
       question: "What conditions do you treat?",
-      answer: "We work with a wide range of conditions including:\n• Chronic pain and movement dysfunction\n• Post-surgery rehabilitation\n• Stroke recovery\n• Balance and fall prevention (elderly care)\n• Sports injuries and performance enhancement\n• Mobility limitations\n• Postural problems\n• General weakness or deconditioning\n\nIf you're unsure whether we can help with your specific condition, please contact us for a consultation."
+      answer: "We work with a wide range of conditions including:\n• Chronic pain and movement dysfunction\n• Post-surgery rehabilitation\n• Stroke recovery\n• Balance and fall prevention (elderly care)\n• Sports injuries and performance enhancement\n• Mobility limitations\n• Postural problems\n• General weakness or deconditioning\n\nIf you\'re unsure whether we can help with your specific condition, please contact us for a consultation."
     },
     
     // Pricing & Payment
@@ -101,7 +101,7 @@ export default function FAQPage() {
     {
       category: "Booking",
       question: "How do I book my first appointment?",
-      answer: "Booking is easy! You can:\n• Fill out the contact form on our website\n• Call us directly at +27 76 456 7890\n• Email us at info@caretherapy.co.za\n• Click the 'Request A Consultation' button in the navigation\n\nWe'll respond within 24 hours during business days to schedule your intro session at a time that works for you."
+      answer: "Booking is easy! You can:\n• Fill out the contact form on our website\n• Call us directly at +27 76 456 7890\n• Email us at info@caretherapy.co.za\n• Click the \'Request A Consultation\' button in the navigation\n\nWe\'ll respond within 24 hours during business days to schedule your intro session at a time that works for you."
     },
     {
       category: "Booking",
@@ -111,24 +111,24 @@ export default function FAQPage() {
     {
       category: "Booking",
       question: "How far in advance should I book?",
-      answer: "We recommend booking at least 3-5 days in advance, especially for home visits. However, we'll do our best to accommodate urgent needs. For package clients with regular weekly sessions, we'll establish a consistent schedule that works for both parties."
+      answer: "We recommend booking at least 3-5 days in advance, especially for home visits. However, we\'ll do our best to accommodate urgent needs. For package clients with regular weekly sessions, we\'ll establish a consistent schedule that works for both parties."
     },
     {
       category: "Booking",
       question: "Can I change my appointment time?",
-      answer: "Yes, you can reschedule appointments with 24 hours notice. Please contact us as soon as possible if you need to change your appointment. We'll work with you to find an alternative time that fits your schedule."
+      answer: "Yes, you can reschedule appointments with 24 hours notice. Please contact us as soon as possible if you need to change your appointment. We\'ll work with you to find an alternative time that fits your schedule."
     },
     {
       category: "Booking",
       question: "What happens if I need to pause my program?",
-      answer: "We understand that life circumstances can change. For monthly package clients, we can arrange a temporary pause for medical reasons, travel, or other circumstances. Please discuss your situation with us, and we'll work out the best solution. Note that the 12-month programs are designed for consistent progress, so extended breaks may affect your results."
+      answer: "We understand that life circumstances can change. For monthly package clients, we can arrange a temporary pause for medical reasons, travel, or other circumstances. Please discuss your situation with us, and we\'ll work out the best solution. Note that the 12-month programs are designed for consistent progress, so extended breaks may affect your results."
     },
     
     // Medical & Health
     {
       category: "Medical",
       question: "Do I need a referral from my doctor?",
-      answer: "No, you don't need a doctor's referral to start with CARE Therapy. However, if you're recovering from surgery, have a serious medical condition, or are claiming through medical aid, we recommend getting a referral as it may:\n• Help with medical aid claims\n• Ensure we have complete information about your condition\n• Demonstrate medical necessity for insurance purposes\n\nWe'll assess your needs during the intro session and recommend if medical clearance would be beneficial."
+      answer: "No, you don\'t need a doctor\'s referral to start with CARE Therapy. However, if you\'re recovering from surgery, have a serious medical condition, or are claiming through medical aid, we recommend getting a referral as it may:\n• Help with medical aid claims\n• Ensure we have complete information about your condition\n• Demonstrate medical necessity for insurance purposes\n\nWe\'ll assess your needs during the intro session and recommend if medical clearance would be beneficial."
     },
     {
       category: "Medical",
@@ -143,7 +143,7 @@ export default function FAQPage() {
     {
       category: "Medical",
       question: "Can you help with chronic pain?",
-      answer: "Yes! Therapeutic exercise is highly effective for managing many types of chronic pain. Through:\n• Movement pattern correction\n• Strengthening weak areas\n• Improving flexibility and mobility\n• Addressing postural issues\n• Progressive, pain-free exercise protocols\n\nMany of our clients experience significant pain reduction and improved function. However, we'll refer you to appropriate medical professionals if we identify issues beyond our scope."
+      answer: "Yes! Therapeutic exercise is highly effective for managing many types of chronic pain. Through:\n• Movement pattern correction\n• Strengthening weak areas\n• Improving flexibility and mobility\n• Addressing postural issues\n• Progressive, pain-free exercise protocols\n\nMany of our clients experience significant pain reduction and improved function. However, we\'ll refer you to appropriate medical professionals if we identify issues beyond our scope."
     },
     {
       category: "Medical",
@@ -155,7 +155,7 @@ export default function FAQPage() {
     {
       category: "General",
       question: "What areas do you serve?",
-      answer: "We provide mobile services throughout:\n• Pretoria and surrounding areas\n• Johannesburg and surrounding areas\n\nOur home visit service means you don't need to travel. We bring our expertise and equipment directly to you. If you're outside these areas, contact us to discuss possibilities."
+      answer: "We provide mobile services throughout:\n• Pretoria and surrounding areas\n• Johannesburg and surrounding areas\n\nOur home visit service means you don\'t need to travel. We bring our expertise and equipment directly to you. If you\'re outside these areas, contact us to discuss possibilities."
     },
     {
       category: "General",
@@ -165,7 +165,7 @@ export default function FAQPage() {
     {
       category: "General",
       question: "Will I get homework exercises?",
-      answer: "Yes! An important part of your program includes exercises to do between sessions. These:\n• Reinforce what we work on during sessions\n• Accelerate your progress\n• Build consistent habits\n• Are tailored to your schedule and abilities\n• Come with clear instructions and modifications\n\nWe'll demonstrate each exercise and provide written/video instructions for reference."
+      answer: "Yes! An important part of your program includes exercises to do between sessions. These:\n• Reinforce what we work on during sessions\n• Accelerate your progress\n• Build consistent habits\n• Are tailored to your schedule and abilities\n• Come with clear instructions and modifications\n\nWe\'ll demonstrate each exercise and provide written/video instructions for reference."
     },
     {
       category: "General",
@@ -175,12 +175,12 @@ export default function FAQPage() {
     {
       category: "General",
       question: "Can family members join sessions?",
-      answer: "Yes! We encourage family involvement, especially for elderly clients or those recovering from significant injuries. Family members can:\n• Learn exercises to help between sessions\n• Provide encouragement and support\n• Better understand the recovery process\n• Participate in certain activities (inquire about family/couple packages)\n\nLet us know if you'd like family members involved, and we'll accommodate accordingly."
+      answer: "Yes! We encourage family involvement, especially for elderly clients or those recovering from significant injuries. Family members can:\n• Learn exercises to help between sessions\n• Provide encouragement and support\n• Better understand the recovery process\n• Participate in certain activities (inquire about family/couple packages)\n\nLet us know if you\'d like family members involved, and we\'ll accommodate accordingly."
     },
     {
       category: "General",
-      question: "What if I'm not seeing progress?",
-      answer: "Communication is crucial. If you're not seeing expected progress, we'll:\n• Reassess your program and adjust exercises\n• Review your homework compliance and technique\n• Consider if frequency needs to increase\n• Check for other factors affecting progress\n• Refer to other specialists if needed\n\nYour success is our priority. We include regular re-assessments to track progress and make necessary adjustments to keep you on track toward your goals."
+      question: "What if I\'m not seeing progress?",
+      answer: "Communication is crucial. If you\'re not seeing expected progress, we\'ll:\n• Reassess your program and adjust exercises\n• Review your homework compliance and technique\n• Consider if frequency needs to increase\n• Check for other factors affecting progress\n• Refer to other specialists if needed\n\nYour success is our priority. We include regular re-assessments to track progress and make necessary adjustments to keep you on track toward your goals."
     }
   ];
 
@@ -359,7 +359,7 @@ export default function FAQPage() {
               Still Have Questions?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Can't find what you're looking for? We're here to help!
+              Can\'t find what you\'re looking for? We\'re here to help!
             </p>
           </motion.div>
 

@@ -76,7 +76,7 @@ export default function ContactPage() {
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Ready to start your journey? Have questions about our services? 
-              We're here to help. Reach out and we'll get back to you within 24 hours.
+              We\'re here to help. Reach out and we\'ll get back to you within 24 hours.
             </p>
           </motion.div>
         </div>
@@ -193,7 +193,7 @@ export default function ContactPage() {
               >
                 <h2 className="text-2xl font-bold mb-2">Send Us a Message</h2>
                 <p className="text-muted-foreground mb-8">
-                  Fill out the form below and we'll get back to you as soon as possible.
+                  Fill out the form below and we\'ll get back to you as soon as possible.
                 </p>
 
                 {isSubmitted ? (
@@ -207,7 +207,7 @@ export default function ContactPage() {
                     </div>
                     <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
                     <p className="text-muted-foreground">
-                      Thank you for contacting us. We'll be in touch soon.
+                      Thank you for contacting us. We\'ll be in touch soon.
                     </p>
                   </motion.div>
                 ) : (

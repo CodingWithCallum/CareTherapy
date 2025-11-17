@@ -103,7 +103,7 @@ export default function AboutPage() {
               {
                 icon: Target,
                 title: "Tailored to Your Goals",
-                description: "We adapt to each client's goals and environment, ideal for elderly individuals, post-injury recovery, or young athletes.",
+                description: "We adapt to each client\'s goals and environment, ideal for elderly individuals, post-injury recovery, or young athletes.",
               },
               {
                 icon: TrendingUp,
@@ -263,8 +263,8 @@ export default function AboutPage() {
               Ready to Start Your Journey?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Whether you're recovering from an injury, looking to prevent future issues, 
-              or wanting to enhance your performance, we're here to help.
+              Whether you\'re recovering from an injury, looking to prevent future issues, 
+              or wanting to enhance your performance, we\'re here to help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/services">
