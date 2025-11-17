@@ -402,9 +402,9 @@ export default function ServicesPage() {
                   key={therapy.id}
                   id={therapy.id}
                   initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.3, delay: index * 0.2 }}
                   className="scroll-mt-24"
                 >
                   <div className="bg-card border rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300">
@@ -479,6 +479,7 @@ export default function ServicesPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+                  animate={{ opacity: 1, y: 0 }}
                   className="bg-card border rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300"
                 >
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-4">
@@ -498,9 +499,9 @@ export default function ServicesPage() {
         <div className="container mx-auto max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.25 }}
             className="bg-card border rounded-2xl p-12 text-center"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -517,9 +518,9 @@ export default function ServicesPage() {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
-              <Link href="/contact">
+              <Link href="/testimonials">
                 <Button size="lg" variant="outline" className="text-base">
-                  Contact Us for Questions
+                  View Our Success Stories
                 </Button>
               </Link>
             </div>

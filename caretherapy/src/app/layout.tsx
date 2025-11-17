@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CareTherapy | Professional Therapy Services",
+  title: "CareTherapy | Professional Exercise and Rehabilitation Services",
   description: "Providing compassionate and professional therapy services to help you live your best life.",
 };
 
