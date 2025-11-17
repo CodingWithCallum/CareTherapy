@@ -176,7 +176,7 @@ export function Navbar() {
       ]
     },
     {
-      title: 'More Care Therapy',
+      title: 'Resources',
       href: '/',
       icon: Mail,
       hasDropdown: true,
@@ -187,12 +187,6 @@ export function Navbar() {
         icon: Mail
       },
       items:[
-        // {
-        //   title: 'Book a Consultation',
-        //   href: '/contact',
-        //   description: 'Schedule your intro session today',
-        //   icon: Heart,
-        // },
         {
           title: 'FAQs',
           href: '/faq',
