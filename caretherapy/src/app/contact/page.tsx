@@ -14,8 +14,11 @@ import {
   Smartphone
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useReCaptcha } from 'next-recaptcha-v3';
 
 export default function ContactPage() {
+  const { executeRecaptcha } = useReCaptcha();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -40,11 +43,42 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission (replace with actual API call)
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    if (!executeRecaptcha) {
+      console.log("reCAPTCHA not yet available.");
+      setIsSubmitting(false);
+      return;
+    }
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    const token = await executeRecaptcha("contact_form");
+
+    const submissionData = {
+      ...formData,
+      reCaptchaToken: token, // Attach the token
+    };
+
+    try {
+      // **REPLACE with your actual API endpoint for form submission**
+      const response = await fetch('/api/submit-contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(submissionData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Form submission failed.');
+      }
+      
+      // 4. If submission successful (and verified on the server)
+      setIsSubmitted(true);
+      // ... rest of the success/reset logic ...
+      
+    } catch (error) {
+      console.error('Submission Error:', error);
+      alert('There was an error submitting the form. Please try again.');
+      setIsSubmitting(false);
+    }
 
     // Reset form after 3 seconds
     setTimeout(() => {
@@ -186,8 +220,8 @@ export default function ContactPage() {
             <div className="lg:col-span-2">
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
+                animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
                 className="bg-card border rounded-2xl p-8 md:p-10"
               >
