@@ -1,10 +1,14 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Target, Heart, TrendingUp, MapPin, Award, Users, Medal, HeartPlus, UsersRound } from "lucide-react";
+import { 
+  Target, Heart, TrendingUp, MapPin, Award, Users, Medal, 
+  HeartPlus, UsersRound, GraduationCap, Trophy, Briefcase, 
+  CheckCircle2, Star 
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -66,7 +70,6 @@ export default function AboutPage() {
               className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5" />
-              {/* Placeholder for image */}
               <div className="absolute inset-0 flex items-center justify-center bg-muted">
                 <Heart className="w-24 h-24 text-primary/20" />
               </div>
@@ -76,7 +79,7 @@ export default function AboutPage() {
       </section>
 
       {/* What Makes Us Different */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -103,7 +106,7 @@ export default function AboutPage() {
               {
                 icon: Target,
                 title: "Tailored to Your Goals",
-                description: "We adapt to each client\'s goals and environment, ideal for elderly individuals, post-injury recovery, or young athletes.",
+                description: "We adapt to each client's goals and environment, ideal for elderly individuals, post-injury recovery, or young athletes.",
               },
               {
                 icon: TrendingUp,
@@ -130,8 +133,202 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Our Team Section */}
+      <section id="our-team" className="py-20 px-4">
+        <div className="container mx-auto max-w-7xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Meet Our Specialist
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Expert guidance from a qualified professional dedicated to your movement health
+            </p>
+          </motion.div>
+
+          {/* Cameron's Profile Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="max-w-5xl mx-auto"
+          >
+            <div className="bg-card border rounded-2xl overflow-hidden shadow-lg">
+              <div className="grid md:grid-cols-5 gap-0">
+                {/* Left Column - Image & Quick Stats */}
+                <div className="md:col-span-2 bg-gradient-to-br from-primary/10 to-primary/5 p-8 flex flex-col items-center justify-center">
+                  <motion.div
+                    initial={{ scale: 0.9, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                  >
+                    <Avatar className="w-48 h-48 border-4 border-background shadow-xl mb-6">
+                      <AvatarImage src="/cameron_libera_linkedin.jpeg" alt="Cameron" />
+                      <AvatarFallback className="text-4xl bg-primary text-primary-foreground">
+                        CH
+                      </AvatarFallback>
+                    </Avatar>
+                  </motion.div>
+
+                  <h3 className="text-2xl font-bold mb-1 text-center">Cameron</h3>
+                  <p className="text-sm text-muted-foreground mb-6 text-center">
+                    Founder & Clinical Exercise Specialist
+                  </p>
+
+                  {/* Quick Stats */}
+                  <div className="w-full space-y-4">
+                    <div className="bg-background/50 rounded-lg p-4 text-center">
+                      <Briefcase className="w-6 h-6 mx-auto mb-2 text-primary" />
+                      <p className="text-2xl font-bold">2+</p>
+                      <p className="text-xs text-muted-foreground">Years Experience</p>
+                    </div>
+                    <div className="bg-background/50 rounded-lg p-4 text-center">
+                      <GraduationCap className="w-6 h-6 mx-auto mb-2 text-primary" />
+                      <p className="text-2xl font-bold">MSc</p>
+                      <p className="text-xs text-muted-foreground">Kinesiology</p>
+                    </div>
+                    <div className="bg-background/50 rounded-lg p-4 text-center">
+                      <Trophy className="w-6 h-6 mx-auto mb-2 text-primary" />
+                      <p className="text-2xl font-bold">Division 2</p>
+                      <p className="text-xs text-muted-foreground">Rugby Athlete</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Column - Bio & Credentials */}
+                <div className="md:col-span-3 p-8 md:p-10">
+                  <div className="space-y-6">
+                    {/* Introduction */}
+                    <div>
+                      <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                        <Users className="w-5 h-5 text-primary" />
+                        About Cameron
+                      </h4>
+                      <p className="text-muted-foreground leading-relaxed">
+                        My name is Cameron, I am a Clinical / Adaptive Exercise Specialist and Founder of CARE Therapy, 
+                        with a strong foundation in rehabilitative and adapted movement. I hold an MSc in Kinesiology with 
+                        a specialization in Adapted Physical Activity from California State University, and earned my 
+                        Undergraduate and Honours degrees in Human Kinetics and Ergonomics from Rhodes University.
+                      </p>
+                    </div>
+
+                    {/* Experience */}
+                    <div>
+                      <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                        <Briefcase className="w-5 h-5 text-primary" />
+                        Professional Journey
+                      </h4>
+                      <p className="text-muted-foreground leading-relaxed">
+                        With professional experience in personal training and athletic performance since 2019, and a clinical 
+                        focus on therapeutic and adapted exercise since 2022, I bring both scientific expertise and personal 
+                        insight to my work. As a former Varsity Shield and U.S. Division II rugby player, I understand the 
+                        physical demands of performance and the journey through injury recovery.
+                      </p>
+                    </div>
+
+                    {/* Specialized Experience */}
+                    <div>
+                      <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                        <Star className="w-5 h-5 text-primary" />
+                        Specialized Experience
+                      </h4>
+                      <p className="text-muted-foreground leading-relaxed">
+                        My adapted exercise experience includes working at the renowned Center of Achievement in California, 
+                        where I provided specialized support for individuals with neurological and physical disabilities. 
+                        I now lead CARE Therapy with a commitment to holistic, evidence-based care that bridges rehabilitation, 
+                        functional movement, and performance enhancement.
+                      </p>
+                    </div>
+
+                    {/* Education Credentials */}
+                    <div className="pt-6 border-t">
+                      <h4 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                        <GraduationCap className="w-5 h-5 text-primary" />
+                        Academic Qualifications
+                      </h4>
+                      <div className="space-y-4">
+                        {/* Masters */}
+                        <div className="flex items-start gap-3">
+                          <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                          <div>
+                            <p className="font-semibold">Master of Science in Kinesiology</p>
+                            <p className="text-sm text-muted-foreground">Specialization: Adapted Physical Activity</p>
+                            <p className="text-sm text-muted-foreground">California State University, Northridge, USA</p>
+                          </div>
+                        </div>
+
+                        {/* Honours */}
+                        <div className="flex items-start gap-3">
+                          <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                          <div>
+                            <p className="font-semibold">B.SocSci Honours in Human Kinetics & Ergonomics</p>
+                            <p className="text-sm text-muted-foreground">Rhodes University, South Africa</p>
+                          </div>
+                        </div>
+
+                        {/* Undergraduate */}
+                        <div className="flex items-start gap-3">
+                          <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                          <div>
+                            <p className="font-semibold">B.SocSci in Human Kinetics & Ergonomics and Psychology</p>
+                            <p className="text-sm text-muted-foreground">Rhodes University, South Africa</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Credentials Highlight */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-12 max-w-5xl mx-auto"
+          >
+            <div className="bg-primary/5 border border-primary/20 rounded-xl p-8">
+              <h4 className="text-center text-lg font-semibold mb-6">Areas of Expertise</h4>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {[
+                  "Adapted Physical Activity",
+                  "Therapeutic Exercise",
+                  "Post-Injury Rehabilitation",
+                  "Athletic Performance",
+                  "Neurological Conditions",
+                  "Elderly Care & Mobility",
+                  "Movement Assessment",
+                  "Strength & Conditioning"
+                ].map((expertise, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: 0.5 + (index * 0.05) }}
+                    className="bg-background rounded-lg p-3 text-center text-sm font-medium"
+                  >
+                    {expertise}
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Our Values */}
-      <section className="py-20 px-4">
+      <section id="our-values" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -177,7 +374,7 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center p-6"
+                className="bg-card border rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-4">
                   <value.icon className="w-8 h-8" />
@@ -226,7 +423,7 @@ export default function AboutPage() {
                 icon: Medal,
               },
             ].map((group, index) => {
-              const Icon = group.icon; 
+              const Icon = group.icon;
               
               return (
                 <motion.div
@@ -238,7 +435,7 @@ export default function AboutPage() {
                   className="bg-card border rounded-xl p-8 text-center hover:shadow-lg transition-all duration-300"
                 >
                   <div className="text-5xl mb-4">
-                    <Icon className="mx-auto" size={48} /> 
+                    <Icon className="mx-auto text-primary" size={48} />
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{group.title}</h3>
                   <p className="text-muted-foreground">{group.description}</p>
@@ -250,7 +447,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -263,8 +460,8 @@ export default function AboutPage() {
               Ready to Start Your Journey?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Whether you\'re recovering from an injury, looking to prevent future issues, 
-              or wanting to enhance your performance, we\'re here to help.
+              Whether you're recovering from an injury, looking to prevent future issues, 
+              or wanting to enhance your performance, we're here to help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/services">
