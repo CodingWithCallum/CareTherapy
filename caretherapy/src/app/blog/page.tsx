@@ -101,7 +101,7 @@ export default function BlogPage() {
             </div>
 
             {/* Category Filter */}
-            <div className="flex flex-wrap gap-2 justify-center">
+            <div className="flex flex-wrap gap-2 justify-center relative z-50">
               {categories.map((category) => (
                 <button
                   key={category}
@@ -126,9 +126,10 @@ export default function BlogPage() {
           <div className="container mx-auto max-w-7xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              style={{ pointerEvents: 'auto' }}
             >
               <div className="flex items-center gap-2 mb-6">
                 <div className="h-1 w-12 bg-primary rounded-full" />
@@ -137,69 +138,69 @@ export default function BlogPage() {
                 </span>
               </div>
 
-              <Link href={`/blog/${featuredPost.slug}`}>
-                <div className="bg-card border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 group">
-                  <div className="grid md:grid-cols-2 gap-0">
-                    {/* Image */}
-                    <div className="relative h-64 md:h-full overflow-hidden">
-                      <div 
-                        className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
-                        style={{ backgroundImage: `url(${featuredPost.featuredImage})` }}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                      <div className="absolute top-4 left-4">
-                        <span className="inline-block px-3 py-1 bg-primary text-primary-foreground text-xs font-semibold rounded-full">
-                          {featuredPost.category}
-                        </span>
+              <div className="bg-card border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                <div className="grid md:grid-cols-2 gap-0">
+                  {/* Image */}
+                  <div className="relative h-64 md:h-full overflow-hidden">
+                    <div 
+                      className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                      style={{ backgroundImage: `url(${featuredPost.featuredImage})` }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute top-4 left-4">
+                      <span className="inline-block px-3 py-1 bg-primary text-primary-foreground text-xs font-semibold rounded-full">
+                        {featuredPost.category}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-8 md:p-10 flex flex-col justify-between">
+                    <div>
+                      <h2 className="text-2xl md:text-3xl font-bold mb-4 group-hover:text-primary transition-colors">
+                        {featuredPost.title}
+                      </h2>
+                      <p className="text-muted-foreground mb-6">
+                        {featuredPost.excerpt}
+                      </p>
+
+                      {/* Meta */}
+                      <div className="flex flex-wrap items-center gap-4 mb-6 text-sm text-muted-foreground">
+                        <div className="flex items-center gap-2">
+                          <Calendar className="w-4 h-4" />
+                          <span>{new Date(featuredPost.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Clock className="w-4 h-4" />
+                          <span>{featuredPost.readTime}</span>
+                        </div>
+                      </div>
+
+                      {/* Author */}
+                      <div className="flex items-center gap-3 pb-6 border-b">
+                        <Avatar className="w-10 h-10">
+                          <AvatarImage src={featuredPost.author.avatar} />
+                          <AvatarFallback>
+                            <User className="w-5 h-5" />
+                          </AvatarFallback>
+                        </Avatar>
+                        <div>
+                          <p className="font-semibold text-sm">{featuredPost.author.name}</p>
+                        </div>
                       </div>
                     </div>
 
-                    {/* Content */}
-                    <div className="p-8 md:p-10 flex flex-col justify-between">
-                      <div>
-                        <h2 className="text-2xl md:text-3xl font-bold mb-4 group-hover:text-primary transition-colors">
-                          {featuredPost.title}
-                        </h2>
-                        <p className="text-muted-foreground mb-6">
-                          {featuredPost.excerpt}
-                        </p>
-
-                        {/* Meta */}
-                        <div className="flex flex-wrap items-center gap-4 mb-6 text-sm text-muted-foreground">
-                          <div className="flex items-center gap-2">
-                            <Calendar className="w-4 h-4" />
-                            <span>{new Date(featuredPost.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <Clock className="w-4 h-4" />
-                            <span>{featuredPost.readTime}</span>
-                          </div>
-                        </div>
-
-                        {/* Author */}
-                        <div className="flex items-center gap-3 pb-6 border-b">
-                          <Avatar className="w-10 h-10">
-                            <AvatarImage src={featuredPost.author.avatar} />
-                            <AvatarFallback>
-                              <User className="w-5 h-5" />
-                            </AvatarFallback>
-                          </Avatar>
-                          <div>
-                            <p className="font-semibold text-sm">{featuredPost.author.name}</p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="mt-6">
+                    <div className="mt-6">
+                      <Link href={`/blog/${featuredPost.slug}`}>
                         <Button className="group/btn">
-                          Read Full Article
-                          <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                        </Button>
-                      </div>
+                        Read Full Article
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                      </Button>
+                      </Link>
                     </div>
                   </div>
                 </div>
-              </Link>
+              </div>
             </motion.div>
           </div>
         </section>
@@ -336,7 +337,7 @@ export default function BlogPage() {
       )}
 
       {/* Newsletter CTA */}
-      <section className="py-20 px-4 bg-muted/30">
+      {/* <section className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -363,7 +364,7 @@ export default function BlogPage() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
