@@ -218,7 +218,7 @@ export function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <>
       <div className="container mx-auto flex h-20 max-w-7xl items-center justify-between px-4">
         {/* Logo */}
         <Link href="/" className="flex items-center transition-opacity hover:opacity-80">
@@ -334,7 +334,7 @@ export function Navbar() {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden border-t bg-background">
+        <div className="absolute w-full left-0 top-20 lg:hidden border-t bg-background">
           <nav className="container mx-auto px-4 py-4 max-h-[calc(100vh-5rem)] overflow-y-auto">
             <ul className="space-y-2">
               {navigationItems.map((item) => (
@@ -429,6 +429,6 @@ export function Navbar() {
           </nav>
         </div>
       )}
-    </header>
+    </>
   );
 }
