@@ -367,7 +367,7 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Video Testimonials Section (Placeholder) */}
-      <section className="py-20 px-4 bg-muted/30">
+      <section className="py-20 px-4">
         <div className="container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -477,7 +477,7 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Share Your Story CTA */}
-      <section className="py-20 px-4 bg-muted/30">
+      <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

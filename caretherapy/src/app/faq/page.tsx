@@ -344,7 +344,7 @@ export default function FAQPage() {
       </section>
 
       {/* Quick Contact Section */}
-      <section className="py-20 px-4 bg-muted/30">
+      <section className="py-20 px-4">
         <div className="container mx-auto max-w-5xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

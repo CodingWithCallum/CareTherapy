@@ -27,7 +27,7 @@ export default function AboutPage() {
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Bridging the gap between rehabilitation and fitness through expert-guided, 
-              proactive exercise therapy in real-world settings.
+              proactive exercise in real-world settings.
             </p>
           </motion.div>
         </div>
@@ -79,7 +79,7 @@ export default function AboutPage() {
       </section>
 
       {/* What Makes Us Different */}
-      <section className="py-20 px-4 bg-muted/30">
+      <section className="py-20 px-4">
         <div className="container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -179,7 +179,7 @@ export default function AboutPage() {
 
                   <h3 className="text-2xl font-bold mb-1 text-center">Cameron</h3>
                   <p className="text-sm text-muted-foreground mb-6 text-center">
-                    Founder & Clinical Exercise Specialist
+                    Founder and Adapted Exercise Specialist
                   </p>
 
                   {/* Quick Stats */}
@@ -303,9 +303,8 @@ export default function AboutPage() {
                 {[
                   "Adapted Physical Activity",
                   "Therapeutic Exercise",
-                  "Post-Injury Rehabilitation",
+                  "Post-Injury Recovery",
                   "Athletic Performance",
-                  "Neurological Conditions",
                   "Elderly Care & Mobility",
                   "Movement Assessment",
                   "Strength & Conditioning"
@@ -328,7 +327,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Values */}
-      <section id="our-values" className="py-20 px-4 bg-muted/30">
+      <section id="our-values" className="py-20 px-4">
         <div className="container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -414,7 +413,7 @@ export default function AboutPage() {
               },
               {
                 title: "Post-Injury Recovery",
-                description: "Guided rehabilitation to restore function and prevent future injuries.",
+                description: "Guided exercise to restore function and prevent injuries.",
                 icon: HeartPlus,
               },
               {
@@ -447,7 +446,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-muted/30">
+      <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl">
           <motion.div
             initial={{ opacity: 0, }} animate={{ opacity: 1, }} transition={{ duration: 0.3, delay: 0.75, }}
@@ -464,7 +463,7 @@ export default function AboutPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/services">
                 <Button size="lg" className="text-base">
-                  View Our Services?
+                  View Our Services
                 </Button>
               </Link>
               <Link href="/contact">

@@ -173,7 +173,7 @@ export default function ServicesPage() {
       id: "home-sessions",
       title: "Mobile Home Sessions",
       icon: MapPin,
-      description: "Professional therapeutic care delivered directly to your home, community setting, or preferred location across Pretoria & Johannesburg.",
+      description: "Professional Adapted and functional exercise care delivered directly to your home, community setting, or preferred location across Pretoria and Johannesburg.",
       benefits: [
         "No travel required",
         "Familiar environment",
@@ -190,17 +190,17 @@ export default function ServicesPage() {
     {
       icon: Award,
       title: "MSc Kinesiology Specialist",
-      description: "Advanced rehab & adapted exercise expertise"
+      description: "Advanced rehabilitative & adapted exercise expertise"
     },
     {
       icon: Users,
       title: "Specialized Focus",
-      description: "Chronic conditions, seniors, stroke recovery, and mobility"
+      description: "Adapted to specific client needs and goals to deliver the best possible care"
     },
     {
       icon: MapPin,
       title: "Home Visits Available",
-      description: "Service in Pretoria & Johannesburg"
+      description: "Service in Pretoria & Johannesburg bring our expertise to your doorstep"
     },
     {
       icon: CheckCircle2,
@@ -212,7 +212,7 @@ export default function ServicesPage() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 bg-gradient-to-b from-primary/5 to-transparent">
+      <section className="relative py-20 px-4">
         <div className="container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -348,7 +348,7 @@ export default function ServicesPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-muted/30 rounded-2xl p-8 md:p-10"
+            className="rounded-2xl p-8 md:p-10"
           >
             <h3 className="text-2xl font-bold mb-6 text-center">Add-On Services (Optional)</h3>
             <div className="grid md:grid-cols-2 gap-6 mb-6">
@@ -375,7 +375,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Therapy Types Section */}
-      <section className="py-20 px-4 bg-muted/20">
+      <section className="py-20 px-4">
         <div className="container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -495,7 +495,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 px-4 bg-primary/5">
+      <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

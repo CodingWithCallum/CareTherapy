@@ -152,7 +152,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
       </article>
 
       {/* Author Bio */}
-      <section className="px-4 py-12 bg-muted/30">
+      <section className="px-4 py-12">
         <div className="container mx-auto max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -227,7 +227,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
       )}
 
       {/* CTA Section */}
-      <section className="px-4 py-16 bg-muted/30">
+      <section className="px-4 py-16">
         <div className="container mx-auto max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
