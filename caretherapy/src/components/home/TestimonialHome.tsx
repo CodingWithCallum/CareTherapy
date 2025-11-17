@@ -1,4 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function TestimonialSection() {
     const testimonials = [
@@ -54,6 +56,13 @@ export default function TestimonialSection() {
                             </div>
                         ))}
                     </div>
+                </div>
+                <div className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4">
+                    <Link href="/testimonials">
+                    <Button size="lg" className="text-base">
+                        View All Success Stories
+                    </Button>
+                    </Link>
                 </div>
             </div>
         </section>

@@ -128,25 +128,6 @@ export default function FeaturedBlogPost() {
             </div>
           </div>
         </motion.div>
-
-        {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-12"
-        >
-          <p className="text-muted-foreground mb-4">
-            Want more insights and updates? Subscribe to our newsletter for weekly mental health tips.
-          </p>
-          <Link href="/blog">
-            <Button variant="ghost" className="group">
-              Explore More Articles
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </Link>
-        </motion.div>
       </div>
     </section>
   );

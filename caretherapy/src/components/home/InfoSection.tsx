@@ -86,11 +86,14 @@ export default function InfoSection() {
               Learn more about our approach, meet our team, and discover how we can 
               support you on your path to excellence.
             </p>
-            <Link href="/about">
-              <Button size="lg" className="text-base">
-                Learn More About Us
-              </Button>
-            </Link>
+            <motion.div initial={{ opacity: 0, }} animate={{ opacity: 1, }} transition={{ duration: 0.3, delay: 1, }}
+              className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4" >
+              <Link href="/about">
+                <Button size="lg" className="text-base">
+                  Learn More About Us
+                </Button>
+              </Link>
+            </motion.div>
           </div>
         </motion.div>
       </div>
