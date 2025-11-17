@@ -17,7 +17,7 @@ import { Service } from "@/types";
 export const services: Service[] = [
   {
     id: "therapeutic-exercise",
-    title: "Therapeutic Exercise",
+    title: "Adapted Functional Fitness",
     description: "Our therapeutic exercise programs are designed to address specific movement dysfunctions, improve strength, flexibility, and restore optimal physical function. Whether recovering from injury or preventing future issues, we create personalized plans tailored to your needs.",
     shortDescription: "Customized exercise programs to restore function and improve movement quality.",
     icon: "Dumbbell",
@@ -34,7 +34,7 @@ export const services: Service[] = [
   },
   {
     id: "post-injury-rehabilitation",
-    title: "Post-Injury Rehabilitation",
+    title: "Post-injury Recovery",
     description: "Our rehabilitation programs help you safely return to your activities after injury or surgery. We focus on progressive loading, movement re-education, and building resilience to prevent re-injury.",
     shortDescription: "Guided recovery programs to restore function after injury or surgery.",
     icon: "Heart",
@@ -68,7 +68,7 @@ export const services: Service[] = [
   },
   {
     id: "elderly-care",
-    title: "Elderly Care & Mobility",
+    title: "Senior & Elderly Wellness And Adapted Exercise",
     description: "Our elderly care programs focus on maintaining and improving mobility, balance, and functional independence. We help seniors stay active, reduce fall risk, and maintain their quality of life.",
     shortDescription: "Specialized programs to maintain independence and improve quality of life.",
     icon: "Users",

@@ -17,7 +17,7 @@ export function HeroSectionOne() {
         </h1>
         <motion.p initial={{ opacity: 0, }} animate={{ opacity: 1, }} transition={{ duration: 0.3, delay: 0.8, }}
           className="relative z-10 mx-auto max-w-xl py-4 text-center text-xl font-normal italic text-neutral-600 dark:text-neutral-400" >
-          CARE Therapy provides evidence-based adapted therapeutic and rehabilitative exercise. We strive to empower individuals to achieve optimal health and well-being.
+          CARE Therapy provides evidence-based adaptive exercise and functional fitness guidance. We strive to empower individuals to achieve optimal health and well-being. 
         </motion.p>
         <motion.div initial={{ opacity: 0, }} animate={{ opacity: 1, }} transition={{ duration: 0.3, delay: 1, }}
           className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4" >

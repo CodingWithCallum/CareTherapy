@@ -45,8 +45,8 @@ const Logo = () => {
         <Image src="/Cam_Logo_no_extened@4x.png" alt="Care Therapy Logo" width={75} height={75}/>
       </div>
       <div className="hidden sm:block">
-        <div className="font-bold text-xl text-foreground">Care Therapy</div>
-        <div className="text-xs text-muted-foreground">Exercise & Rehabilitation</div>
+        <div className="font-bold text-xl text-foreground">CARE Therapy</div>
+        <div className="text-xs text-muted-foreground">Adapted Functional Exercise</div>
       </div>
     </div>
   );

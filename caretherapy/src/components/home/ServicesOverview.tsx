@@ -34,8 +34,7 @@ export default function ServicesOverview() {
             Our Services
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We offer a range of exercise and rehabilitative services designed to meet you where you are 
-            and support your unique journey toward healing, growth, and recovery.
+            We offer a range of exercise and functional adaptive exercise services designed to meet you where you are and to support your unique journey towards growth, moving better and independence. 
           </p>
         </motion.div>
 

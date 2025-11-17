@@ -9,7 +9,7 @@ const features = [
   {
     icon: Heart,
     title: "Compassionate Care",
-    description: "We provide evidence-based, personalized therapy tailored to your unique needs.",
+    description: "We provide evidence-based personalised exercise programs tailored to your unique needs.",
   },
   {
     icon: Users,
@@ -19,7 +19,7 @@ const features = [
   {
     icon: Award,
     title: "Evidence-Based",
-    description: "We use proven approaches backed by scientific research to guide you through your recovery.",
+    description: "We use proven approaches used in a rehabilitation center in California, backed by scientific research, to guide you through your journey to functional movement.",
   },
   {
     icon: Shield,
@@ -41,10 +41,10 @@ export default function InfoSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
-            Why Choose CareTherapy?
+            Why Choose CARE Therapy?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We're committed to providing exceptional exercise and rehabilitative care in studio or at in your home environment where you can grow, heal, and recover at your own comfort.
+            We’re committed to providing exceptional and safe functional and adaptive fitness in the studio or in your home environment. Where you can grow, maintain independence, and go at your own pace.
           </p>
         </motion.div>
 
