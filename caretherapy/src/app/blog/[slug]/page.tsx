@@ -38,7 +38,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
     <div className="w-full">
       {/* Back Button */}
       <div className="border-b">
-        <div className="container mx-auto max-w-4xl px-4 py-6">
+        <div className="container mx-auto max-w-4xl px-4 py-6 relative z-50">
           <Link href="/blog">
             <Button variant="ghost" size="sm" className="group">
               <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
@@ -231,9 +231,9 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
         <div className="container mx-auto max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6, delay: 0.25 }}
+            animate={{ opacity: 1}}
             className="bg-primary/5 border border-primary/20 rounded-2xl p-12 text-center"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">

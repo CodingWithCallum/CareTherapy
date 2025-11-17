@@ -203,7 +203,7 @@ export default function TestimonialsPage() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 bg-gradient-to-b from-primary/5 to-transparent">
+      <section className="relative pt-20 pb-10 px-4 bg-gradient-to-b from-primary/5 to-transparent">
         <div className="container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -221,7 +221,7 @@ export default function TestimonialsPage() {
           </motion.div>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          {/* <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {stats.map((stat, index) => {
               const Icon = stat.icon;
               return (
@@ -240,15 +240,15 @@ export default function TestimonialsPage() {
                 </motion.div>
               );
             })}
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* Category Filter */}
-      <section className="py-8 px-4 border-b sticky top-20 bg-background/95 backdrop-blur z-40">
+      <section className="py-8 px-4 border-b sticky top-20 z-40">
         <div className="container mx-auto max-w-7xl">
           <div className="flex items-center gap-4 overflow-x-auto pb-2">
-            <Filter className="w-5 h-5 text-muted-foreground flex-shrink-0" />
+            {/* <Filter className="w-5 h-5 text-muted-foreground flex-shrink-0" /> */}
             <div className="flex gap-2">
               {categories.map((category) => {
                 const Icon = category.icon;
@@ -419,8 +419,9 @@ export default function TestimonialsPage() {
         <div className="container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1}}
             viewport={{ once: true }}
+            animate={{ opacity: 1}}
             transition={{ duration: 0.6 }}
             className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-2xl p-12"
           >
@@ -480,9 +481,10 @@ export default function TestimonialsPage() {
         <div className="container mx-auto max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1}}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            animate={{ opacity: 1 }}
             className="bg-card border rounded-2xl p-12 text-center"
           >
             <Heart className="w-12 h-12 text-primary mx-auto mb-4" />

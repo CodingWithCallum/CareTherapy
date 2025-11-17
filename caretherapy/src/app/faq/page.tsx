@@ -224,7 +224,7 @@ export default function FAQPage() {
       </section>
 
       {/* Search and Filter */}
-      <section className="py-12 px-4 border-b sticky top-20 bg-background/95 backdrop-blur z-40">
+      <section className="py-12 px-4 border-b sticky top-20 z-40">
         <div className="container mx-auto max-w-7xl">
           <div className="flex flex-col gap-6">
             {/* Search Bar */}
@@ -282,8 +282,8 @@ export default function FAQPage() {
                   <motion.div
                     key={group.id}
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
+                    animate={{ opacity: 1}}
                     transition={{ duration: 0.6, delay: groupIndex * 0.1 }}
                   >
                     <div className="flex items-center gap-3 mb-6">
@@ -298,7 +298,6 @@ export default function FAQPage() {
                         <AccordionItem 
                           key={index} 
                           value={`${group.id}-${index}`}
-                          className="bg-card border rounded-xl px-6 overflow-hidden"
                         >
                           <AccordionTrigger className="hover:no-underline py-6">
                             <span className="text-left font-semibold">
@@ -319,7 +318,7 @@ export default function FAQPage() {
             // Show single category results
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
               <Accordion type="single" collapsible className="space-y-4">
@@ -327,7 +326,6 @@ export default function FAQPage() {
                   <AccordionItem 
                     key={index} 
                     value={`faq-${index}`}
-                    className="bg-card border rounded-xl px-6 overflow-hidden"
                   >
                     <AccordionTrigger className="hover:no-underline py-6">
                       <span className="text-left font-semibold">
