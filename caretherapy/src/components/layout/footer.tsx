@@ -166,7 +166,7 @@ export default function Footer() {
                   className="flex items-center space-x-3 text-sm text-muted-foreground hover:text-primary transition-colors group"
                 >
                   <Phone size={18} className="flex-shrink-0 group-hover:text-primary" />
-                  <span>+27 12 345 6789</span>
+                  <span>+27 79 790 8846</span>
                 </motion.a>
               </li>
               <li>
@@ -176,7 +176,7 @@ export default function Footer() {
                   className="flex items-center space-x-3 text-sm text-muted-foreground hover:text-primary transition-colors group"
                 >
                   <Mail size={18} className="flex-shrink-0 group-hover:text-primary" />
-                  <span>info@caretherapy.co.za</span>
+                  <span>caretherapysa@gmail.com</span>
                 </motion.a>
               </li>
             </ul>
