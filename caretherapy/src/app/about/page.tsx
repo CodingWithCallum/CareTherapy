@@ -212,7 +212,7 @@ export default function AboutPage() {
                         About Cameron
                       </h4>
                       <p className="text-muted-foreground leading-relaxed">
-                        My name is Cameron, I am a Clinical / Adaptive Exercise Specialist and Founder of CARE Therapy, 
+                        My name is Cameron, I am a Adaptive Exercise Specialist and Founder of CARE Therapy, 
                         with a strong foundation in rehabilitative and adapted movement. I hold an MSc in Kinesiology with 
                         a specialization in Adapted Physical Activity from California State University, and earned my 
                         Undergraduate and Honours degrees in Human Kinetics and Ergonomics from Rhodes University.
@@ -307,7 +307,8 @@ export default function AboutPage() {
                   "Athletic Performance",
                   "Elderly Care & Mobility",
                   "Movement Assessment",
-                  "Strength & Conditioning"
+                  "Strength & Conditioning",
+                  "Functional Fitness"
                 ].map((expertise, index) => (
                   <motion.div
                     key={index}

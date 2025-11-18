@@ -144,7 +144,7 @@ export default function ContactPage() {
                           href="tel:+27123456789" 
                           className="text-muted-foreground hover:text-primary transition-colors"
                         >
-                          +27 12 345 6789
+                          +27 79 790 8846
                         </a>
                       </div>
                     </div>
@@ -162,7 +162,7 @@ export default function ContactPage() {
                           href="mailto:info@caretherapy.co.za" 
                           className="text-muted-foreground hover:text-primary transition-colors break-all"
                         >
-                          info@caretherapy.co.za
+                          caretherapysa@gmail.com
                         </a>
                       </div>
                     </div>

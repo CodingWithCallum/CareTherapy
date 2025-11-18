@@ -114,8 +114,8 @@ export default function ServicesPage() {
       idealFor: "Recovery from injury, chronic pain management, movement optimization"
     },
     {
-      id: "post-injury-rehabilitation",
-      title: "Post-Injury Rehabilitation",
+      id: "post-injury-recovery",
+      title: "Post-Injury Recovery",
       icon: Heart,
       description: "Guided recovery programs that help you safely return to activities after injury or surgery through progressive loading and movement re-education.",
       benefits: [
