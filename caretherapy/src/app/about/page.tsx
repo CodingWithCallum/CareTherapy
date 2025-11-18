@@ -111,7 +111,7 @@ export default function AboutPage() {
               {
                 icon: TrendingUp,
                 title: "Long-term Focus",
-                description: "We emphasize sustainable movement health and performance enhancement, not just short-term fixes.",
+                description: "We emphasize sustainable mobility and performance enhancement, not just short-term fixes.",
               },
             ].map((item, index) => (
               <motion.div
@@ -147,7 +147,7 @@ export default function AboutPage() {
               Meet Our Specialist
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Expert guidance from a qualified professional dedicated to your movement health
+              Expert guidance from a qualified professional dedicated to your mobility, independence, and performance
             </p>
           </motion.div>
 
