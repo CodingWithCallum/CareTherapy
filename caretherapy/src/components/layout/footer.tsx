@@ -44,7 +44,7 @@ export default function Footer() {
 
   const services = [
     { label: "Therapeutic Exercise", href: "/services#therapeutic-exercise" },
-    { label: "Post-Injury Rehab", href: "/services#post-injury-rehabilitation" },
+    { label: "Post-Injury Rehabilitation", href: "/services#post-injury-rehabilitation" },
     { label: "Movement Assessment", href: "/services#movement-assessment" },
     { label: "Elderly Care", href: "/services#elderly-care" },
     { label: "Sports Performance", href: "/services#sports-performance" },
@@ -72,7 +72,7 @@ export default function Footer() {
               </div>
               <div>
                 <h3 className="text-lg font-bold">CARE Therapy</h3>
-                <span className="text-xs text-muted-foreground">Exercise & Rehabilitation</span>
+                <span className="text-xs text-muted-foreground">Adapted functional exercise</span>
               </div>
             </div>
             <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
@@ -161,7 +161,7 @@ export default function Footer() {
               </li>
               <li>
                 <motion.a
-                  href="tel:+27123456789"
+                  href="tel:+27797908846"
                   whileHover={{ x: 3 }}
                   className="flex items-center space-x-3 text-sm text-muted-foreground hover:text-primary transition-colors group"
                 >
@@ -171,7 +171,7 @@ export default function Footer() {
               </li>
               <li>
                 <motion.a
-                  href="mailto:info@caretherapy.co.za"
+                  href="mailto:caretherapysa@gmail.co.za"
                   whileHover={{ x: 3 }}
                   className="flex items-center space-x-3 text-sm text-muted-foreground hover:text-primary transition-colors group"
                 >

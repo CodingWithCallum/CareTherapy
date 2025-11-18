@@ -47,7 +47,7 @@ export default function FAQPage() {
     {
       category: "Services",
       question: "What is the difference between CARE Therapy and physiotherapy?",
-      answer: "While physiotherapy typically focuses on acute injuries and short-term treatment, CARE Therapy emphasizes long-term movement health, preventative care, and performance enhancement. We bridge the gap between rehabilitation and fitness through expert-guided, adaptive therapeutic exercise programs designed for sustainable results."
+      answer: "While physiotherapy typically focuses on acute injuries and short-term treatment, CARE Therapy emphasizes long-term movement health, preventative care, and performance enhancement. We bridge the gap between rehabilitation and fitness through expert-guided, functional adapted exercise programs designed for sustainable results."
     },
     {
       category: "Services",
@@ -67,7 +67,7 @@ export default function FAQPage() {
     {
       category: "Services",
       question: "What conditions do you treat?",
-      answer: "We work with a wide range of conditions including:\n• Chronic pain and movement dysfunction\n• Post-surgery rehabilitation\n• Stroke recovery\n• Balance and fall prevention (elderly care)\n• Sports injuries and performance enhancement\n• Mobility limitations\n• Postural problems\n• General weakness or deconditioning\n\nIf you\'re unsure whether we can help with your specific condition, please contact us for a consultation."
+      answer: "We work with a wide range of conditions including:\n• Chronic pain and movement dysfunction\n• Post-surgery rehabilitation (Recovery)\n• Post-stroke After Physiotherapy\n• Balance and fall prevention (elderly care)\n• Sports injuries and performance enhancement\n• Mobility limitations\n• Postural problems\n• General weakness or deconditioning\n\nIf you\'re unsure whether we can help with your specific condition, please contact us for a consultation."
     },
     
     // Pricing & Payment
@@ -79,7 +79,7 @@ export default function FAQPage() {
     {
       category: "Pricing",
       question: "Do you accept medical aid?",
-      answer: "Yes, we work with most major medical aid providers. We can provide you with an invoice and necessary documentation to submit to your medical aid for reimbursement. Please check with your specific medical aid regarding coverage for exercise therapy services. We recommend contacting them before your first session to understand your benefits."
+      answer: "No, we do not work with medical aid. I am not a biokineticist or physiotherapist, but a professional exercise professional in the health and wellness space. Therefore, as I do not provide clinical or medical treatment, we do not work with medical aids."
     },
     {
       category: "Pricing",
@@ -128,7 +128,7 @@ export default function FAQPage() {
     {
       category: "Medical",
       question: "Do I need a referral from my doctor?",
-      answer: "No, you don\'t need a doctor\'s referral to start with CARE Therapy. However, if you\'re recovering from surgery, have a serious medical condition, or are claiming through medical aid, we recommend getting a referral as it may:\n• Help with medical aid claims\n• Ensure we have complete information about your condition\n• Demonstrate medical necessity for insurance purposes\n\nWe\'ll assess your needs during the intro session and recommend if medical clearance would be beneficial."
+      answer: "Yes, you will be required to hand over a medical clearance letter from your doctor stating you are okay to continue to do physical activity, as well as to fill out a PAR-Q (Physical Activity Readiness Questionnaire). So that we know it is safe for you to exercise and move without any risks to your health."
     },
     {
       category: "Medical",
