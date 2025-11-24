@@ -363,13 +363,13 @@ export default function ServicesPage() {
                 </div>
               ))}
             </div>
-            <div className="text-center">
+            {/* <div className="text-center">
               <Button variant="outline" size="lg" className="group">
                 <Download className="w-4 h-4 mr-2" />
                 Download Full CARE Package Options
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </section>
