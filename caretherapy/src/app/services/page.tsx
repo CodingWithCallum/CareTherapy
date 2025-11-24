@@ -39,7 +39,7 @@ export default function ServicesPage() {
       cta: "Book Your Intro Session",
       icon: Sparkles,
       popular: false,
-      color: "from-blue-500/20 to-blue-600/20"
+      color: "from-primary/20 to-primary/30"
     },
     {
       id: "mobility",
@@ -58,7 +58,7 @@ export default function ServicesPage() {
       cta: "Get Started",
       icon: Star,
       popular: true,
-      color: "from-primary/20 to-primary/30"
+      color: "from-blue-500/20 to-blue-600/20"
     },
     {
       id: "elite",
