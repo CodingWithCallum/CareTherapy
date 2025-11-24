@@ -29,10 +29,10 @@ export default function Footer() {
   };
 
   const socialLinks = [
-    { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-    { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" }
+    //{ icon: Facebook, href: "https://facebook.com", label: "Facebook" },
+    { icon: Instagram, href: "https://www.instagram.com/care_therapy_sa/", label: "Instagram" },
+    //{ icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/care-therapy-centre-for-adaptive-rehabilitative-exercise-therapy/", label: "LinkedIn" }
   ];
 
   const quickLinks = [
