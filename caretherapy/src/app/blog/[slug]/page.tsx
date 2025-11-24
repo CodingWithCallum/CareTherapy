@@ -133,21 +133,25 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
       )}
 
       {/* Article Content */}
-      <article className="px-4 pb-16">
+<article className="px-4 pb-16">
         <div className="container mx-auto max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="prose prose-lg max-w-none
+            className="prose prose-lg dark:prose-invert max-w-none
               prose-headings:font-bold prose-headings:text-foreground
               prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
               prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
-              prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-6
+              prose-p:text-foreground/90 prose-p:leading-relaxed prose-p:mb-6
               prose-a:text-primary prose-a:no-underline hover:prose-a:underline
-              prose-strong:text-foreground prose-strong:font-semibold"
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
+              prose-strong:text-foreground prose-strong:font-semibold
+              prose-ul:my-6 prose-ul:list-disc prose-ul:pl-6
+              prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-6
+              prose-li:text-foreground/90 prose-li:my-2"
+          >
+            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+          </motion.div>
         </div>
       </article>
 
