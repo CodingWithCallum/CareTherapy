@@ -39,7 +39,7 @@ export default function TestimonialsPage() {
       role: "Account Executive",
       category: "Rehabilitation",
       location: "Johannesburg",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Nick",
+      image: "", //https://api.dicebear.com/7.x/avataaars/svg?seed=Nick
       rating: 5,
       date: "2024-10",
       program: "CARE Elite Program",
@@ -58,7 +58,7 @@ export default function TestimonialsPage() {
       role: "Software Developer",
       category: "Performance",
       location: "Pretoria",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Callum",
+      image: "", //https://api.dicebear.com/7.x/avataaars/svg?seed=Callum
       rating: 5,
       date: "2024-09",
       program: "CARE Mobility Package",
@@ -77,7 +77,7 @@ export default function TestimonialsPage() {
       role: "Retired",
       category: "Elderly",
       location: "Johannesburg",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Joan",
+      image: "", //https://api.dicebear.com/7.x/avataaars/svg?seed=Joan
       rating: 5,
       date: "2024-08",
       program: "CARE Elite Program",
@@ -96,7 +96,7 @@ export default function TestimonialsPage() {
       role: "Medical Officer - Intern",
       category: "Performance",
       location: "Pretoria",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Tara",
+      image: "", //https://api.dicebear.com/7.x/avataaars/svg?seed=Tara
       rating: 5,
       date: "2024-11",
       program: "CARE Mobility Package",
@@ -107,82 +107,6 @@ export default function TestimonialsPage() {
         "Personalized training",
         "Trail run preparation",
         "Comprehensive recovery"
-      ]
-    },
-    {
-      id: 5,
-      name: "Michael Stevens",
-      role: "Business Owner",
-      category: "Chronic",
-      location: "Johannesburg",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Michael",
-      rating: 5,
-      date: "2024-07",
-      program: "CARE Mobility Package",
-      condition: "Chronic Back Pain",
-      testimonial: "After years of chronic back pain affecting my work and daily life, I was skeptical about yet another treatment approach. Cameron's program has been transformative. The home visits made it convenient, and his systematic approach to strengthening my core and improving my posture has dramatically reduced my pain levels. I can now work full days without discomfort and even started playing golf again. The investment in the CARE Mobility Package has paid for itself many times over in improved quality of life.",
-      highlights: [
-        "Chronic pain reduction",
-        "Convenient home visits",
-        "Core strengthening focus",
-        "Return to activities"
-      ]
-    },
-    {
-      id: 6,
-      name: "Sarah Johnson",
-      role: "Teacher",
-      category: "Rehabilitation",
-      location: "Pretoria",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
-      rating: 5,
-      date: "2024-06",
-      program: "CARE Elite Program",
-      condition: "Post-Surgery Rehabilitation",
-      testimonial: "Following knee surgery, I was nervous about the rehabilitation process. Cameron's expertise and encouraging approach made all the difference. The Elite Program's three sessions per week kept me accountable and progressing steadily. Within three months, I went from barely walking to confidently hiking short trails. His knowledge of post-operative care and progressive loading was evident in every session. I couldn't have asked for better support during my recovery.",
-      highlights: [
-        "Post-surgery success",
-        "Steady progression",
-        "Expert post-op care",
-        "Returned to hiking"
-      ]
-    },
-    {
-      id: 7,
-      name: "David Thompson",
-      role: "Retired Engineer",
-      category: "Elderly",
-      location: "Johannesburg",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=David",
-      rating: 5,
-      date: "2024-05",
-      program: "CARE Mobility Package",
-      condition: "Fall Prevention & Strength",
-      testimonial: "At 72, I was worried about becoming less independent. My children suggested CARE Therapy, and it's been one of the best decisions I've made. The exercises are challenging but appropriate for my age and abilities. My balance has improved tremendously, and I feel more confident going about my daily activities. Cameron comes to my home, which makes everything so much easier. I've noticed I have more energy and can keep up with my grandchildren better than before!",
-      highlights: [
-        "Improved independence",
-        "Better balance",
-        "Increased energy",
-        "Age-appropriate exercises"
-      ]
-    },
-    {
-      id: 8,
-      name: "Lisa Mbatha",
-      role: "Marketing Manager",
-      category: "Chronic",
-      location: "Pretoria",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Lisa",
-      rating: 5,
-      date: "2024-09",
-      program: "CARE Mobility Package",
-      condition: "Postural Issues & Neck Pain",
-      testimonial: "Years of desk work had left me with terrible posture and constant neck pain. Physiotherapy provided temporary relief, but the pain always returned. Cameron's approach was different – he focused on strengthening the right muscles and teaching me proper movement patterns. Now, six months in, I rarely experience neck pain. The home sessions fit perfectly into my busy schedule, and I've learned exercises I can do at my desk. This has been life-changing for my work comfort and productivity.",
-      highlights: [
-        "Lasting pain relief",
-        "Postural improvement",
-        "Workplace exercises",
-        "Flexible scheduling"
       ]
     }
   ];
