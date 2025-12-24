@@ -161,12 +161,6 @@ export function Navbar() {
           description: 'Browse our complete collection of articles',
           icon: Library,
         },
-        // {
-        //   title: 'I\'m Feeling Lucky',
-        //   href: '/blog#random',
-        //   description: 'Let us surprise you with a random article',
-        //   icon: Sparkles,
-        // },
         {
           title: 'Most Popular',
           href: '/blog#popular-posts',

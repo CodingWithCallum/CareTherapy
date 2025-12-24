@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "motion/react";
-import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone, MapPin, ArrowRight, Heart } from "lucide-react";
+import { Instagram, Linkedin, Mail, Phone, MapPin, ArrowRight, Heart } from "lucide-react";
+import { CONTACT_INFO } from "@/config/contact";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -29,10 +29,8 @@ export default function Footer() {
   };
 
   const socialLinks = [
-    //{ icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-    { icon: Instagram, href: "https://www.instagram.com/care_therapy_sa/", label: "Instagram" },
-    //{ icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { icon: Linkedin, href: "https://www.linkedin.com/company/care-therapy-centre-for-adaptive-rehabilitative-exercise-therapy/", label: "LinkedIn" }
+    { icon: Instagram, href: CONTACT_INFO.social.instagram, label: "Instagram" },
+    { icon: Linkedin, href: CONTACT_INFO.social.linkedin, label: "LinkedIn" }
   ];
 
   const quickLinks = [
@@ -154,29 +152,28 @@ export default function Footer() {
                 >
                   <MapPin size={18} className="mt-0.5 flex-shrink-0 group-hover:text-primary" />
                   <span>
-                    Mobile service available throughout<br />
-                    Johannesburg & surrounding areas
+                    {CONTACT_INFO.serviceArea.full}
                   </span>
                 </motion.a>
               </li>
               <li>
                 <motion.a
-                  href="tel:+27797908846"
+                  href={CONTACT_INFO.phone.href}
                   whileHover={{ x: 3 }}
                   className="flex items-center space-x-3 text-sm text-muted-foreground hover:text-primary transition-colors group"
                 >
                   <Phone size={18} className="flex-shrink-0 group-hover:text-primary" />
-                  <span>+27 79 790 8846</span>
+                  <span>{CONTACT_INFO.phone.display}</span>
                 </motion.a>
               </li>
               <li>
                 <motion.a
-                  href="mailto:caretherapysa@gmail.co.za"
+                  href={CONTACT_INFO.email.href}
                   whileHover={{ x: 3 }}
                   className="flex items-center space-x-3 text-sm text-muted-foreground hover:text-primary transition-colors group"
                 >
                   <Mail size={18} className="flex-shrink-0 group-hover:text-primary" />
-                  <span>caretherapysa@gmail.com</span>
+                  <span>{CONTACT_INFO.email.display}</span>
                 </motion.a>
               </li>
             </ul>
@@ -205,7 +202,7 @@ export default function Footer() {
                 Terms of Service
               </Link>
               <span>•</span>
-              <Link href="/sitemap" className="hover:text-primary transition-colors">
+              <Link href="/site-map" className="hover:text-primary transition-colors">
                 Sitemap
               </Link>
             </div>

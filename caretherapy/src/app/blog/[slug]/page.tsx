@@ -1,20 +1,40 @@
 "use client";
 
 import { motion } from "motion/react";
-import { use } from "react";
+import { use, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { Calendar, Clock, ArrowLeft, ArrowRight, User, Facebook, Twitter, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 // Import data from centralized data file
 import { getPostBySlug, getRelatedPosts } from "@/data";
+import { sanitizeBlogContent } from "@/lib/sanitize";
+import { formatDateLong } from "@/lib/format";
+import { trackBlogView } from "@/lib/blog-analytics";
+import { StructuredData } from "@/components/seo/StructuredData";
+import { generateArticleSchema, generateBreadcrumbSchema } from "@/lib/seo/schemas";
+import { SITE_CONFIG } from "@/config/seo";
+
+// Client component due to view tracking - dynamic metadata will be added separately
 
 export default function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = use(params);
-  
+
   // Get post data from data file
   const post = getPostBySlug(slug);
   const relatedPosts = getRelatedPosts(slug, 3);
+
+  // Sanitize blog content to prevent XSS attacks
+  const sanitizedContent = useMemo(() => {
+    return post ? sanitizeBlogContent(post.content) : '';
+  }, [post]);
+
+  // Track blog post view
+  useEffect(() => {
+    if (post) {
+      trackBlogView(slug);
+    }
+  }, [slug, post]);
 
   // If post not found, show 404
   if (!post) {
@@ -35,18 +55,31 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
   }
 
   return (
-    <div className="w-full">
-      {/* Back Button */}
-      <div className="border-b">
-        <div className="container mx-auto max-w-4xl px-4 py-6 relative z-50">
-          <Link href="/blog">
-            <Button variant="ghost" size="sm" className="group">
-              <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
-              Back to Blog
-            </Button>
-          </Link>
+    <>
+      {post && (
+        <StructuredData
+          data={[
+            generateArticleSchema(post),
+            generateBreadcrumbSchema([
+              { name: 'Home', url: SITE_CONFIG.url },
+              { name: 'Blog', url: `${SITE_CONFIG.url}/blog` },
+              { name: post.title, url: `${SITE_CONFIG.url}/blog/${slug}` },
+            ]),
+          ]}
+        />
+      )}
+      <div className="w-full">
+        {/* Back Button */}
+        <div className="border-b">
+          <div className="container mx-auto max-w-4xl px-4 py-6 relative z-50">
+            <Link href="/blog">
+              <Button variant="ghost" size="sm" className="group">
+                <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
+                Back to Blog
+              </Button>
+            </Link>
+          </div>
         </div>
-      </div>
 
       {/* Hero Section */}
       <section className="relative py-12 px-4">
@@ -72,7 +105,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
             <div className="flex flex-wrap items-center gap-6 mb-8 text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
-                <span>{new Date(post.publishedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+                <span>{formatDateLong(post.publishedAt)}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
@@ -150,7 +183,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
               prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-6
               prose-li:text-foreground/90 prose-li:my-2"
           >
-            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+            <div dangerouslySetInnerHTML={{ __html: sanitizedContent }} />
           </motion.div>
         </div>
       </article>
@@ -263,6 +296,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
           </motion.div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
