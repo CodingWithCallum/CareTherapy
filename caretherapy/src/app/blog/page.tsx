@@ -8,13 +8,16 @@ import { Calendar, Clock, ArrowRight, Search, User, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 // Import data from centralized data file
-import { 
-  getAllPosts, 
-  getFeaturedPost, 
-  getAllCategories, 
+import {
+  getAllPosts,
+  getFeaturedPost,
+  getAllCategories,
   getRandomPost,
-  getPopularPosts 
+  getPopularPosts
 } from "@/data";
+import { formatDateShort, formatDateCompact } from "@/lib/format";
+
+// Client component due to search/filter state - metadata in root layout
 
 export default function BlogPage() {
   const router = useRouter();
@@ -168,7 +171,7 @@ export default function BlogPage() {
                       <div className="flex flex-wrap items-center gap-4 mb-6 text-sm text-muted-foreground">
                         <div className="flex items-center gap-2">
                           <Calendar className="w-4 h-4" />
-                          <span>{new Date(featuredPost.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                          <span>{formatDateShort(featuredPost.publishedAt)}</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <Clock className="w-4 h-4" />
@@ -255,7 +258,7 @@ export default function BlogPage() {
                         <div className="flex items-center justify-between pt-4 border-t text-xs text-muted-foreground">
                           <div className="flex items-center gap-2">
                             <Calendar className="w-3 h-3" />
-                            <span>{new Date(post.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
+                            <span>{formatDateCompact(post.publishedAt)}</span>
                           </div>
                           <div className="flex items-center gap-2">
                             <Clock className="w-3 h-3" />
@@ -335,36 +338,6 @@ export default function BlogPage() {
           </div>
         </section>
       )}
-
-      {/* Newsletter CTA */}
-      {/* <section className="py-20 px-4 bg-muted/30">
-        <div className="container mx-auto max-w-4xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="bg-primary/5 border border-primary/20 rounded-2xl p-12 text-center"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Stay Updated
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Subscribe to our newsletter for the latest articles, tips, and insights delivered directly to your inbox.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-background"
-              />
-              <Button size="lg">
-                Subscribe
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-      </section> */}
     </div>
   );
 }

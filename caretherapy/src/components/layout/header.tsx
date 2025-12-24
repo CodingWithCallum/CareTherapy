@@ -1,5 +1,3 @@
-
-import Link from "next/link";
 import {Navbar} from "./navigation";
 
 export default function Header() {

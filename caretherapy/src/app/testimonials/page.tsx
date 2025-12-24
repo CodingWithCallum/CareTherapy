@@ -3,11 +3,10 @@
 import { motion } from "motion/react";
 import { useState } from "react";
 import Link from "next/link";
-import { 
+import {
   Star,
   Quote,
   ArrowRight,
-  Filter,
   TrendingUp,
   Heart,
   Users,
@@ -115,14 +114,6 @@ export default function TestimonialsPage() {
   const filteredTestimonials = selectedCategory === "All" 
     ? testimonials 
     : testimonials.filter(t => t.category === selectedCategory);
-
-  // Stats for hero section
-  const stats = [
-    { icon: Users, value: "100+", label: "Happy Clients" },
-    { icon: Star, value: "5.0", label: "Average Rating" },
-    { icon: TrendingUp, value: "95%", label: "Success Rate" },
-    { icon: Award, value: "8+", label: "Years Experience" },
-  ];
 
   return (
     <div className="w-full">

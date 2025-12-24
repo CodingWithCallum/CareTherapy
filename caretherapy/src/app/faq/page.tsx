@@ -3,16 +3,13 @@
 import { motion } from "motion/react";
 import { useState } from "react";
 import Link from "next/link";
-import { 
-  ChevronDown, 
+import {
   Search,
   ArrowRight,
   Mail,
   Phone,
-  Clock,
   MapPin,
   CreditCard,
-  Shield,
   Users,
   Calendar,
   Activity,

@@ -2,11 +2,11 @@
 
 import { motion } from "motion/react";
 import { useState } from "react";
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
   Send,
   CheckCircle2,
   MessageSquare,
@@ -15,6 +15,9 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useReCaptcha } from 'next-recaptcha-v3';
+import { CONTACT_INFO, RESPONSE_TIME } from "@/config/contact";
+
+// Client component due to form state - metadata in root layout
 
 export default function ContactPage() {
   const { executeRecaptcha } = useReCaptcha();
@@ -30,6 +33,7 @@ export default function ContactPage() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -42,9 +46,10 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
 
     if (!executeRecaptcha) {
-      console.log("reCAPTCHA not yet available.");
+      setError("Security verification not ready. Please wait a moment and try again.");
       setIsSubmitting(false);
       return;
     }
@@ -53,11 +58,10 @@ export default function ContactPage() {
 
     const submissionData = {
       ...formData,
-      reCaptchaToken: token, // Attach the token
+      reCaptchaToken: token,
     };
 
     try {
-      // **REPLACE with your actual API endpoint for form submission**
       const response = await fetch('/api/submit-contact', {
         method: 'POST',
         headers: {
@@ -66,32 +70,45 @@ export default function ContactPage() {
         body: JSON.stringify(submissionData),
       });
 
+      const data = await response.json();
+
       if (!response.ok) {
-        throw new Error('Form submission failed.');
+        // Handle specific error types
+        if (response.status === 429) {
+          setError('Too many submissions. Please wait a moment and try again.');
+        } else if (response.status === 400) {
+          setError(data.error || 'Please check your information and try again.');
+        } else if (response.status === 500) {
+          setError('Server error. Please try again later or contact us directly at +27 79 790 8846.');
+        } else {
+          setError('Unable to send message. Please try again or call us at +27 79 790 8846.');
+        }
+        setIsSubmitting(false);
+        return;
       }
-      
-      // 4. If submission successful (and verified on the server)
+
+      // Success!
+      setError(null);
       setIsSubmitted(true);
-      // ... rest of the success/reset logic ...
-      
+
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+          preferredContact: "email"
+        });
+      }, 3000);
+
     } catch (error) {
       console.error('Submission Error:', error);
-      alert('There was an error submitting the form. Please try again.');
+      setError('Network error. Please check your connection and try again.');
       setIsSubmitting(false);
     }
-
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: "",
-        preferredContact: "email"
-      });
-    }, 3000);
   };
 
   return (
@@ -140,11 +157,11 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Phone</h3>
-                        <a 
-                          href="tel:+27123456789" 
+                        <a
+                          href={CONTACT_INFO.phone.href}
                           className="text-muted-foreground hover:text-primary transition-colors"
                         >
-                          +27 79 790 8846
+                          {CONTACT_INFO.phone.display}
                         </a>
                       </div>
                     </div>
@@ -158,11 +175,11 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Email</h3>
-                        <a 
-                          href="mailto:info@caretherapy.co.za" 
+                        <a
+                          href={CONTACT_INFO.email.href}
                           className="text-muted-foreground hover:text-primary transition-colors break-all"
                         >
-                          caretherapysa@gmail.com
+                          {CONTACT_INFO.email.display}
                         </a>
                       </div>
                     </div>
@@ -177,7 +194,7 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold mb-1">Service Area</h3>
                         <p className="text-muted-foreground">
-                          Mobile service available throughout Johannesburg & surrounding areas
+                          {CONTACT_INFO.serviceArea.full}
                         </p>
                       </div>
                     </div>
@@ -192,9 +209,9 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold mb-1">Business Hours</h3>
                         <div className="text-sm text-muted-foreground space-y-1">
-                          <p>Monday - Friday: 7:00 AM - 7:00 PM</p>
-                          <p>Saturday: 8:00 AM - 2:00 PM</p>
-                          <p>Sunday: Closed</p>
+                          <p>{CONTACT_INFO.businessHours.weekdays}</p>
+                          <p>{CONTACT_INFO.businessHours.saturday}</p>
+                          <p>{CONTACT_INFO.businessHours.sunday}</p>
                         </div>
                       </div>
                     </div>
@@ -208,7 +225,7 @@ export default function ContactPage() {
                     <div className="text-sm">
                       <p className="font-semibold mb-1">Quick Response Guarantee</p>
                       <p className="text-muted-foreground">
-                        We typically respond to all inquiries within 24 hours during business days.
+                        {RESPONSE_TIME.description}
                       </p>
                     </div>
                   </div>
@@ -379,10 +396,17 @@ export default function ContactPage() {
                       </div>
                     </div>
 
+                    {/* Error Display */}
+                    {error && (
+                      <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
+                        <p className="text-sm">{error}</p>
+                      </div>
+                    )}
+
                     {/* Submit Button */}
-                    <Button 
-                      type="submit" 
-                      size="lg" 
+                    <Button
+                      type="submit"
+                      size="lg"
                       className="w-full group"
                       disabled={isSubmitting}
                     >

@@ -14,9 +14,12 @@ export default function ServicesOverview() {
   const services = getFeaturedServices(4);
 
   // Helper to get icon component by name
-  const getIconComponent = (iconName: string) => {
-    const IconComponent = Icons[iconName as keyof typeof Icons] as any;
-    return IconComponent || Icons.Activity;
+  const getIconComponent = (iconName: string): React.ComponentType<{ className?: string; size?: number }> => {
+    const IconComponent = Icons[iconName as keyof typeof Icons];
+    if (typeof IconComponent === 'function') {
+      return IconComponent as React.ComponentType<{ className?: string; size?: number }>;
+    }
+    return Icons.Activity;
   };
 
   return (

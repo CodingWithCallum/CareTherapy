@@ -2,10 +2,9 @@
 
 import { motion } from "motion/react";
 import Link from "next/link";
-import { 
-  Clock, 
-  ArrowRight, 
-  Check, 
+import {
+  ArrowRight,
+  Check,
   Star,
   Sparkles,
   Award,
@@ -15,10 +14,11 @@ import {
   Users,
   Target,
   MapPin,
-  Download,
   CheckCircle2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+// Client component due to animations - metadata in root layout
 
 export default function ServicesPage() {
   // Pricing packages

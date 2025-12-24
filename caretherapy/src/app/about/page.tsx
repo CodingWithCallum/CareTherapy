@@ -1,14 +1,16 @@
 "use client";
 
 import { motion } from "motion/react";
-import { 
-  Target, Heart, TrendingUp, MapPin, Award, Users, Medal, 
-  HeartPlus, UsersRound, GraduationCap, Trophy, Briefcase, 
-  CheckCircle2, Star 
+import {
+  Target, Heart, TrendingUp, MapPin, Award, Users, Medal,
+  HeartPlus, UsersRound, GraduationCap, Trophy, Briefcase,
+  CheckCircle2, Star
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";
+
+// Client component due to animations - metadata in root layout
 
 export default function AboutPage() {
   return (
