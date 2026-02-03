@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_CONFIG.url),
+  metadataBase: new URL(SITE_CONFIG.url.startsWith("http") ? SITE_CONFIG.url : `https://${SITE_CONFIG.url}`),
   title: {
     default: 'CARE Therapy | Professional Exercise and Rehabilitation Services in Johannesburg',
     template: '%s | CARE Therapy',
