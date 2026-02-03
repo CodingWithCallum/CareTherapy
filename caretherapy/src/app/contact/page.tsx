@@ -14,13 +14,13 @@ import {
   Smartphone
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useReCaptcha } from 'next-recaptcha-v3';
+import { Turnstile } from '@marsidev/react-turnstile';
 import { CONTACT_INFO, RESPONSE_TIME } from "@/config/contact";
 
 // Client component due to form state - metadata in root layout
 
 export default function ContactPage() {
-  const { executeRecaptcha } = useReCaptcha();
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -48,17 +48,15 @@ export default function ContactPage() {
     setIsSubmitting(true);
     setError(null);
 
-    if (!executeRecaptcha) {
-      setError("Security verification not ready. Please wait a moment and try again.");
+    if (!turnstileToken) {
+      setError("Please complete the security check.");
       setIsSubmitting(false);
       return;
     }
 
-    const token = await executeRecaptcha("contact_form");
-
     const submissionData = {
       ...formData,
-      reCaptchaToken: token,
+      turnstileToken,
     };
 
     try {
@@ -394,6 +392,15 @@ export default function ContactPage() {
                           placeholder="Tell us about your needs and how we can help..."
                         />
                       </div>
+                    </div>
+
+                    {/* Turnstile Widget */}
+                    <div className="mb-6">
+                      <Turnstile
+                        siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""}
+                        onSuccess={(token) => setTurnstileToken(token)}
+                        onExpire={() => setTurnstileToken(null)}
+                      />
                     </div>
 
                     {/* Error Display */}

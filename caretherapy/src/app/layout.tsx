@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import { ReCaptchaProvider } from 'next-recaptcha-v3';
 import { SITE_CONFIG } from "@/config/seo";
 
 const geistSans = Geist({
@@ -89,7 +88,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning>
-        <ReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ''}>
           <div className="flex flex-col min-h-screen">
             <Header/>
             <div className="min-h-screen w-full bg-white relative">
@@ -102,7 +100,6 @@ export default function RootLayout({
               </div>
             </div>
           </div>
-        </ReCaptchaProvider>
       </body>
     </html>
   );

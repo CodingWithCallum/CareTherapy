@@ -12,11 +12,11 @@ const contactFormSchema = z.object({
   subject: z.string().min(1, 'Subject is required'),
   message: z.string().min(10, 'Message must be at least 10 characters').max(1000, 'Message is too long'),
   preferredContact: z.enum(['email', 'phone']).optional(),
-  reCaptchaToken: z.string().min(1, 'reCAPTCHA token is required'),
+  turnstileToken: z.string().min(1, 'Turnstile token is required'),
 });
 
-// Get reCAPTCHA secret key (validated at runtime)
-const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY;
+// Get Turnstile secret key (validated at runtime)
+const TURNSTILE_SECRET_KEY = process.env.TURNSTILE_SECRET_KEY;
 
 // Initialize Resend for email sending
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -46,8 +46,8 @@ function checkRateLimit(ip: string): boolean {
 export async function POST(request: Request) {
   try {
     // Validate environment variable at runtime
-    if (!RECAPTCHA_SECRET_KEY) {
-      console.error('RECAPTCHA_SECRET_KEY environment variable is not configured');
+    if (!TURNSTILE_SECRET_KEY) {
+      console.error('TURNSTILE_SECRET_KEY environment variable is not configured');
       return NextResponse.json(
         { error: 'Server configuration error. Please contact support.' },
         { status: 500 }
@@ -83,19 +83,19 @@ export async function POST(request: Request) {
       );
     }
 
-    const { reCaptchaToken, ...formData } = validationResult.data;
+    const { turnstileToken, ...formData } = validationResult.data;
 
-    // Verify the token with Google using POST body (more secure)
+    // Verify the token with Cloudflare using POST body
     const verificationResponse = await fetch(
-      'https://www.google.com/recaptcha/api/siteverify',
+      'https://challenges.cloudflare.com/turnstile/v0/siteverify',
       {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
         body: new URLSearchParams({
-          secret: RECAPTCHA_SECRET_KEY,
-          response: reCaptchaToken,
+          secret: TURNSTILE_SECRET_KEY,
+          response: turnstileToken,
         }),
       }
     );
@@ -103,18 +103,17 @@ export async function POST(request: Request) {
     const verificationData = await verificationResponse.json();
 
     // Check the verification result
-    if (!verificationData.success || verificationData.score < 0.5) {
+    if (!verificationData.success) {
       // Log suspicious activity (without sensitive data)
-      console.warn('reCAPTCHA verification failed', {
+      console.warn('Turnstile verification failed', {
         success: verificationData.success,
-        score: verificationData.score,
         ip,
         timestamp: new Date().toISOString(),
       });
 
       // Return error to prevent bot submissions
       return NextResponse.json(
-        { error: 'reCAPTCHA verification failed. Please try again.' },
+        { error: 'Security verification failed. Please try again.' },
         { status: 400 }
       );
     }
@@ -123,7 +122,6 @@ export async function POST(request: Request) {
     console.info('Contact form submission verified', {
       ip,
       timestamp: new Date().toISOString(),
-      score: verificationData.score,
     });
 
     // Send email notifications using Resend
@@ -161,7 +159,6 @@ export async function POST(request: Request) {
             <div style="font-size: 12px; color: #6b7280;">
               <p style="margin: 4px 0;">Submitted: ${new Date().toLocaleString()}</p>
               <p style="margin: 4px 0;">IP Address: ${ip}</p>
-              <p style="margin: 4px 0;">reCAPTCHA Score: ${verificationData.score}</p>
             </div>
           </div>
         `,
