@@ -75,7 +75,11 @@ export default function ContactPage() {
         if (response.status === 429) {
           setError('Too many submissions. Please wait a moment and try again.');
         } else if (response.status === 400) {
-          setError(data.error || 'Please check your information and try again.');
+          if (data.details && data.details.length > 0) {
+            setError(data.details[0].message);
+          } else {
+            setError(data.error || 'Please check your information and try again.');
+          }
         } else if (response.status === 500) {
           setError('Server error. Please try again later or contact us directly at +27 79 790 8846.');
         } else {
@@ -124,7 +128,7 @@ export default function ContactPage() {
               Get In Touch
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Ready to start your journey? Have questions about our services? 
+              Ready to start your journey? Have questions about our services?
               We\'re here to help. Reach out and we\'ll get back to you within 24 hours.
             </p>
           </motion.div>
@@ -144,7 +148,7 @@ export default function ContactPage() {
                 transition={{ duration: 0.6 }}
               >
                 <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
-                
+
                 {/* Contact Cards */}
                 <div className="space-y-4">
                   {/* Phone */}
