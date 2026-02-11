@@ -102,9 +102,9 @@ export default function PrivacyPolicyPage() {
             If you have questions or comments about this Privacy Policy, please contact our Information Officer:
           </p>
           <p>
-            Email: info@caretherapy.co.za <br />
-            Phone: +27 12 345 6789 <br />
-            Address: [Your Business Address, Johannesburg, South Africa]
+            Email: caretherapysa@gmail.com <br />
+            Phone: +27 79 790 8846 <br />
+            Address: Polo Village Offices B107, Val de Vie Estate, Paarl
           </p>
         </div>
       </div>

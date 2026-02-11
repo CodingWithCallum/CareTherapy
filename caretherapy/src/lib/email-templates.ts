@@ -3,21 +3,21 @@
  */
 
 interface ContactFormData {
-    name: string;
-    email: string;
-    phone?: string;
-    subject: string;
-    message: string;
-    preferredContact?: string;
+  name: string;
+  email: string;
+  phone?: string;
+  subject: string;
+  message: string;
+  preferredContact?: string;
 }
 
 /**
  * Generates the HTML for the business notification email
  */
 export function getBusinessNotificationHtml(formData: ContactFormData, ip: string): string {
-    const timestamp = new Date().toLocaleString();
+  const timestamp = new Date().toLocaleString();
 
-    return `
+  return `
     <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 600px; margin: 0 auto;">
       <h2 style="color: #2563eb; margin-bottom: 24px;">New Contact Form Submission</h2>
 
@@ -48,7 +48,7 @@ export function getBusinessNotificationHtml(formData: ContactFormData, ip: strin
  * Generates the HTML for the user confirmation email
  */
 export function getUserConfirmationHtml(formData: ContactFormData): string {
-    return `
+  return `
     <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 600px; margin: 0 auto;">
       <div style="background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%); padding: 32px; text-align: center; border-radius: 8px 8px 0 0;">
         <h1 style="color: white; margin: 0; font-size: 24px;">CARE Therapy</h1>
@@ -90,7 +90,7 @@ export function getUserConfirmationHtml(formData: ContactFormData): string {
           <p style="margin: 4px 0;">Centre for Adaptive Rehabilitative Exercise Therapy</p>
           <p style="margin: 4px 0;">Phone: <a href="tel:+27797908846" style="color: #2563eb; text-decoration: none;">+27 79 790 8846</a></p>
           <p style="margin: 4px 0;">Email: <a href="mailto:caretherapysa@gmail.com" style="color: #2563eb; text-decoration: none;">caretherapysa@gmail.com</a></p>
-          <p style="margin: 4px 0;">Mobile service throughout Johannesburg & surrounding areas</p>
+          <p style="margin: 4px 0;">Mobile service throughout Val de Vie Estate, Paarl & surrounding areas</p>
         </div>
       </div>
     </div>

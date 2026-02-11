@@ -37,7 +37,7 @@ export default function TestimonialsPage() {
       name: "Nick Rogan",
       role: "Account Executive",
       category: "Rehabilitation",
-      location: "Johannesburg",
+      location: "Paarl",
       image: "", //https://api.dicebear.com/7.x/avataaars/svg?seed=Nick
       rating: 5,
       date: "2024-10",
@@ -56,7 +56,7 @@ export default function TestimonialsPage() {
       name: "Callum Barry",
       role: "Software Developer",
       category: "Performance",
-      location: "Pretoria",
+      location: "Val de Vie",
       image: "", //https://api.dicebear.com/7.x/avataaars/svg?seed=Callum
       rating: 5,
       date: "2024-09",
@@ -75,7 +75,7 @@ export default function TestimonialsPage() {
       name: "Joan",
       role: "Retired",
       category: "Elderly",
-      location: "Johannesburg",
+      location: "Paarl",
       image: "", //https://api.dicebear.com/7.x/avataaars/svg?seed=Joan
       rating: 5,
       date: "2024-08",
@@ -94,7 +94,7 @@ export default function TestimonialsPage() {
       name: "Tara Pohl",
       role: "Medical Officer - Intern",
       category: "Performance",
-      location: "Pretoria",
+      location: "Val de Vie",
       image: "", //https://api.dicebear.com/7.x/avataaars/svg?seed=Tara
       rating: 5,
       date: "2024-11",
@@ -111,8 +111,8 @@ export default function TestimonialsPage() {
   ];
 
   // Filter testimonials
-  const filteredTestimonials = selectedCategory === "All" 
-    ? testimonials 
+  const filteredTestimonials = selectedCategory === "All"
+    ? testimonials
     : testimonials.filter(t => t.category === selectedCategory);
 
   return (
@@ -130,7 +130,7 @@ export default function TestimonialsPage() {
               Client Success Stories
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Real experiences from real people. Discover how CARE Therapy has helped clients 
+              Real experiences from real people. Discover how CARE Therapy has helped clients
               achieve their health and movement goals.
             </p>
           </motion.div>
@@ -171,11 +171,10 @@ export default function TestimonialsPage() {
                   <button
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap ${
-                      selectedCategory === category.id
+                    className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap ${selectedCategory === category.id
                         ? "bg-primary text-primary-foreground"
                         : "bg-muted hover:bg-muted/80"
-                    }`}
+                      }`}
                   >
                     <Icon className="w-4 h-4" />
                     {category.name}
@@ -268,9 +267,9 @@ export default function TestimonialsPage() {
                   <div className="flex items-center gap-2 mt-4 pt-4 border-t">
                     <Calendar className="w-3 h-3 text-muted-foreground" />
                     <span className="text-xs text-muted-foreground">
-                      {new Date(testimonial.date).toLocaleDateString('en-US', { 
-                        month: 'long', 
-                        year: 'numeric' 
+                      {new Date(testimonial.date).toLocaleDateString('en-US', {
+                        month: 'long',
+                        year: 'numeric'
                       })}
                     </span>
                   </div>
@@ -334,9 +333,9 @@ export default function TestimonialsPage() {
         <div className="container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1}}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            animate={{ opacity: 1}}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
             className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-2xl p-12"
           >
@@ -346,7 +345,7 @@ export default function TestimonialsPage() {
                   Join Our Success Stories
                 </h2>
                 <p className="text-lg text-muted-foreground mb-6">
-                  Every client's journey is unique, but they all share one thing in common: 
+                  Every client's journey is unique, but they all share one thing in common:
                   a commitment to improving their health and movement. Your success story could be next.
                 </p>
                 <ul className="space-y-3 mb-8">
@@ -369,13 +368,13 @@ export default function TestimonialsPage() {
               <div className="bg-card border rounded-xl p-8">
                 <h3 className="text-xl font-bold mb-4">Ready to Start?</h3>
                 <p className="text-muted-foreground mb-6">
-                  Book your R600 intro session and experience the difference personalized 
+                  Book your R800 general session and experience the difference personalized
                   therapeutic exercise can make in your life.
                 </p>
                 <div className="space-y-3">
                   <Link href="/contact" className="block">
                     <Button size="lg" className="w-full">
-                      Book Your Intro Session
+                      Book Your Session
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </Link>
@@ -396,7 +395,7 @@ export default function TestimonialsPage() {
         <div className="container mx-auto max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1}}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             animate={{ opacity: 1 }}
@@ -407,7 +406,7 @@ export default function TestimonialsPage() {
               Current Client?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              We'd love to hear about your experience! Your story could inspire others 
+              We'd love to hear about your experience! Your story could inspire others
               to take the first step toward better health and movement.
             </p>
             <Link href="/contact">

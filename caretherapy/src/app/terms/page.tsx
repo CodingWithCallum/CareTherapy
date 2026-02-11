@@ -84,9 +84,9 @@ export default function TermsOfServicePage() {
             If you have any questions about these Terms, please contact us at:
           </p>
           <p>
-            Email: info@caretherapy.co.za <br />
-            Phone: +27 12 345 6789 <br />
-            Address: [Your Business Address, Johannesburg, South Africa]
+            Email: caretherapysa@gmail.com <br />
+            Phone: +27 79 790 8846 <br />
+            Address: Polo Village Offices B107, Val de Vie Estate, Paarl
           </p>
         </div>
       </div>

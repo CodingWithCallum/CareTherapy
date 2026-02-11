@@ -24,23 +24,23 @@ export function generateLocalBusinessSchema() {
     email: CONTACT_INFO.email.display,
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Johannesburg',
-      addressRegion: 'Gauteng',
+      addressLocality: 'Paarl',
+      addressRegion: 'Western Cape',
       addressCountry: 'ZA',
     },
     areaServed: {
       '@type': 'GeoCircle',
       geoMidpoint: {
         '@type': 'GeoCoordinates',
-        latitude: -26.2041,
-        longitude: 28.0473,
+        latitude: -33.7225,
+        longitude: 18.9558,
       },
       geoRadius: '50000', // 50km radius
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: -26.2041,
-      longitude: 28.0473,
+      latitude: -33.7225,
+      longitude: 18.9558,
     },
     openingHoursSpecification: [
       {
@@ -82,8 +82,8 @@ export function generateOrganizationSchema() {
     telephone: CONTACT_INFO.phone.display,
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Johannesburg',
-      addressRegion: 'Gauteng',
+      addressLocality: 'Paarl',
+      addressRegion: 'Western Cape',
       addressCountry: 'ZA',
     },
     sameAs: [
@@ -200,7 +200,7 @@ export function generateServiceSchema(
     },
     areaServed: {
       '@type': 'City',
-      name: 'Johannesburg',
+      name: 'Paarl',
     },
     serviceType: 'Exercise Therapy',
   };
@@ -244,7 +244,7 @@ export function generateContactPageSchema() {
     '@id': `${SITE_CONFIG.url}/contact#webpage`,
     url: `${SITE_CONFIG.url}/contact`,
     name: 'Contact CARE Therapy',
-    description: 'Get in touch with CARE Therapy for exercise therapy and rehabilitation services in Johannesburg.',
+    description: 'Get in touch with CARE Therapy for exercise therapy and rehabilitation services in Paarl and Val de Vie.',
     mainEntity: {
       '@id': `${SITE_CONFIG.url}/#organization`,
     },

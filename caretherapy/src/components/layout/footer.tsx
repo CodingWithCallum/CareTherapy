@@ -41,19 +41,19 @@ export default function Footer() {
   ];
 
   const services = [
-    { label: "Therapeutic Exercise", href: "/services#therapeutic-exercise" },
-    { label: "Post-Injury Rehabilitation", href: "/services#post-injury-rehabilitation" },
+    { label: "Adapted Functional Fitness", href: "/services#therapeutic-exercise" },
+    { label: "PnF & Assisted Stretching", href: "/services#stretching-therapy" },
+    { label: "Older Adults Wellness", href: "/services#elderly-care" },
+    { label: "High-Performance Coaching", href: "/services#high-performance-coaching" },
     { label: "Movement Assessment", href: "/services#movement-assessment" },
-    { label: "Elderly Care", href: "/services#elderly-care" },
-    { label: "Sports Performance", href: "/services#sports-performance" },
-    { label: "Mobile Sessions", href: "/services#home-sessions" }
+    { label: "Mobile Home Sessions", href: "/services#home-sessions" }
   ];
 
   return (
     <footer className="relative bg-muted/80 border-t overflow-hidden">
       {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/5 pointer-events-none" />
-      
+
       <div className="container mx-auto px-4 py-12 relative">
         <motion.div
           variants={containerVariants}
@@ -74,7 +74,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-              Bridging the gap between rehabilitation and fitness through expert-guided, 
+              Bridging the gap between rehabilitation and fitness through expert-guided,
               proactive exercise therapy in real-world settings.
             </p>
             <div className="flex space-x-3">
@@ -143,18 +143,13 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-4">Get In Touch</h3>
             <ul className="space-y-4">
               <li>
-                <motion.a
-                  href="https://maps.google.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ x: 3 }}
-                  className="flex items-start space-x-3 text-sm text-muted-foreground hover:text-primary transition-colors group"
-                >
-                  <MapPin size={18} className="mt-0.5 flex-shrink-0 group-hover:text-primary" />
-                  <span>
-                    {CONTACT_INFO.serviceArea.full}
-                  </span>
-                </motion.a>
+                <MapPin size={18} className="mt-0.5 flex-shrink-0 group-hover:text-primary" />
+                <div className="flex flex-col">
+                  <span className="font-medium text-foreground">Our Office</span>
+                  <span>{CONTACT_INFO.address?.display}</span>
+                  <span className="mt-2 font-medium text-foreground">Service Area</span>
+                  <span>{CONTACT_INFO.serviceArea.full}</span>
+                </div>
               </li>
               <li>
                 <motion.a
@@ -189,10 +184,15 @@ export default function Footer() {
           className="pt-8 border-t"
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted-foreground text-center md:text-left">
-              © {currentYear} CARE Therapy. All rights reserved.
-            </p>
-            
+            <div className="max-w-md">
+              <p className="text-[10px] text-muted-foreground leading-relaxed text-center md:text-left mb-4">
+                <span className="font-semibold">Medical Disclaimer:</span> All services are provided as exercise and wellness programs. This is not medical advice or treatment. Please consult your healthcare provider for medical concerns.
+              </p>
+              <p className="text-sm text-muted-foreground text-center md:text-left">
+                © {currentYear} CARE Therapy. All rights reserved.
+              </p>
+            </div>
+
             <div className="flex flex-wrap justify-center gap-4 text-xs text-muted-foreground">
               <Link href="/privacy" className="hover:text-primary transition-colors">
                 Privacy Policy

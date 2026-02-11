@@ -13,20 +13,20 @@ import { SITE_CONFIG } from "@/config/seo";
 
 export const metadata: Metadata = {
   title: 'Home',
-  description: 'Professional exercise therapy and rehabilitation services in Johannesburg. Mobile physiotherapy, elderly mobility training, sports injury prevention, and personalized recovery programs. Book your consultation today.',
+  description: 'Professional exercise therapy and rehabilitation services in Paarl and Val de Vie. Specializing in assisted stretching, older adults wellness, high-performance coaching, and mobile rehabilitation. Book your session today.',
   keywords: [
-    'exercise therapy Johannesburg',
-    'physiotherapy Johannesburg',
-    'mobile physiotherapy',
-    'rehabilitation services',
-    'elderly mobility training',
-    'sports injury prevention',
-    'therapeutic exercise',
-    'home physiotherapy',
+    'exercise therapy Paarl',
+    'physiotherapy Paarl',
+    'Val de Vie wellness',
+    'assisted stretching Paarl',
+    'older adults wellness Paarl',
+    'mobile rehabilitation Paarl',
+    'therapeutic exercise Val de Vie',
+    'rehabilitation services Paarl',
   ],
   openGraph: {
-    title: 'CARE Therapy | Professional Exercise and Rehabilitation Services in Johannesburg',
-    description: 'Expert mobile physiotherapy and exercise therapy services throughout Johannesburg. Specializing in elderly mobility, sports injury prevention, and personalized rehabilitation programs.',
+    title: 'CARE Therapy | Professional Exercise and Rehabilitation Services in Paarl & Val de Vie',
+    description: 'Expert mobile exercise therapy services throughout Paarl and Val de Vie. Specializing in assisted stretching, older adults wellness, and high-performance coaching.',
     url: SITE_CONFIG.url,
     images: ['/logo.png'],
   },
@@ -45,11 +45,11 @@ export default function Home() {
         ]}
       />
       <div className="w-full">
-        <HeroSectionOne/>
-        <InfoSection/>
-        <ServicesOverview/>
-        <TestimonialSection/>
-        <FeaturedBlogPost/>
+        <HeroSectionOne />
+        <InfoSection />
+        <ServicesOverview />
+        <TestimonialSection />
+        <FeaturedBlogPost />
       </div>
     </>
   );

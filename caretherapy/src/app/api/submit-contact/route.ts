@@ -1,4 +1,5 @@
 // app/api/submit-contact/route.ts (Server-side code)
+export const dynamic = 'force-dynamic';
 
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
@@ -32,8 +33,8 @@ const contactFormSchema = z.object({
 // Get Turnstile secret key (validated at runtime)
 const TURNSTILE_SECRET_KEY = process.env.TURNSTILE_SECRET_KEY;
 
-// Initialize Resend for email sending
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialize Resend (instantiated inside handler to avoid build-time errors)
+let resend: Resend | null = null;
 
 // Rate limiting map (in production, use Redis or similar)
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
@@ -135,8 +136,13 @@ export async function POST(request: Request) {
 
     // Send email notifications using Resend
     try {
-      if (!process.env.RESEND_API_KEY) {
-        throw new Error('RESEND_API_KEY not configured');
+      // Lazy initialization to avoid build-time errors
+      if (!resend && process.env.RESEND_API_KEY) {
+        resend = new Resend(process.env.RESEND_API_KEY);
+      }
+
+      if (!resend) {
+        throw new Error('Resend client could not be initialized. Missing RESEND_API_KEY.');
       }
 
       // Send notification email to business

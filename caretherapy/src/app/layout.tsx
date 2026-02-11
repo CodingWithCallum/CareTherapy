@@ -18,14 +18,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.url.startsWith("http") ? SITE_CONFIG.url : `https://${SITE_CONFIG.url}`),
   title: {
-    default: 'CARE Therapy | Professional Exercise and Rehabilitation Services in Johannesburg',
+    default: 'CARE Therapy | Professional Exercise and Rehabilitation Services in Paarl & Val de Vie',
     template: '%s | CARE Therapy',
   },
   description: SITE_CONFIG.description,
   keywords: [
-    'exercise therapy Johannesburg',
-    'rehabilitation services South Africa',
-    'mobile physiotherapy Johannesburg',
+    'exercise therapy Paarl',
+    'rehabilitation services Western Cape',
+    'mobile assisted stretching Paarl',
     'elderly mobility training',
     'sports injury prevention',
     'adaptive exercise programs',
@@ -88,18 +88,20 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning>
-          <div className="flex flex-col min-h-screen">
-            <Header/>
-            <div className="min-h-screen w-full bg-white relative">
-              <div className="absolute inset-0 z-0" style={{ backgroundImage: `radial-gradient(125% 125% at 50% 10%, #ffffff 40%, #bfdbfe 100%)`,
-                backgroundSize: "100% 100%", }} />
-              <div className="min-h-screen w-full relative overflow-hidden">
-                <div className="absolute inset-0 z-0" style={{backgroundImage: `radial-gradient(circle 600px at 0% 200px, #bfdbfe, transparent), radial-gradient(circle 600px at 100% 200px, #bfdbfe, transparent)`,}}/>
-                {children}
-                <Footer/>
-              </div>
+        <div className="flex flex-col min-h-screen">
+          <Header />
+          <div className="min-h-screen w-full bg-white relative">
+            <div className="absolute inset-0 z-0" style={{
+              backgroundImage: `radial-gradient(125% 125% at 50% 10%, #ffffff 40%, #bfdbfe 100%)`,
+              backgroundSize: "100% 100%",
+            }} />
+            <div className="min-h-screen w-full relative overflow-hidden">
+              <div className="absolute inset-0 z-0" style={{ backgroundImage: `radial-gradient(circle 600px at 0% 200px, #bfdbfe, transparent), radial-gradient(circle 600px at 100% 200px, #bfdbfe, transparent)`, }} />
+              {children}
+              <Footer />
             </div>
           </div>
+        </div>
       </body>
     </html>
   );

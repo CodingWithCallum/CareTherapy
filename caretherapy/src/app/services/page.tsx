@@ -25,10 +25,10 @@ export default function ServicesPage() {
   const pricingPackages = [
     {
       id: "intro",
-      name: "Start Here",
-      subtitle: "Intro Session",
-      price: "R600",
-      period: "once-off",
+      name: "General Session",
+      subtitle: "Therapeutic Session",
+      price: "R800",
+      period: "per session",
       duration: "60 minutes",
       description: "The best way to experience CARE Therapy before committing to a package.",
       features: [
@@ -36,7 +36,7 @@ export default function ServicesPage() {
         "Tailored exercise/stretch trial session",
         "Recommendations for your recovery or mobility plan"
       ],
-      cta: "Book Your Intro Session",
+      cta: "Book Your Session",
       icon: Sparkles,
       popular: false,
       color: "from-primary/20 to-primary/30"
@@ -85,9 +85,9 @@ export default function ServicesPage() {
   const addOns = [
     {
       name: "Stretch Therapy Sessions",
-      price: "from R350",
-      duration: "30 min",
-      description: "Targeted flexibility and mobility work"
+      price: "R450 / R800",
+      duration: "30 min / 60 min",
+      description: "PnF and Assisted flexibility and mobility work"
     },
     {
       name: "Flexible Voucher Packs",
@@ -220,12 +220,11 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              Our Services & Pricing
+            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 uppercase">
+              OUR SERVICES
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Expert-guided exercise therapy and rehabilitation services tailored to your unique needs. 
-              Choose the package that's right for you.
+              Comprehensive services and exercise approaches tailored to your specific needs.
             </p>
           </motion.div>
         </div>
@@ -259,13 +258,12 @@ export default function ServicesPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className={`relative bg-card border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 ${
-                    pkg.popular ? "ring-2 ring-primary scale-105 md:scale-110 z-10" : ""
-                  }`}
+                  className={`relative bg-card border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 ${pkg.popular ? "ring-2 ring-primary scale-105 md:scale-110 z-10" : ""
+                    }`}
                 >
                   {/* Background gradient */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${pkg.color} opacity-50`} />
-                  
+
                   {/* Popular badge */}
                   {pkg.popular && (
                     <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-4 py-1 rounded-bl-lg text-xs font-semibold">
@@ -327,8 +325,8 @@ export default function ServicesPage() {
 
                     {/* CTA Button */}
                     <Link href="/contact" className="block">
-                      <Button 
-                        className="w-full group" 
+                      <Button
+                        className="w-full group"
                         size="lg"
                         variant={pkg.popular ? "default" : "outline"}
                       >
@@ -508,7 +506,7 @@ export default function ServicesPage() {
               Ready to Start Your Journey?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Book your intro session today and experience the CARE Therapy difference. 
+              Book your intro session today and experience the CARE Therapy difference.
               We'll assess your needs and create a personalized plan just for you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -194,6 +194,10 @@ export default function ContactPage() {
                         <MapPin className="w-6 h-6" />
                       </div>
                       <div>
+                        <h3 className="font-semibold mb-1">Our Office</h3>
+                        <p className="text-muted-foreground mb-4">
+                          {CONTACT_INFO.address?.display}
+                        </p>
                         <h3 className="font-semibold mb-1">Service Area</h3>
                         <p className="text-muted-foreground">
                           {CONTACT_INFO.serviceArea.full}
@@ -319,7 +323,7 @@ export default function ContactPage() {
                             value={formData.phone}
                             onChange={handleChange}
                             className="w-full pl-11 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-background"
-                            placeholder="+27 12 345 6789"
+                            placeholder="+27 79 790 8846"
                           />
                         </div>
                       </div>
@@ -433,9 +437,14 @@ export default function ContactPage() {
                       )}
                     </Button>
 
-                    <p className="text-xs text-muted-foreground text-center">
-                      By submitting this form, you agree to our privacy policy and terms of service.
-                    </p>
+                    <div className="pt-4 mt-6 border-t border-muted/30">
+                      <p className="text-[10px] text-muted-foreground text-center leading-relaxed">
+                        <span className="font-semibold">Medical Disclaimer:</span> All services are provided as exercise and wellness programs. This is not medical advice or treatment. Please consult your healthcare provider for medical concerns.
+                      </p>
+                      <p className="text-[10px] text-muted-foreground text-center mt-2">
+                        By submitting this form, you agree to our privacy policy and terms of service.
+                      </p>
+                    </div>
                   </form>
                 )}
               </motion.div>
@@ -465,11 +474,11 @@ export default function ContactPage() {
               {[
                 {
                   question: "Do you accept medical aid?",
-                  answer: "Yes, we work with most major medical aid providers. Contact us for specific details."
+                  answer: "No, we do not work with medical aid. We provide professional exercise and wellness programs rather than clinical medical treatment."
                 },
                 {
                   question: "What areas do you service?",
-                  answer: "We offer mobile services throughout Johannesburg and surrounding areas."
+                  answer: "We offer mobile services throughout Val de Vie Estate, Paarl and surrounding areas."
                 },
                 {
                   question: "How long is a typical session?",

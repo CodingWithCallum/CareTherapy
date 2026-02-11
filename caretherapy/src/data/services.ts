@@ -21,8 +21,8 @@ export const services: Service[] = [
     description: "Our therapeutic exercise programs are designed to address specific movement dysfunctions, improve strength, flexibility, and restore optimal physical function. Whether recovering from injury or preventing future issues, we create personalized plans tailored to your needs.",
     shortDescription: "Customized exercise programs to restore function and improve movement quality.",
     icon: "Dumbbell",
-    price: "From R500 per session",
-    duration: "45-60 minutes",
+    price: "R800 per session",
+    duration: "60 minutes",
     features: [
       "Improved strength and flexibility",
       "Enhanced movement patterns",
@@ -33,12 +33,80 @@ export const services: Service[] = [
     image: "/images/services/therapeutic-exercise.jpg"
   },
   {
+    id: "stretching-therapy",
+    title: "Assisted and PnF Stretching",
+    description: "Deeply effective assisted stretching techniques including PnF (Proprioceptive Neuromuscular Facilitation) to dramatically improve flexibility, range of motion, and muscle function.",
+    shortDescription: "Professional assisted stretching for maximum flexibility and performance.",
+    icon: "Zap",
+    price: "R450 (30min) / R800 (60min)",
+    duration: "30 or 60 minutes",
+    features: [
+      "Improved range of motion",
+      "Reduced muscle tension",
+      "Enhanced athletic performance",
+      "Postural correction",
+      "Relaxation and recovery"
+    ],
+    image: "/images/services/stretching.jpg"
+  },
+  {
+    id: "elderly-care",
+    title: "Older adults Wellness and adapted exercise",
+    description: "Our specialized programs for older adults focus on maintaining and improving mobility, balance, and functional independence. We help you stay active, reduce fall risk, and maintain your quality of life.",
+    shortDescription: "Maintaining independence and improving quality of life for older adults.",
+    icon: "Users",
+    price: "R800 per session",
+    duration: "60 minutes",
+    features: [
+      "Fall prevention strategies",
+      "Balance and coordination training",
+      "Strength maintenance",
+      "Functional movement for daily activities",
+      "Social engagement opportunities"
+    ],
+    image: "/images/services/elderly-care.jpg"
+  },
+  {
+    id: "high-performance-coaching",
+    title: "High-Performance Coaching",
+    description: "Elevate your physical and mental performance with our elite coaching. Focused on movement efficiency, strength development, and injury resilience for athletes and high-performers.",
+    shortDescription: "Elite coaching for athletes and high-achievers looking to push their limits.",
+    icon: "Trophy",
+    price: "R800 per session",
+    duration: "60 minutes",
+    features: [
+      "Advanced strength & conditioning",
+      "Movement optimization",
+      "Performance metrics tracking",
+      "Injury resilience building",
+      "Sport-specific development"
+    ],
+    image: "/images/services/performance.jpg"
+  },
+  {
+    id: "movement-assessment",
+    title: "Movement Assessment",
+    description: "Our detailed movement assessments identify compensations, imbalances, and areas of dysfunction. Using evidence-based screening tools, we create a roadmap for your therapeutic journey.",
+    shortDescription: "Comprehensive analysis to identify movement dysfunctions and imbalances.",
+    icon: "Activity",
+    price: "R800 per assessment",
+    duration: "60 minutes",
+    features: [
+      "Identify movement compensations",
+      "Assess strength and flexibility",
+      "Postural analysis",
+      "Functional movement screening",
+      "Personalized recommendations"
+    ],
+    image: "/images/services/assessment.jpg"
+  },
+  {
     id: "post-injury-rehabilitation",
     title: "Post-injury Recovery",
     description: "Our rehabilitation programs help you safely return to your activities after injury or surgery. We focus on progressive loading, movement re-education, and building resilience to prevent re-injury.",
     shortDescription: "Guided recovery programs to restore function after injury or surgery.",
     icon: "Heart",
-    price: "From R600 per session",
+    price: "R800 per session",
     duration: "60 minutes",
     features: [
       "Structured recovery pathway",
@@ -50,63 +118,12 @@ export const services: Service[] = [
     image: "/images/services/rehabilitation.jpg"
   },
   {
-    id: "movement-assessment",
-    title: "Movement Assessment",
-    description: "Our detailed movement assessments identify compensations, imbalances, and areas of dysfunction. Using evidence-based screening tools, we create a roadmap for your therapeutic journey.",
-    shortDescription: "Comprehensive analysis to identify movement dysfunctions and imbalances.",
-    icon: "Activity",
-    price: "R750 per assessment",
-    duration: "60-90 minutes",
-    features: [
-      "Identify movement compensations",
-      "Assess strength and flexibility",
-      "Postural analysis",
-      "Functional movement screening",
-      "Personalized recommendations"
-    ],
-    image: "/images/services/assessment.jpg"
-  },
-  {
-    id: "elderly-care",
-    title: "Senior & Elderly Wellness And Adapted Exercise",
-    description: "Our elderly care programs focus on maintaining and improving mobility, balance, and functional independence. We help seniors stay active, reduce fall risk, and maintain their quality of life.",
-    shortDescription: "Specialized programs to maintain independence and improve quality of life.",
-    icon: "Users",
-    price: "From R450 per session",
-    duration: "45 minutes",
-    features: [
-      "Fall prevention strategies",
-      "Balance and coordination training",
-      "Strength maintenance",
-      "Functional movement for daily activities",
-      "Social engagement opportunities"
-    ],
-    image: "/images/services/elderly-care.jpg"
-  },
-  {
-    id: "sports-performance",
-    title: "Sports Performance Enhancement",
-    description: "Our performance programs help athletes of all levels improve their physical capabilities, reduce injury risk, and enhance sports-specific skills through targeted training and conditioning.",
-    shortDescription: "Optimize athletic performance and prevent sports-related injuries.",
-    icon: "Target",
-    price: "From R650 per session",
-    duration: "60 minutes",
-    features: [
-      "Sport-specific training",
-      "Power and speed development",
-      "Injury prevention protocols",
-      "Movement optimization",
-      "Performance testing and monitoring"
-    ],
-    image: "/images/services/sports-performance.jpg"
-  },
-  {
     id: "home-sessions",
     title: "Mobile Home Sessions",
     description: "We bring our expertise to you! Our mobile service delivers professional therapeutic care in your home, community setting, or preferred location, making quality care accessible and convenient.",
     shortDescription: "Convenient therapy sessions in the comfort of your own home.",
     icon: "Home",
-    price: "From R700 per session",
+    price: "R800 per session",
     duration: "60 minutes",
     features: [
       "No travel required",
@@ -188,7 +205,7 @@ export const getAllPackages = (): ServicePackage[] => {
 export const calculatePackageSavings = (packageId: string, basePrice: number = 500): number => {
   const pkg = servicePackages.find(p => p.id === packageId);
   if (!pkg) return 0;
-  
+
   const regularPrice = basePrice * pkg.sessions;
   const savings = regularPrice - pkg.price;
   return savings;

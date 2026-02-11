@@ -15,8 +15,12 @@ export const CONTACT_INFO = {
     href: 'mailto:caretherapysa@gmail.com',
   },
   serviceArea: {
-    short: 'Johannesburg & surrounding areas',
-    full: 'Mobile service available throughout Johannesburg & surrounding areas',
+    short: 'Val de Vie Estate, Paarl & surrounding areas',
+    full: 'Mobile service available throughout Val de Vie Estate, Paarl & surrounding areas',
+  },
+  address: {
+    display: 'Polo Village Offices B107, Val de Vie Estate, Paarl',
+    mapUrl: 'https://maps.google.com/?q=Polo+Village+Offices+B107,+Val+de+Vie+Estate,+Paarl',
   },
   businessHours: {
     weekdays: 'Monday - Friday: 7:00 AM - 7:00 PM',

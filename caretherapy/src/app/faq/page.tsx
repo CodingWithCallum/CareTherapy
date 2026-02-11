@@ -49,24 +49,24 @@ export default function FAQPage() {
     {
       category: "Services",
       question: "What does the Intro Session include?",
-      answer: "The R600 Intro Session is a comprehensive 60-minute appointment that includes: a personalized assessment of your movement patterns, strength, flexibility, and balance; a tailored exercise/stretch trial session designed for your specific needs; and detailed recommendations for your recovery or mobility plan. This is the best way to experience CARE Therapy before committing to a longer program."
+      answer: "The R800 General Session is a comprehensive 60-minute appointment that includes: a personalized assessment of your movement patterns, strength, flexibility, and balance; a tailored exercise/stretch trial session designed for your specific needs; and detailed recommendations for your recovery or mobility plan. This is the best way to experience CARE Therapy before committing to a longer program."
     },
     {
       category: "Services",
       question: "Which package is right for me?",
-      answer: "It depends on your goals and needs:\n\n• **Intro Session (R600)**: Perfect if you\'re new and want to try before committing\n• **CARE Mobility Package (R4,400/month)**: Ideal for long-term recovery, chronic conditions, or maintaining independence with 2x/week sessions\n• **CARE Elite Program (R6,500/month)**: Best for stroke recovery, post-op rehabilitation, or clients wanting maximum results with 3x/week intensive support\n\nWe\'ll help you choose the right option during your intro session."
+      answer: "It depends on your goals and needs:\n\n• **General Session (R800)**: Perfect if you\'re new and want to try before committing\n• **CARE Mobility Package (R4,400/month)**: Ideal for long-term recovery, chronic conditions, or maintaining independence with 2x/week sessions\n• **CARE Elite Program (R6,500/month)**: Best for stroke recovery, post-op rehabilitation, or clients wanting maximum results with 3x/week intensive support\n\nWe\'ll help you choose the right option during your intro session."
     },
     {
       category: "Services",
       question: "Do you offer home visits?",
-      answer: "Yes! We provide mobile services throughout Pretoria and Johannesburg. We bring all necessary equipment to your home, making it convenient and comfortable for you to receive professional therapeutic care in your familiar environment."
+      answer: "Yes! We provide mobile services throughout Val de Vie Estate, Paarl and surrounding areas. We bring all necessary equipment to your home, making it convenient and comfortable for you to receive professional therapeutic care in your familiar environment."
     },
     {
       category: "Services",
       question: "What conditions do you treat?",
       answer: "We work with a wide range of conditions including:\n• Chronic pain and movement dysfunction\n• Post-surgery rehabilitation (Recovery)\n• Post-stroke After Physiotherapy\n• Balance and fall prevention (elderly care)\n• Sports injuries and performance enhancement\n• Mobility limitations\n• Postural problems\n• General weakness or deconditioning\n\nIf you\'re unsure whether we can help with your specific condition, please contact us for a consultation."
     },
-    
+
     // Pricing & Payment
     {
       category: "Pricing",
@@ -93,12 +93,12 @@ export default function FAQPage() {
       question: "Are there discounts for long-term commitments?",
       answer: "Yes! Our 12-month programs (CARE Mobility Package and CARE Elite Program) offer significant savings compared to paying per session. Additionally, we offer:\n• Flexible Voucher Packs at discounted rates\n• Family/couple packages (inquire for details)\n• Potential medical aid reimbursement\n\nThe longer your commitment, the more value you receive."
     },
-    
+
     // Booking & Scheduling
     {
       category: "Booking",
       question: "How do I book my first appointment?",
-      answer: "Booking is easy! You can:\n• Fill out the contact form on our website\n• Call us directly at +27 76 456 7890\n• Email us at info@caretherapy.co.za\n• Click the \'Request A Consultation\' button in the navigation\n\nWe\'ll respond within 24 hours during business days to schedule your intro session at a time that works for you."
+      answer: "Booking is easy! You can:\n• Fill out the contact form on our website\n• Call us directly at +27 79 790 8846\n• Email us at caretherapysa@gmail.com\n• Click the \'Request A Consultation\' button in the navigation\n\nWe\'ll respond within 24 hours during business days to schedule your intro session at a time that works for you."
     },
     {
       category: "Booking",
@@ -120,7 +120,7 @@ export default function FAQPage() {
       question: "What happens if I need to pause my program?",
       answer: "We understand that life circumstances can change. For monthly package clients, we can arrange a temporary pause for medical reasons, travel, or other circumstances. Please discuss your situation with us, and we\'ll work out the best solution. Note that the 12-month programs are designed for consistent progress, so extended breaks may affect your results."
     },
-    
+
     // Medical & Health
     {
       category: "Medical",
@@ -147,12 +147,12 @@ export default function FAQPage() {
       question: "What should I wear to sessions?",
       answer: "Wear comfortable, loose-fitting athletic clothing that allows free movement. For home sessions:\n• Athletic shorts or comfortable pants\n• T-shirt or tank top\n• Athletic shoes or trainers\n• Have water available\n\nFor studio sessions (if applicable), the same dress code applies. We want you to be comfortable and able to move freely during exercises."
     },
-    
+
     // General Info
     {
       category: "General",
       question: "What areas do you serve?",
-      answer: "We provide mobile services throughout:\n• Pretoria and surrounding areas\n• Johannesburg and surrounding areas\n\nOur home visit service means you don\'t need to travel. We bring our expertise and equipment directly to you. If you\'re outside these areas, contact us to discuss possibilities."
+      answer: "We provide mobile services throughout:\n• Val de Vie Estate, Paarl and surrounding areas\n\nOur home visit service means you don\'t need to travel. We bring our expertise and equipment directly to you. If you\'re outside these areas, contact us to discuss possibilities."
     },
     {
       category: "General",
@@ -162,7 +162,7 @@ export default function FAQPage() {
     {
       category: "General",
       question: "Will I get homework exercises?",
-      answer: "Yes! An important part of your program includes exercises to do between sessions. These:\n• Reinforce what we work on during sessions\n• Accelerate your progress\n• Build consistent habits\n• Are tailored to your schedule and abilities\n• Come with clear instructions and modifications\n\nWe\'ll demonstrate each exercise and provide written/video instructions for reference."
+      answer: "Yes! An important part of your program includes exercises to do between sessions. These:\n• Reinforce what we work on during sessions\n• Accelerate your progress\n• Build consistent habits\n• Are tailored to your schedule and abilities\n• Come with clear instructions and modifications\n• Provide written/video instructions for reference."
     },
     {
       category: "General",
@@ -184,7 +184,7 @@ export default function FAQPage() {
   // Filter FAQs based on search and category
   const filteredFaqs = faqs.filter(faq => {
     const matchesCategory = selectedCategory === "All" || faq.category === selectedCategory;
-    const matchesSearch = 
+    const matchesSearch =
       faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
       faq.answer.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
@@ -214,7 +214,7 @@ export default function FAQPage() {
               Frequently Asked Questions
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Find answers to common questions about CARE Therapy services, pricing, and programs
+              Find answers to common questions about CARE Therapy services and programs
             </p>
           </motion.div>
         </div>
@@ -244,11 +244,10 @@ export default function FAQPage() {
                   <button
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                      selectedCategory === category.id
-                        ? "bg-primary text-primary-foreground"
-                        : "bg-muted hover:bg-muted/80"
-                    }`}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all ${selectedCategory === category.id
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-muted hover:bg-muted/80"
+                      }`}
                   >
                     <Icon className="w-4 h-4" />
                     {category.name}
@@ -280,7 +279,7 @@ export default function FAQPage() {
                     key={group.id}
                     initial={{ opacity: 0, y: 20 }}
                     viewport={{ once: true }}
-                    animate={{ opacity: 1}}
+                    animate={{ opacity: 1 }}
                     transition={{ duration: 0.6, delay: groupIndex * 0.1 }}
                   >
                     <div className="flex items-center gap-3 mb-6">
@@ -292,8 +291,8 @@ export default function FAQPage() {
 
                     <Accordion type="single" collapsible className="space-y-4">
                       {group.faqs.map((faq, index) => (
-                        <AccordionItem 
-                          key={index} 
+                        <AccordionItem
+                          key={index}
                           value={`${group.id}-${index}`}
                         >
                           <AccordionTrigger className="hover:no-underline py-6">
@@ -320,8 +319,8 @@ export default function FAQPage() {
             >
               <Accordion type="single" collapsible className="space-y-4">
                 {filteredFaqs.map((faq, index) => (
-                  <AccordionItem 
-                    key={index} 
+                  <AccordionItem
+                    key={index}
                     value={`faq-${index}`}
                   >
                     <AccordionTrigger className="hover:no-underline py-6">
@@ -363,16 +362,16 @@ export default function FAQPage() {
               {
                 icon: Phone,
                 title: "Call Us",
-                content: "+27 76 456 7890",
+                content: "+27 79 790 8846",
                 description: "Mon-Fri: 7am-7pm",
-                href: "tel:+27764567890"
+                href: "tel:+27797908846"
               },
               {
                 icon: Mail,
                 title: "Email Us",
-                content: "info@caretherapy.co.za",
+                content: "caretherapysa@gmail.com",
                 description: "Response within 24hrs",
-                href: "mailto:info@caretherapy.co.za"
+                href: "mailto:caretherapysa@gmail.com"
               },
               {
                 icon: Calendar,
@@ -384,7 +383,7 @@ export default function FAQPage() {
               {
                 icon: MapPin,
                 title: "Service Areas",
-                content: "Pretoria & JHB",
+                content: "Paarl & Val de Vie",
                 description: "Mobile home visits",
                 href: "/services"
               }
@@ -429,13 +428,13 @@ export default function FAQPage() {
               Ready to Get Started?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Book your R600 intro session today and experience the CARE Therapy difference. 
+              Book your R800 general session today and experience the CARE Therapy difference.
               No long-term commitment required!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
                 <Button size="lg" className="text-base">
-                  Book Your Intro Session
+                  Book Your Session
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
