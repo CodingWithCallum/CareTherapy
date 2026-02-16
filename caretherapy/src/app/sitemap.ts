@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { getAllPosts } from '@/data';
+import { getAllKestaticPosts } from '@/lib/keystatic';
 
 /**
  * Dynamic Sitemap Generation
@@ -7,11 +7,11 @@ import { getAllPosts } from '@/data';
  * This file generates a sitemap.xml for SEO purposes.
  * It includes all static pages and dynamic blog posts.
  */
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://caretherapy.co.za';
 
   // Get all blog posts for dynamic routes
-  const blogPosts = getAllPosts();
+  const blogPosts = await getAllKestaticPosts();
 
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [
