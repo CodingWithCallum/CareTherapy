@@ -12,7 +12,7 @@ export default config({
         posts: collection({
             label: 'Blog Posts',
             slugField: 'title',
-            path: 'src/data/posts/*',
+            path: 'caretherapy/src/data/posts/*',
             format: { contentField: 'content' },
             schema: {
                 // 1. Title (generates the slug automatically)
@@ -68,7 +68,7 @@ export default config({
                 // 8. Cover Image
                 coverImage: fields.image({
                     label: 'Cover Image',
-                    directory: 'public/images/blog',
+                    directory: 'caretherapy/public/images/blog',
                     publicPath: '/images/blog/',
                 }),
 
@@ -91,7 +91,7 @@ export default config({
                     dividers: true,
                     links: true,
                     images: {
-                        directory: 'public/images/blog',
+                        directory: 'caretherapy/public/images/blog',
                         publicPath: '/images/blog/',
                     },
                 }),

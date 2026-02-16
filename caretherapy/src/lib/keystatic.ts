@@ -8,8 +8,11 @@ import { createReader } from '@keystatic/core/reader';
 import keystaticConfig from '../../keystatic.config';
 import { BlogPost } from '@/types';
 
-// Create a reader instance pointing to the project root
-const reader = createReader(process.cwd(), keystaticConfig);
+import path from 'path';
+
+// Create a reader instance pointing to the REPO root (one level up from project root)
+// This matches the 'caretherapy/src/data/posts' path in config
+const reader = createReader(path.join(process.cwd(), '..'), keystaticConfig);
 
 // Default author info (Cameron is the primary author)
 const DEFAULT_AUTHOR = {
