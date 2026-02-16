@@ -3,11 +3,10 @@ import { config, fields, collection } from '@keystatic/core';
 
 export default config({
     storage: {
-        kind: 'github',
-        repo: {
-            owner: 'CodingWithCallum',
-            name: 'CareTherapy'
-        },
+        kind: 'cloud',
+    },
+    cloud: {
+        project: 'care-therapy/caretherapy',
     },
     collections: {
         posts: collection({
