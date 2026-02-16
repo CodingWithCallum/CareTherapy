@@ -107,8 +107,8 @@ export function Navbar() {
           icon: Dumbbell,
         },
         {
-          title: 'Post-Injury Rehabilitation',
-          href: '/services#post-injury-rehabilitation',
+          title: 'Post-Injury Recovery',
+          href: '/services#post-injury-recovery',
           description: 'Guided recovery after injury or surgery',
           icon: Heart,
         },
@@ -119,19 +119,19 @@ export function Navbar() {
           icon: Activity,
         },
         {
-          title: 'Elderly Care',
+          title: 'Elderly Care & Mobility',
           href: '/services#elderly-care',
           description: 'Maintain independence and quality of life',
           icon: UserCheck,
         },
         {
-          title: 'Sports Performance',
+          title: 'Sports Performance Enhancement',
           href: '/services#sports-performance',
           description: 'Optimize athletic performance',
           icon: Target,
         },
         {
-          title: 'Mobile Sessions',
+          title: 'Mobile Home Sessions',
           href: '/services#home-sessions',
           description: 'We come to you at home or location',
           icon: MapPin,

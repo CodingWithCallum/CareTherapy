@@ -41,10 +41,10 @@ export default function Footer() {
   ];
 
   const services = [
-    { label: "Adapted Functional Fitness", href: "/services#therapeutic-exercise" },
-    { label: "PnF & Assisted Stretching", href: "/services#stretching-therapy" },
-    { label: "Older Adults Wellness", href: "/services#elderly-care" },
-    { label: "High-Performance Coaching", href: "/services#high-performance-coaching" },
+    { label: "Therapeutic Exercise", href: "/services#therapeutic-exercise" },
+    { label: "Post-Injury Recovery", href: "/services#post-injury-recovery" },
+    { label: "Elderly Care & Mobility", href: "/services#elderly-care" },
+    { label: "Sports Performance Enhancement", href: "/services#sports-performance" },
     { label: "Movement Assessment", href: "/services#movement-assessment" },
     { label: "Mobile Home Sessions", href: "/services#home-sessions" }
   ];

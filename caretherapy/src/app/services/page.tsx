@@ -173,7 +173,7 @@ export default function ServicesPage() {
       id: "home-sessions",
       title: "Mobile Home Sessions",
       icon: MapPin,
-      description: "Professional Adapted and functional exercise care delivered directly to your home, community setting, or preferred location across Pretoria and Johannesburg.",
+      description: "Professional Adapted and functional exercise care delivered directly to your home, community setting, or preferred location across Val de Vie Estate and Paarl.",
       benefits: [
         "No travel required",
         "Familiar environment",
@@ -200,7 +200,7 @@ export default function ServicesPage() {
     {
       icon: MapPin,
       title: "Home Visits Available",
-      description: "Service in Pretoria & Johannesburg bring our expertise to your doorstep"
+      description: "Service in Val de Vie & Paarl bring our expertise to your doorstep"
     },
     {
       icon: CheckCircle2,

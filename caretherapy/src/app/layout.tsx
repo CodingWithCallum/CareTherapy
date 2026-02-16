@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     locale: SITE_CONFIG.locale,
     url: SITE_CONFIG.url,
     siteName: SITE_CONFIG.name,
-    title: 'CARE Therapy | Professional Exercise and Rehabilitation Services in Johannesburg',
+    title: 'CARE Therapy | Professional Exercise and Rehabilitation Services in Paarl & Val de Vie',
     description: SITE_CONFIG.description,
     images: [
       {
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CARE Therapy | Professional Exercise and Rehabilitation Services in Johannesburg',
+    title: 'CARE Therapy | Professional Exercise and Rehabilitation Services in Paarl & Val de Vie',
     description: SITE_CONFIG.description,
     images: ['/logo.png'],
   },
