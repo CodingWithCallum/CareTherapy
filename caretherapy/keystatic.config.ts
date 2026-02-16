@@ -2,12 +2,13 @@
 import { config, fields, collection } from '@keystatic/core';
 
 export default config({
-    storage: process.env.NODE_ENV === 'development'
-        ? { kind: 'local' }
-        : {
-            kind: 'github',
-            repo: 'codingwithcallum/caretherapy',
+    storage: {
+        kind: 'github',
+        repo: {
+            owner: 'CodingWithCallum',
+            name: 'CareTherapy'
         },
+    },
     collections: {
         posts: collection({
             label: 'Blog Posts',
