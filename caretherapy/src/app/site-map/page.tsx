@@ -1,7 +1,7 @@
 
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { getAllPosts } from '@/data/blog-posts';
+import { getAllKestaticPosts } from '@/lib/keystatic';
 import { getAllServices } from '@/data/services';
 import { ArrowRight } from 'lucide-react';
 
@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   description: 'A complete overview of all pages on the CareTherapy website.',
 };
 
-export default function SitemapPage() {
-  const posts = getAllPosts();
+export default async function SitemapPage() {
+  const posts = await getAllKestaticPosts();
   const services = getAllServices();
 
   const staticPages = [
@@ -59,7 +59,7 @@ export default function SitemapPage() {
               {services.map((service) => (
                 <li key={service.id}>
                   <Link href={`/services#${service.id}`} className="group flex items-center text-muted-foreground hover:text-primary transition-colors">
-                     <ArrowRight className="w-4 h-4 mr-2 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />
                     <span>{service.title}</span>
                   </Link>
                 </li>
@@ -73,7 +73,7 @@ export default function SitemapPage() {
               {posts.map((post) => (
                 <li key={post.slug}>
                   <Link href={`/blog/${post.slug}`} className="group flex items-center text-muted-foreground hover:text-primary transition-colors">
-                     <ArrowRight className="w-4 h-4 mr-2 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />
                     <span>{post.title}</span>
                   </Link>
                 </li>

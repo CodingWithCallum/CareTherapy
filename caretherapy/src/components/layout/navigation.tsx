@@ -35,7 +35,7 @@ import {
 } from '@/components/ui/navigation-menu';
 import { cn } from '@/lib/utils';
 // Import blog data functions
-import { getFeaturedPost } from '@/data';
+import { BlogPost } from '@/types';
 
 // Logo component
 const Logo = () => {
@@ -52,13 +52,14 @@ const Logo = () => {
   );
 };
 
-export function Navbar() {
+interface NavbarProps {
+  featuredPost?: BlogPost | null;
+}
+
+export function Navbar({ featuredPost }: NavbarProps) {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null);
-
-  // Get featured blog post for navigation
-  const featuredPost = getFeaturedPost();
 
   // Navigation data structure with dynamic blog content
   const navigationItems = [
