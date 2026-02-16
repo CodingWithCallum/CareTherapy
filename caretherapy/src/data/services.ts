@@ -16,9 +16,9 @@ import { Service } from "@/types";
 
 export const services: Service[] = [
   {
-    id: "therapeutic-exercise",
+    id: "adapted-exercise",
     title: "Adapted Functional Fitness",
-    description: "Our therapeutic exercise programs are designed to address specific movement dysfunctions, improve strength, flexibility, and restore optimal physical function. Whether recovering from injury or preventing future issues, we create personalized plans tailored to your needs.",
+    description: "Our adapted functional exercise programs are designed to address specific movement dysfunctions, improve strength, flexibility, and restore optimal physical function. Whether recovering from injury or preventing future issues, we create personalized plans tailored to your needs.",
     shortDescription: "Customized exercise programs to restore function and improve movement quality.",
     icon: "Dumbbell",
     price: "R800 per session",
@@ -86,7 +86,7 @@ export const services: Service[] = [
   {
     id: "movement-assessment",
     title: "Movement Assessment",
-    description: "Our detailed movement assessments identify compensations, imbalances, and areas of dysfunction. Using evidence-based screening tools, we create a roadmap for your therapeutic journey.",
+    description: "Our detailed movement assessments identify compensations, imbalances, and areas of dysfunction. Using evidence-based screening tools, we create a roadmap for your adapted exercise journey.",
     shortDescription: "Comprehensive analysis to identify movement dysfunctions and imbalances.",
     icon: "Activity",
     price: "R800 per assessment",
@@ -120,7 +120,7 @@ export const services: Service[] = [
   {
     id: "home-sessions",
     title: "Mobile Home Sessions",
-    description: "We bring our expertise to you! Our mobile service delivers professional therapeutic care in your home, community setting, or preferred location, making quality care accessible and convenient.",
+    description: "We bring our expertise to you! Our mobile service delivers professional adapted exercise care in your home, community setting, or preferred location, making quality care accessible and convenient.",
     shortDescription: "Convenient therapy sessions in the comfort of your own home.",
     icon: "Home",
     price: "R800 per session",
@@ -156,7 +156,7 @@ export const servicePackages: ServicePackage[] = [
     sessions: 5,
     discount: 5,
     price: 2375,
-    description: "Perfect for getting started with your therapy journey"
+    description: "Perfect for getting started with your adapted exercise journey"
   },
   {
     id: "momentum",

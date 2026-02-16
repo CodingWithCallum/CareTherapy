@@ -41,7 +41,7 @@ export default function Footer() {
   ];
 
   const services = [
-    { label: "Therapeutic Exercise", href: "/services#therapeutic-exercise" },
+    { label: "Adapted Exercise", href: "/services#adapted-exercise" },
     { label: "Post-Injury Recovery", href: "/services#post-injury-recovery" },
     { label: "Elderly Care & Mobility", href: "/services#elderly-care" },
     { label: "Sports Performance Enhancement", href: "/services#sports-performance" },
@@ -75,7 +75,7 @@ export default function Footer() {
             </div>
             <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
               Bridging the gap between rehabilitation and fitness through expert-guided,
-              proactive exercise therapy in real-world settings.
+              proactive adapted exercise in real-world settings.
             </p>
             <div className="flex space-x-3">
               {socialLinks.map((social) => {

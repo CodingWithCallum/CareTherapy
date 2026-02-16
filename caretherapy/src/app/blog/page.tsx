@@ -33,7 +33,7 @@ export default function BlogPage() {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash;
-      
+
       if (hash === '#random') {
         const randomPost = getRandomPost();
         if (randomPost) {
@@ -50,7 +50,7 @@ export default function BlogPage() {
 
     // Check on mount
     handleHashChange();
-    
+
     // Listen for hash changes
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
@@ -60,7 +60,7 @@ export default function BlogPage() {
   const filteredPosts = allPosts.filter(post => {
     const matchesCategory = selectedCategory === "All" || post.category === selectedCategory;
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
+      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
@@ -81,7 +81,7 @@ export default function BlogPage() {
               Our Blog
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Expert insights, practical tips, and the latest in therapeutic exercise and rehabilitation
+              Expert insights, practical tips, and the latest in adapted exercise and rehabilitation
             </p>
           </motion.div>
         </div>
@@ -109,11 +109,10 @@ export default function BlogPage() {
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                    selectedCategory === category
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${selectedCategory === category
                       ? "bg-primary text-primary-foreground"
                       : "bg-muted hover:bg-muted/80"
-                  }`}
+                    }`}
                 >
                   {category}
                 </button>
@@ -145,7 +144,7 @@ export default function BlogPage() {
                 <div className="grid md:grid-cols-2 gap-0">
                   {/* Image */}
                   <div className="relative h-64 md:h-full overflow-hidden">
-                    <div 
+                    <div
                       className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
                       style={{ backgroundImage: `url(${featuredPost.featuredImage})` }}
                     />
@@ -196,9 +195,9 @@ export default function BlogPage() {
                     <div className="mt-6">
                       <Link href={`/blog/${featuredPost.slug}`}>
                         <Button className="group/btn">
-                        Read Full Article
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                      </Button>
+                          Read Full Article
+                          <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                        </Button>
                       </Link>
                     </div>
                   </div>
@@ -232,7 +231,7 @@ export default function BlogPage() {
                     <article className="bg-card border rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group h-full flex flex-col">
                       {/* Image */}
                       <div className="relative h-48 overflow-hidden">
-                        <div 
+                        <div
                           className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
                           style={{ backgroundImage: `url(${post.featuredImage})` }}
                         />
@@ -303,7 +302,7 @@ export default function BlogPage() {
                 </span>
               </div>
               <h2 className="text-3xl font-bold mb-8">Our Most-Read Articles</h2>
-              
+
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {popularPosts.map((post, index) => (
                   <motion.div
@@ -316,7 +315,7 @@ export default function BlogPage() {
                     <Link href={`/blog/${post.slug}`}>
                       <div className="bg-card border rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group">
                         <div className="relative h-40 overflow-hidden">
-                          <div 
+                          <div
                             className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
                             style={{ backgroundImage: `url(${post.featuredImage})` }}
                           />

@@ -26,7 +26,7 @@ export default function ServicesPage() {
     {
       id: "intro",
       name: "General Session",
-      subtitle: "Therapeutic Session",
+      subtitle: "Adapted Exercise Session",
       price: "R800",
       period: "per session",
       duration: "60 minutes",
@@ -51,7 +51,7 @@ export default function ServicesPage() {
       sessions: "2x/week, 60-minute sessions",
       description: "Ideal for long-term recovery, chronic conditions, or maintaining independence.",
       features: [
-        "Adaptive therapeutic exercise",
+        "Adaptive functional exercise",
         "Strength, flexibility, and balance training",
         "Progress tracking and regular re-assessments"
       ],
@@ -100,8 +100,8 @@ export default function ServicesPage() {
   // Therapy types
   const therapyTypes = [
     {
-      id: "therapeutic-exercise",
-      title: "Therapeutic Exercise",
+      id: "adapted-exercise",
+      title: "Adapted Functional Fitness",
       icon: Dumbbell,
       description: "Personalized exercise programs designed to address specific movement dysfunctions, improve strength, flexibility, and restore optimal physical function.",
       benefits: [
@@ -386,7 +386,7 @@ export default function ServicesPage() {
               Our Therapy Services
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive therapeutic approaches tailored to your specific needs
+              Comprehensive adapted functional approaches tailored to your specific needs
             </p>
           </motion.div>
 

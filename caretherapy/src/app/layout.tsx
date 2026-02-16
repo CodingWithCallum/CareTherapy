@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     'sports injury prevention',
     'adaptive exercise programs',
     'post-surgery rehabilitation',
-    'therapeutic exercise',
+    'adapted exercise',
     'movement assessment',
     'home exercise therapy',
   ],

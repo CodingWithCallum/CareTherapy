@@ -172,8 +172,8 @@ export default function TestimonialsPage() {
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
                     className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap ${selectedCategory === category.id
-                        ? "bg-primary text-primary-foreground"
-                        : "bg-muted hover:bg-muted/80"
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-muted hover:bg-muted/80"
                       }`}
                   >
                     <Icon className="w-4 h-4" />
@@ -369,7 +369,7 @@ export default function TestimonialsPage() {
                 <h3 className="text-xl font-bold mb-4">Ready to Start?</h3>
                 <p className="text-muted-foreground mb-6">
                   Book your R800 general session and experience the difference personalized
-                  therapeutic exercise can make in your life.
+                  adapted exercise can make in your life.
                 </p>
                 <div className="space-y-3">
                   <Link href="/contact" className="block">

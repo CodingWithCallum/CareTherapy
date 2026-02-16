@@ -5,13 +5,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import { 
-  Menu, 
-  X, 
+import {
+  Menu,
+  X,
   ChevronDown,
-  Heart, 
-  Users, 
-  BookOpen, 
+  Heart,
+  Users,
+  BookOpen,
   Mail,
   Info,
   Dumbbell,
@@ -42,7 +42,7 @@ const Logo = () => {
   return (
     <div className="flex items-center gap-3">
       <div className="relative w-20 h-20 rounded-full overflow-hidden flex items-center justify-center">
-        <Image src="/Cam_Logo_no_extened@4x.png" alt="Care Therapy Logo" width={75} height={75}/>
+        <Image src="/Cam_Logo_no_extened@4x.png" alt="Care Therapy Logo" width={75} height={75} />
       </div>
       <div className="hidden sm:block">
         <div className="font-bold text-xl text-foreground">CARE Therapy</div>
@@ -56,7 +56,7 @@ export function Navbar() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null);
-  
+
   // Get featured blog post for navigation
   const featuredPost = getFeaturedPost();
 
@@ -67,7 +67,7 @@ export function Navbar() {
       href: '/about',
       icon: Info,
       hasDropdown: true,
-      featured:{
+      featured: {
         title: 'Our Story',
         description: 'Learn about our mission and what sets us apart',
         href: '/about',
@@ -101,8 +101,8 @@ export function Navbar() {
       },
       items: [
         {
-          title: 'Therapeutic Exercise',
-          href: '/services#therapeutic-exercise',
+          title: 'Adapted Exercise',
+          href: '/services#adapted-exercise',
           description: 'Personalized programs for function and movement',
           icon: Dumbbell,
         },
@@ -174,13 +174,13 @@ export function Navbar() {
       href: '/',
       icon: Mail,
       hasDropdown: true,
-      featured:{
+      featured: {
         title: 'Contact Us',
         href: '/contact',
         description: 'Get in touch for consultations and inquiries',
         icon: Mail
       },
-      items:[
+      items: [
         {
           title: 'FAQs',
           href: '/faq',
@@ -227,7 +227,7 @@ export function Navbar() {
                 <NavigationMenuItem key={item.title}>
                   {item.hasDropdown ? (
                     <>
-                      <NavigationMenuTrigger 
+                      <NavigationMenuTrigger
                         className={cn(
                           "text-base font-medium",
                           isActive(item.href) && "text-primary"
@@ -241,7 +241,7 @@ export function Navbar() {
                           {item.featured && (
                             <div className="mb-4">
                               <NavigationMenuLink asChild>
-                                <Link 
+                                <Link
                                   href={item.featured.href}
                                   className="group relative overflow-hidden rounded-lg border bg-gradient-to-br from-primary/10 to-primary/5 p-6 hover:shadow-md transition-all block"
                                 >
@@ -262,11 +262,11 @@ export function Navbar() {
                               </NavigationMenuLink>
                             </div>
                           )}
-                          
+
                           <div className="grid grid-cols-2 gap-3">
                             {item.items?.map((subItem) => (
                               <NavigationMenuLink key={subItem.title} asChild>
-                                <Link 
+                                <Link
                                   href={subItem.href}
                                   className="group block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                                 >
@@ -355,7 +355,7 @@ export function Navbar() {
                           )}
                         />
                       </button>
-                      
+
                       {openMobileDropdown === item.title && (
                         <ul className="mt-2 ml-4 space-y-1 border-l-2 border-primary/20 pl-4">
                           {/* Featured item in mobile */}

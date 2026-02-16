@@ -59,7 +59,7 @@ export default function FAQPage() {
     {
       category: "Services",
       question: "Do you offer home visits?",
-      answer: "Yes! We provide mobile services throughout Val de Vie Estate, Paarl and surrounding areas. We bring all necessary equipment to your home, making it convenient and comfortable for you to receive professional therapeutic care in your familiar environment."
+      answer: "Yes! We provide mobile services throughout Val de Vie Estate, Paarl and surrounding areas. We bring all necessary equipment to your home, making it convenient and comfortable for you to receive professional adapted exercise care in your familiar environment."
     },
     {
       category: "Services",
@@ -130,7 +130,7 @@ export default function FAQPage() {
     {
       category: "Medical",
       question: "What qualifications does the therapist have?",
-      answer: "Our lead therapist holds an MSc in Kinesiology with specialized training in:\n• Advanced rehabilitation and adapted exercise\n• Chronic condition management\n• Stroke recovery protocols\n• Elderly care and fall prevention\n• Sports performance and injury prevention\n\nWe maintain continuing education to stay current with the latest evidence-based practices in therapeutic exercise."
+      answer: "Our lead therapist holds an MSc in Kinesiology with specialized training in:\n• Advanced rehabilitation and adapted exercise\n• Chronic condition management\n• Stroke recovery protocols\n• Elderly care and fall prevention\n• Sports performance and injury prevention\n\nWe maintain continuing education to stay current with the latest evidence-based practices in adapted functional exercise."
     },
     {
       category: "Medical",
@@ -140,7 +140,7 @@ export default function FAQPage() {
     {
       category: "Medical",
       question: "Can you help with chronic pain?",
-      answer: "Yes! Therapeutic exercise is highly effective for managing many types of chronic pain. Through:\n• Movement pattern correction\n• Strengthening weak areas\n• Improving flexibility and mobility\n• Addressing postural issues\n• Progressive, pain-free exercise protocols\n\nMany of our clients experience significant pain reduction and improved function. However, we\'ll refer you to appropriate medical professionals if we identify issues beyond our scope."
+      answer: "Yes! Adapted functional exercise is highly effective for managing many types of chronic pain. Through:\n• Movement pattern correction\n• Strengthening weak areas\n• Improving flexibility and mobility\n• Addressing postural issues\n• Progressive, pain-free exercise protocols\n\nMany of our clients experience significant pain reduction and improved function. However, we\'ll refer you to appropriate medical professionals if we identify issues beyond our scope."
     },
     {
       category: "Medical",

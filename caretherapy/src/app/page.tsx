@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'assisted stretching Paarl',
     'older adults wellness Paarl',
     'mobile rehabilitation Paarl',
-    'therapeutic exercise Val de Vie',
+    'adapted exercise Val de Vie',
     'rehabilitation services Paarl',
   ],
   openGraph: {

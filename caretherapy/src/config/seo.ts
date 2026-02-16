@@ -17,7 +17,7 @@ export const SITE_CONFIG = {
     'sports injury prevention',
     'adaptive exercise programs',
     'post-surgery rehabilitation',
-    'therapeutic exercise',
+    'adapted functional exercise',
     'movement assessment',
     'home exercise therapy',
   ],
