@@ -13,7 +13,8 @@ export default config({
             label: 'Blog Posts',
             slugField: 'title',
             path: 'caretherapy/src/data/posts/*',
-            format: { contentField: 'content' },
+            entryLayout: 'content',
+            format: { contentField: 'body' },
             schema: {
                 // 1. Title (generates the slug automatically)
                 title: fields.slug({ name: { label: 'Title' } }),
