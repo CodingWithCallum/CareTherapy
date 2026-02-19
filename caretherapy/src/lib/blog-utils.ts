@@ -4,24 +4,40 @@
  */
 
 /**
+ * Average reading speed: 200 words per minute
+ */
+const WORDS_PER_MINUTE = 200;
+
+/**
+ * Calculate reading time from plain text
+ * @param text - Plain text string
+ * @returns Formatted reading time (e.g., "5 min read")
+ */
+export function calculateReadingTimeFromText(text: string): string {
+  const wordCount = getWordCountFromText(text);
+  const minutes = Math.max(1, Math.ceil(wordCount / WORDS_PER_MINUTE));
+  return `${minutes} min read`;
+}
+
+/**
+ * Calculate word count from plain text
+ * @param text - Plain text string
+ * @returns Number of words
+ */
+export function getWordCountFromText(text: string): number {
+  return text.trim().split(/\s+/).filter(Boolean).length;
+}
+
+/**
  * Calculate reading time based on content length
  * Average reading speed: 200 words per minute
  * @param content - HTML content string
  * @returns Formatted reading time (e.g., "5 min read")
  */
 export function calculateReadingTime(content: string): string {
-  const wordsPerMinute = 200;
-
   // Strip HTML tags to get plain text
   const textContent = content.replace(/<[^>]*>/g, '');
-
-  // Count words (split by whitespace and filter empty strings)
-  const wordCount = textContent.split(/\s+/).filter(word => word.length > 0).length;
-
-  // Calculate minutes (minimum 1 minute)
-  const minutes = Math.max(1, Math.ceil(wordCount / wordsPerMinute));
-
-  return `${minutes} min read`;
+  return calculateReadingTimeFromText(textContent);
 }
 
 /**
@@ -31,7 +47,7 @@ export function calculateReadingTime(content: string): string {
  */
 export function getWordCount(content: string): number {
   const textContent = content.replace(/<[^>]*>/g, '');
-  return textContent.split(/\s+/).filter(word => word.length > 0).length;
+  return getWordCountFromText(textContent);
 }
 
 /**

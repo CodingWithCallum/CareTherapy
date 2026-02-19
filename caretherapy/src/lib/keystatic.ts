@@ -7,6 +7,7 @@
 import { createReader } from '@keystatic/core/reader';
 import keystaticConfig from '../../keystatic.config';
 import { BlogPost } from '@/types';
+import { calculateReadingTimeFromText } from './blog-utils';
 
 import path from 'path';
 
@@ -45,15 +46,6 @@ function extractPlainText(nodes: any): string {
 }
 
 /**
- * Calculate reading time from plain text
- */
-function calcReadingTime(text: string): string {
-    const words = text.trim().split(/\s+/).filter(Boolean).length;
-    const minutes = Math.max(1, Math.round(words / 200));
-    return `${minutes} min read`;
-}
-
-/**
  * Build a BlogPost object from a Keystatic entry. 
  * Content is set to empty string since the detail page uses DocumentRenderer.
  */
@@ -85,7 +77,7 @@ function buildBlogPost(
         category: entry.category || 'General',
         tags,
         featuredImage: entry.coverImage || undefined,
-        readTime: calcReadingTime(plainText),
+        readTime: calculateReadingTimeFromText(plainText),
         featured: entry.featured || false,
     };
 }
