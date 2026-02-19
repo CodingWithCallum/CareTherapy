@@ -103,7 +103,7 @@ export default function AboutPage() {
               {
                 icon: MapPin,
                 title: "We Come to You",
-                description: "CARE Therapy brings the service to you — at home, in community settings, or on the field. No more traveling to appointments.",
+                description: "We provide home visits exclusively in Paarl and Val de Vie estate, offering expert care in the comfort of your own environment.",
               },
               {
                 icon: Target,
