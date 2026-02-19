@@ -97,18 +97,17 @@ function buildBlogPost(
 export async function getAllKestaticPosts(): Promise<BlogPost[]> {
     const allPosts = await reader.collections.posts.all();
 
-    const posts: BlogPost[] = [];
-
-    for (const post of allPosts) {
-        const entry = post.entry;
-
-        // Skip drafts
-        if (entry.draft) continue;
-
-        // Resolve the document content for reading time
-        const contentDoc = await entry.content();
-        posts.push(buildBlogPost(post.slug, entry, contentDoc));
-    }
+    // Parallelize resolving document content for all non-draft posts
+    const posts = await Promise.all(
+        allPosts
+            .filter((post) => !post.entry.draft)
+            .map(async (post) => {
+                const entry = post.entry;
+                // Resolve the document content for reading time
+                const contentDoc = await entry.content();
+                return buildBlogPost(post.slug, entry, contentDoc);
+            })
+    );
 
     // Sort by date, newest first
     return posts.sort(
