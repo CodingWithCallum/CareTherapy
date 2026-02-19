@@ -63,8 +63,8 @@ export default function FAQPage() {
     },
     {
       category: "Services",
-      question: "What conditions do you treat?",
-      answer: "We work with a wide range of conditions including:\n• Chronic pain and movement dysfunction\n• Post-surgery rehabilitation (Recovery)\n• Post-stroke After Physiotherapy\n• Balance and fall prevention (elderly care)\n• Sports injuries and performance enhancement\n• Mobility limitations\n• Postural problems\n• General weakness or deconditioning\n\nIf you\'re unsure whether we can help with your specific condition, please contact us for a consultation."
+      question: "Who can benefit from CARE Therapy?",
+      answer: "We are here for anyone needing safe, guided and personalised exercise. Whether it's to:\n• Improve strength\n• Help with balance issues and fall risks\n• Address stiffness or improve flexibility\n• Toning\n• Pre/post partum guided safe exercise\n• Improve ability to do normal activities of daily living (dressing, feeding, lifting grandkids etc)"
     },
 
     // Pricing & Payment
