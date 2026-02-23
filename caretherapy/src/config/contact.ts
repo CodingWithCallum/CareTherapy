@@ -23,8 +23,8 @@ export const CONTACT_INFO = {
     mapUrl: 'https://maps.google.com/?q=Polo+Village+Offices+B107,+Val+de+Vie+Estate,+Paarl',
   },
   businessHours: {
-    weekdays: 'Monday - Friday: 7:00 AM - 7:00 PM',
-    saturday: 'Saturday: 8:00 AM - 2:00 PM',
+    weekdays: 'Monday - Friday: 8:00 AM - 5:00 PM',
+    saturday: 'Saturday: 9:00 AM - 2:00 PM',
     sunday: 'Sunday: Closed',
   },
   social: {
