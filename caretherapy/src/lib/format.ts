@@ -105,12 +105,37 @@ export function formatPhoneNumber(phone: string): string {
   // Remove all non-numeric characters except +
   const cleaned = phone.replace(/[^\d+]/g, '');
 
-  // South African format: +27 XX XXX XXXX
+  // If there's no meaningful length, return original
+  if (cleaned.length < 10) {
+    return phone;
+  }
+
+  // South African international format: +27 XX XXX XXXX
   if (cleaned.startsWith('+27') && cleaned.length === 12) {
     return `${cleaned.slice(0, 3)} ${cleaned.slice(3, 5)} ${cleaned.slice(5, 8)} ${cleaned.slice(8)}`;
   }
 
-  // Default: return as-is
+  // US/Canada international format: +1 XXX XXX XXXX
+  if (cleaned.startsWith('+1') && cleaned.length === 12) {
+    return `${cleaned.slice(0, 2)} ${cleaned.slice(2, 5)} ${cleaned.slice(5, 8)} ${cleaned.slice(8)}`;
+  }
+
+  // UK international format: +44 XXXX XXXXXX
+  if (cleaned.startsWith('+44') && cleaned.length === 13) {
+    return `${cleaned.slice(0, 3)} ${cleaned.slice(3, 7)} ${cleaned.slice(7)}`;
+  }
+
+  // Australian international format: +61 X XXXX XXXX
+  if (cleaned.startsWith('+61') && cleaned.length === 12) {
+    return `${cleaned.slice(0, 3)} ${cleaned.slice(3, 4)} ${cleaned.slice(4, 8)} ${cleaned.slice(8)}`;
+  }
+
+  // Local 10-digit formats (e.g. South Africa 0XX XXX XXXX, US XXX XXX XXXX)
+  if (!cleaned.startsWith('+') && cleaned.length === 10) {
+    return `${cleaned.slice(0, 3)} ${cleaned.slice(3, 6)} ${cleaned.slice(6)}`;
+  }
+
+  // Default: return unformatted original string
   return phone;
 }
 
