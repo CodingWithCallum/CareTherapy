@@ -108,7 +108,7 @@ export default function AboutPage() {
               {
                 icon: Target,
                 title: "Tailored to Your Goals",
-                description: "We adapt to each client's goals and environment, ideal for elderly individuals, post-injury recovery, or young athletes.",
+                description: "We adapt to each client's goals and environment, ideal for elderly individuals, flexibility training, or young athletes.",
               },
               {
                 icon: TrendingUp,
@@ -305,7 +305,7 @@ export default function AboutPage() {
                 {[
                   "Adapted Physical Activity",
                   "Adapted Functional Exercise",
-                  "Post-Injury Recovery",
+                  "Sports Recovery",
                   "Athletic Performance",
                   "Elderly Care & Mobility",
                   "Movement Assessment",

@@ -42,7 +42,7 @@ export default function Footer() {
 
   const services = [
     { label: "Adapted Exercise", href: "/services#adapted-exercise" },
-    { label: "Post-Injury Recovery", href: "/services#post-injury-recovery" },
+    { label: "Sports Recovery", href: "/services#sports-recovery" },
     { label: "Elderly Care & Mobility", href: "/services#elderly-care" },
     { label: "Sports Performance Enhancement", href: "/services#sports-performance" },
     { label: "Movement Assessment", href: "/services#movement-assessment" },
@@ -74,7 +74,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-              Bridging the gap between rehabilitation and fitness through expert-guided,
+              Bridging the gap between conditioning and fitness through expert-guided,
               proactive adapted exercise in real-world settings.
             </p>
             <div className="flex space-x-3">
