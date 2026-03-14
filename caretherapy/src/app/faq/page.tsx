@@ -34,7 +34,7 @@ export default function FAQPage() {
     { id: "Services", name: "Services & Programs", icon: Activity },
     { id: "Pricing", name: "Pricing & Payment", icon: CreditCard },
     { id: "Booking", name: "Booking & Scheduling", icon: Calendar },
-    { id: "Medical", name: "Medical & Health", icon: Heart },
+    { id: "Health", name: "Health", icon: Heart },
     { id: "General", name: "General Info", icon: Users },
   ];
 
@@ -43,8 +43,8 @@ export default function FAQPage() {
     // Services & Programs
     {
       category: "Services",
-      question: "What is the difference between CARE Therapy and physiotherapy?",
-      answer: "While physiotherapy typically focuses on acute injuries and short-term treatment, CARE Therapy emphasizes long-term movement health, preventative care, and performance enhancement. We bridge the gap between rehabilitation and fitness through expert-guided, functional adapted exercise programs designed for sustainable results."
+      question: "What is the difference between CARE Therapy and physical therapy?",
+      answer: "While physical therapy typically focuses on acute injuries and short-term recovery session, CARE Therapy emphasizes long-term movement health, preventative care, and performance enhancement. We bridge the gap between conditioning and fitness through expert-guided, functional adapted exercise programs designed for sustainable results."
     },
     {
       category: "Services",
@@ -54,7 +54,7 @@ export default function FAQPage() {
     {
       category: "Services",
       question: "Which package is right for me?",
-      answer: "It depends on your goals and needs:\n\n• **General Session (R800)**: Perfect if you\'re new and want to try before committing\n• **CARE Mobility Package (R4,400/month)**: Ideal for long-term recovery, chronic conditions, or maintaining independence with 2x/week sessions\n• **CARE Elite Program (R6,500/month)**: Best for stroke recovery, post-op rehabilitation, or clients wanting maximum results with 3x/week intensive support\n\nWe\'ll help you choose the right option during your intro session."
+      answer: "It depends on your goals and needs:\n\n• **General Session (R800)**: Perfect if you\'re new and want to try before committing\n• **CARE Mobility Package (R4,400/month)**: Ideal for long-term recovery, chronic conditions, or maintaining independence with 2x/week sessions\n• **CARE Elite Program (R6,500/month)**: Best for stroke recovery, post-op conditioning, or clients wanting maximum results with 3x/week intensive support\n\nWe\'ll help you choose the right option during your intro session."
     },
     {
       category: "Services",
@@ -75,8 +75,9 @@ export default function FAQPage() {
     },
     {
       category: "Pricing",
-      question: "Do you accept medical aid?",
-      answer: "No, we do not work with medical aid. I am not a biokineticist or physiotherapist, but a professional exercise professional in the health and wellness space. Therefore, as I do not provide clinical or medical treatment, we do not work with medical aids."
+      question: "Do you accept health aid?",
+      // TODO: HPCSA Compliance Review - "health recovery session" changed from "medical treatment", "health aids" from "medical aids"
+      answer: "No, we do not work with health aid. I am not a movement therapist or physical therapist, but a professional exercise professional in the health and wellness space. Therefore, as I do not provide clinical or health recovery session, we do not work with health aids."
     },
     {
       category: "Pricing",
@@ -91,7 +92,7 @@ export default function FAQPage() {
     {
       category: "Pricing",
       question: "Are there discounts for long-term commitments?",
-      answer: "Yes! Our 12-month programs (CARE Mobility Package and CARE Elite Program) offer significant savings compared to paying per session. Additionally, we offer:\n• Flexible Voucher Packs at discounted rates\n• Family/couple packages (inquire for details)\n• Potential medical aid reimbursement\n\nThe longer your commitment, the more value you receive."
+      answer: "Yes! Our 12-month programs (CARE Mobility Package and CARE Elite Program) offer significant savings compared to paying per session. Additionally, we offer:\n• Flexible Voucher Packs at discounted rates\n• Family/couple packages (inquire for details)\n• Potential health aid reimbursement\n\nThe longer your commitment, the more value you receive."
     },
 
     // Booking & Scheduling
@@ -118,32 +119,32 @@ export default function FAQPage() {
     {
       category: "Booking",
       question: "What happens if I need to pause my program?",
-      answer: "We understand that life circumstances can change. For monthly package clients, we can arrange a temporary pause for medical reasons, travel, or other circumstances. Please discuss your situation with us, and we\'ll work out the best solution. Note that the 12-month programs are designed for consistent progress, so extended breaks may affect your results."
+      answer: "We understand that life circumstances can change. For monthly package clients, we can arrange a temporary pause for health reasons, travel, or other circumstances. Please discuss your situation with us, and we\'ll work out the best solution. Note that the 12-month programs are designed for consistent progress, so extended breaks may affect your results."
     },
 
-    // Medical & Health
+    // Health
     {
-      category: "Medical",
+      category: "Health",
       question: "Do I need a referral from my doctor?",
-      answer: "Yes, you will be required to hand over a medical clearance letter from your doctor stating you are okay to continue to do physical activity, as well as to fill out a PAR-Q (Physical Activity Readiness Questionnaire). So that we know it is safe for you to exercise and move without any risks to your health."
+      answer: "Yes, you will be required to hand over a health clearance letter from your doctor stating you are okay to continue to do physical activity, as well as to fill out a PAR-Q (Physical Activity Readiness Questionnaire). So that we know it is safe for you to exercise and move without any risks to your health."
     },
     {
-      category: "Medical",
+      category: "Health",
       question: "What qualifications does the therapist have?",
-      answer: "Our lead therapist holds an MSc in Kinesiology with specialized training in:\n• Advanced rehabilitation and adapted exercise\n• Chronic condition management\n• Stroke recovery protocols\n• Elderly care and fall prevention\n• Sports performance and injury prevention\n\nWe maintain continuing education to stay current with the latest evidence-based practices in adapted functional exercise."
+      answer: "Our lead therapist holds an MSc in Kinesiology with specialized training in:\n• Advanced conditioning and adapted exercise\n• Chronic condition management\n• Stroke recovery protocols\n• Elderly care and fall prevention\n• Sports performance and injury prevention\n\nWe maintain continuing education to stay current with the latest evidence-based practices in adapted functional exercise."
     },
     {
-      category: "Medical",
+      category: "Health",
       question: "Is exercise therapy safe for seniors?",
       answer: "Absolutely! In fact, appropriate exercise is one of the most beneficial things seniors can do for their health. Our programs are specifically designed for elderly clients, focusing on:\n• Fall prevention and balance training\n• Maintaining functional independence\n• Safe, progressive strengthening\n• Flexibility and mobility maintenance\n• Social engagement and mental well-being\n\nWe carefully assess each individual and adapt exercises to their current abilities and limitations."
     },
     {
-      category: "Medical",
+      category: "Health",
       question: "Can you help with chronic pain?",
-      answer: "Yes! Adapted functional exercise is highly effective for managing many types of chronic pain. Through:\n• Movement pattern correction\n• Strengthening weak areas\n• Improving flexibility and mobility\n• Addressing postural issues\n• Progressive, pain-free exercise protocols\n\nMany of our clients experience significant pain reduction and improved function. However, we\'ll refer you to appropriate medical professionals if we identify issues beyond our scope."
+      answer: "Yes! Adapted functional exercise is highly effective for managing many types of chronic pain. Through:\n• Movement pattern correction\n• Strengthening weak areas\n• Improving flexibility and mobility\n• Addressing postural issues\n• Progressive, pain-free exercise protocols\n\nMany of our clients experience significant pain reduction and improved function. However, we\'ll refer you to appropriate health professionals if we identify issues beyond our scope."
     },
     {
-      category: "Medical",
+      category: "Health",
       question: "What should I wear to sessions?",
       answer: "Wear comfortable, loose-fitting athletic clothing that allows free movement. For home sessions:\n• Athletic shorts or comfortable pants\n• T-shirt or tank top\n• Athletic shoes or trainers\n• Have water available\n\nFor studio sessions (if applicable), the same dress code applies. We want you to be comfortable and able to move freely during exercises."
     },

@@ -19,7 +19,7 @@ const features = [
   {
     icon: Award,
     title: "Evidence-Based",
-    description: "We use proven approaches used in a rehabilitation center in California, backed by scientific research, to guide you through your journey to functional movement.",
+    description: "We use proven approaches used in a conditioning center in California, backed by scientific research, to guide you through your journey to functional movement.",
   },
   {
     icon: Shield,

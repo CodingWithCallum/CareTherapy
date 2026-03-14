@@ -13,19 +13,19 @@ import { SITE_CONFIG } from "@/config/seo";
 
 export const metadata: Metadata = {
   title: 'Home',
-  description: 'Professional exercise therapy and rehabilitation services in Paarl and Val de Vie. Specializing in assisted stretching, older adults wellness, high-performance coaching, and mobile rehabilitation. Book your session today.',
+  description: 'Professional exercise therapy and conditioning services in Paarl and Val de Vie. Specializing in assisted stretching, older adults wellness, high-performance coaching, and mobile conditioning. Book your session today.',
   keywords: [
     'exercise therapy Paarl',
-    'physiotherapy Paarl',
+    'physical therapy Paarl',
     'Val de Vie wellness',
     'assisted stretching Paarl',
     'older adults wellness Paarl',
-    'mobile rehabilitation Paarl',
+    'mobile conditioning Paarl',
     'adapted exercise Val de Vie',
-    'rehabilitation services Paarl',
+    'conditioning services Paarl',
   ],
   openGraph: {
-    title: 'CARE Therapy | Professional Exercise and Rehabilitation Services in Paarl & Val de Vie',
+    title: 'CARE Therapy | Professional Exercise and Conditioning Services in Paarl & Val de Vie',
     description: 'Expert mobile exercise therapy services throughout Paarl and Val de Vie. Specializing in assisted stretching, older adults wellness, and high-performance coaching.',
     url: SITE_CONFIG.url,
     images: ['/logo.png'],

@@ -70,7 +70,7 @@ export default function BlogPageClient({ allPosts, categories, featuredPost }: B
                             Our Blog
                         </h1>
                         <p className="text-xl text-muted-foreground leading-relaxed">
-                            Expert insights, practical tips, and the latest in adapted exercise and rehabilitation
+                            Expert insights, practical tips, and the latest in adapted exercise and conditioning
                         </p>
                     </motion.div>
                 </div>

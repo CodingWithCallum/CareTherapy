@@ -244,7 +244,7 @@ export function generateContactPageSchema() {
     '@id': `${SITE_CONFIG.url}/contact#webpage`,
     url: `${SITE_CONFIG.url}/contact`,
     name: 'Contact CARE Therapy',
-    description: 'Get in touch with CARE Therapy for exercise therapy and rehabilitation services in Paarl and Val de Vie.',
+    description: 'Get in touch with CARE Therapy for exercise therapy and conditioning services in Paarl and Val de Vie.',
     mainEntity: {
       '@id': `${SITE_CONFIG.url}/#organization`,
     },

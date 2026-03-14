@@ -68,7 +68,7 @@ export default function ServicesPage() {
       period: "per month",
       commitment: "12-month program",
       sessions: "3x/week, 60-minute sessions",
-      description: "Best for stroke recovery, post-op rehabilitation, and clients who want maximum results.",
+      description: "Best for stroke recovery, post-op conditioning, and clients who want maximum results.",
       features: [
         "Intensive personalised support",
         "Faster recovery and results",
@@ -190,7 +190,7 @@ export default function ServicesPage() {
     {
       icon: Award,
       title: "MSc Kinesiology Specialist",
-      description: "Advanced rehabilitative & adapted exercise expertise"
+      description: "Advanced conditioning & adapted exercise expertise"
     },
     {
       icon: Users,

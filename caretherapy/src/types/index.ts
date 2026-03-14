@@ -68,7 +68,7 @@ export interface Author {
 export interface Testimonial {
   id: string;
   name: string;
-  role?: string; // Optional: e.g., "Client", "Patient"
+  role?: string; // Optional: e.g., "Client", "Client"
   content: string; // The testimonial text
   rating?: number; // Optional: 1-5 star rating
   avatar?: string; // Optional: profile picture URL
