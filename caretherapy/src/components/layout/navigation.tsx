@@ -108,9 +108,9 @@ export function Navbar({ featuredPost }: NavbarProps) {
           icon: Dumbbell,
         },
         {
-          title: 'Post-Injury Recovery',
-          href: '/services#post-injury-recovery',
-          description: 'Guided recovery after injury or surgery',
+          title: 'Sports Recovery',
+          href: '/services#sports-recovery',
+          description: 'Guided sports recovery',
           icon: Heart,
         },
         {
