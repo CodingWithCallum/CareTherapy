@@ -114,10 +114,10 @@ export default function ServicesPage() {
       idealFor: "Recovery from injury, chronic pain management, movement optimization"
     },
     {
-      id: "post-injury-recovery",
-      title: "Post-Injury Recovery",
+      id: "Sports-Recovery",
+      title: "Sports Recovery",
       icon: Heart,
-      description: "Guided recovery programs that help you safely return to activities after injury or surgery through progressive loading and movement re-education.",
+      description: "Our sports recovery programs help you safely return to your activities. We focus on progressive loading, movement re-education, and building resilience.",
       benefits: [
         "Structured recovery pathway",
         "Progressive exercise protocols",
@@ -125,7 +125,7 @@ export default function ServicesPage() {
         "Scar tissue management",
         "Return to sport/activity planning"
       ],
-      idealFor: "Post-surgery recovery, sports injuries, accident rehabilitation"
+      idealFor: "Recovery from sports"
     },
     {
       id: "movement-assessment",

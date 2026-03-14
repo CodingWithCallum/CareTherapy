@@ -101,10 +101,10 @@ export const services: Service[] = [
     image: "/images/services/assessment.jpg"
   },
   {
-    id: "post-injury-rehabilitation",
-    title: "Post-injury Recovery",
-    description: "Our rehabilitation programs help you safely return to your activities after injury or surgery. We focus on progressive loading, movement re-education, and building resilience to prevent re-injury.",
-    shortDescription: "Guided recovery programs to restore function after injury or surgery.",
+    id: "Sports Recover",
+    title: "Sports Recovery",
+    description: "Our sports recovery programs help you safely return to your activities. We focus on progressive loading, movement re-education, and building resilience.",
+    shortDescription: "Guided recovery programs to restore function.",
     icon: "Heart",
     price: "R800 per session",
     duration: "60 minutes",
