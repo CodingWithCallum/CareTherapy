@@ -27,7 +27,7 @@ export const blogPosts: BlogPost[] = [
       id: "cameron",
       name: "Cameron",
       role: "Founder & Adapted Exercise Specialist",
-      bio: "Founder of CARE Therapy with a strong foundation in rehabilitative and adapted movement.",
+      bio: "Founder of CARE Therapy with a strong foundation in conditioning and adapted movement.",
       avatar: "/cameron_libera_linkedin.jpeg",
     },
     publishedAt: "2024-03-20",

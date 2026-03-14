@@ -27,9 +27,9 @@ export default function TermsOfServicePage() {
             By accessing or using our Site, you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the Site.
           </p>
 
-          <h2 className="text-foreground">1. No Medical Advice</h2>
+          <h2 className="text-foreground">1. No Health Advice</h2>
           <p>
-            The content on this Site, including text, graphics, images, and other material, is for informational purposes only and is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read on this Site. Reliance on any information provided by this Site is solely at your own risk.
+            The content on this Site, including text, graphics, images, and other material, is for informational purposes only and is not intended to be a substitute for professional health advice, assessment, or recovery session. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a health condition. Never disregard professional health advice or delay in seeking it because of something you have read on this Site. Reliance on any information provided by this Site is solely at your own risk.
           </p>
 
           <h2 className="text-foreground">2. Use of the Website</h2>

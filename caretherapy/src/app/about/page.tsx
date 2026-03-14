@@ -28,7 +28,7 @@ export default function AboutPage() {
               Our Story
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Bridging the gap between rehabilitation and fitness through expert-guided,
+              Bridging the gap between conditioning and fitness through expert-guided,
               proactive exercise in real-world settings.
             </p>
           </motion.div>
@@ -50,11 +50,11 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p className="text-lg">
-                  CARE Therapy aims to bridge the gap between rehabilitation and fitness
+                  CARE Therapy aims to bridge the gap between conditioning and fitness
                   by offering expert-guided, proactive adapted exercise in real-world settings.
                 </p>
                 <p className="text-lg">
-                  Unlike physiotherapy, which typically focuses on acute injuries, CARE Therapy
+                  Unlike physical therapy, which typically focuses on acute injuries, CARE Therapy
                   emphasizes long-term movement health and performance enhancement.
                 </p>
                 <p className="text-lg">
@@ -215,7 +215,7 @@ export default function AboutPage() {
                       </h4>
                       <p className="text-muted-foreground leading-relaxed">
                         I am an Adaptive exercise specialist | Flexologist | Founder of CARE Therapy with a strong
-                        foundation in rehabilitative and adapted movement. I hold an MSc in Kinesiology with
+                        foundation in conditioning and adapted movement. I hold an MSc in Kinesiology with
                         a specialization in Adapted Physical Activity from California State University, and earned my
                         Undergraduate and Honours degrees in Human Kinetics and Ergonomics from Rhodes University.
                       </p>
@@ -244,7 +244,7 @@ export default function AboutPage() {
                       <p className="text-muted-foreground leading-relaxed">
                         My adapted exercise experience includes working at the renowned Center of Achievement in California,
                         where I provided specialized support for individuals with neurological and physical disabilities.
-                        I now lead CARE Therapy with a commitment to holistic, evidence-based care that bridges rehabilitation,
+                        I now lead CARE Therapy with a commitment to holistic, evidence-based care that bridges conditioning,
                         functional movement, and performance enhancement.
                       </p>
                     </div>

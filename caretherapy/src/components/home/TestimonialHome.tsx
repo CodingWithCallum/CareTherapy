@@ -7,7 +7,7 @@ export default function TestimonialSection() {
             name: 'Nick Rogan',
             role: 'Account Executive',
             avatar: 'NR',
-            content: 'I had an excellent experience with CARE Therapy. I worked with Cameron on a tailored rehabilitation program for my leg, after a fall whilst running, and the results have been outstanding. Their evidence based approach and attention to detail made a significant difference in my recovery. The exercises were well structured, easy to follow, and adapted to my specific needs. My leg feels much better, and I’ve gained both strength and confidence in my movement. I highly recommend CARE Therapy for anyone seeking professional, personalized rehabilitative care',
+            content: 'I had an excellent experience with CARE Therapy. I worked with Cameron on a tailored conditioning program for my leg, after a fall whilst running, and the results have been outstanding. Their evidence based approach and attention to detail made a significant difference in my recovery. The exercises were well structured, easy to follow, and adapted to my specific needs. My leg feels much better, and I’ve gained both strength and confidence in my movement. I highly recommend CARE Therapy for anyone seeking professional, personalized conditioning care',
         },
         {
             name: 'Callum Barry',
@@ -23,9 +23,10 @@ export default function TestimonialSection() {
         },
         {
             name: 'Tara Pohl',
-            role: 'Medical Officer - Intern',
+            // TODO: HPCSA Compliance Review - check "Health Officer - Intern" from "Medical Officer - Intern"
+            role: 'Health Officer - Intern',
             avatar: 'TP',
-            content: 'Cameron has been instrumental in my recovery from a sports injury. His expertise in rehabilitation and personalized training plans have made a significant difference in my progress readying myself for my next trail run later this year. I highly recommend him to anyone looking to improve their fitness or recover from an injury.',
+            content: 'Cameron has been instrumental in my recovery from a sports injury. His expertise in conditioning and personalized training plans have made a significant difference in my progress readying myself for my next trail run later this year. I highly recommend him to anyone looking to improve their fitness or recover from an injury.',
         },
     ]
 

@@ -18,18 +18,18 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.url.startsWith("http") ? SITE_CONFIG.url : `https://${SITE_CONFIG.url}`),
   title: {
-    default: 'CARE Therapy | Professional Exercise and Rehabilitation Services in Paarl & Val de Vie',
+    default: 'CARE Therapy | Professional Exercise and Conditioning Services in Paarl & Val de Vie',
     template: '%s | CARE Therapy',
   },
   description: SITE_CONFIG.description,
   keywords: [
     'exercise therapy Paarl',
-    'rehabilitation services Western Cape',
+    'conditioning services Western Cape',
     'mobile assisted stretching Paarl',
     'elderly mobility training',
     'sports injury prevention',
     'adaptive exercise programs',
-    'post-surgery rehabilitation',
+    'post-surgery conditioning',
     'adapted exercise',
     'movement assessment',
     'home exercise therapy',
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     locale: SITE_CONFIG.locale,
     url: SITE_CONFIG.url,
     siteName: SITE_CONFIG.name,
-    title: 'CARE Therapy | Professional Exercise and Rehabilitation Services in Paarl & Val de Vie',
+    title: 'CARE Therapy | Professional Exercise and Conditioning Services in Paarl & Val de Vie',
     description: SITE_CONFIG.description,
     images: [
       {
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CARE Therapy | Professional Exercise and Rehabilitation Services in Paarl & Val de Vie',
+    title: 'CARE Therapy | Professional Exercise and Conditioning Services in Paarl & Val de Vie',
     description: SITE_CONFIG.description,
     images: ['/logo.png'],
   },

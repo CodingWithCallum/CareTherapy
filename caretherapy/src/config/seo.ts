@@ -5,18 +5,19 @@
 
 export const SITE_CONFIG = {
   name: 'CARE Therapy',
+  // TODO: HPCSA Compliance Review - check "Rehabilitative" in acronym CARE
   fullName: 'Centre for Adaptive Rehabilitative Exercise Therapy',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://caretherapy.co.za',
-  description: 'Expert exercise therapy and rehabilitation services in Paarl and Val de Vie. Specializing in assisted stretching, older adults wellness, high-performance coaching, and mobile rehabilitation.',
+  description: 'Expert exercise therapy and conditioning services in Paarl and Val de Vie. Specializing in assisted stretching, older adults wellness, high-performance coaching, and mobile conditioning.',
   locale: 'en_ZA',
   keywords: [
     'exercise therapy Paarl',
-    'rehabilitation services Western Cape',
+    'conditioning services Western Cape',
     'mobile assisted stretching Paarl',
     'elderly mobility training',
     'sports injury prevention',
     'adaptive exercise programs',
-    'post-surgery rehabilitation',
+    'post-surgery conditioning',
     'adapted functional exercise',
     'movement assessment',
     'home exercise therapy',
@@ -36,7 +37,7 @@ export const SOCIAL_LINKS = {
  */
 export function generateTitle(pageTitle?: string): string {
   if (!pageTitle) {
-    return `${SITE_CONFIG.name} | Professional Exercise and Rehabilitation Services`;
+    return `${SITE_CONFIG.name} | Professional Exercise and Conditioning Services`;
   }
   return `${pageTitle} | ${SITE_CONFIG.name}`;
 }
