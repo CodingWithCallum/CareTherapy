@@ -74,7 +74,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-              Bridging the gap between rehabilitation and fitness through expert-guided,
+              Bridging the gap between conditioning and fitness through expert-guided,
               proactive adapted exercise in real-world settings.
             </p>
             <div className="flex space-x-3">
@@ -186,7 +186,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="max-w-md">
               <p className="text-[10px] text-muted-foreground leading-relaxed text-center md:text-left mb-4">
-                <span className="font-semibold">Medical Disclaimer:</span> All services are provided as exercise and wellness programs. This is not medical advice or treatment. Please consult your healthcare provider for medical concerns.
+                <span className="font-semibold">Health Disclaimer:</span> All services are provided as exercise and wellness programs. This is not health advice or recovery session. Please consult your healthcare provider for health concerns.
               </p>
               <p className="text-sm text-muted-foreground text-center md:text-left">
                 © {currentYear} CARE Therapy. All rights reserved.

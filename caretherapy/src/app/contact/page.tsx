@@ -439,7 +439,7 @@ export default function ContactPage() {
 
                     <div className="pt-4 mt-6 border-t border-muted/30">
                       <p className="text-[10px] text-muted-foreground text-center leading-relaxed">
-                        <span className="font-semibold">Medical Disclaimer:</span> All services are provided as exercise and wellness programs. This is not medical advice or treatment. Please consult your healthcare provider for medical concerns.
+                        <span className="font-semibold">Health Disclaimer:</span> All services are provided as exercise and wellness programs. This is not health advice or recovery session. Please consult your healthcare provider for health concerns.
                       </p>
                       <p className="text-[10px] text-muted-foreground text-center mt-2">
                         By submitting this form, you agree to our privacy policy and terms of service.
@@ -473,8 +473,8 @@ export default function ContactPage() {
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {[
                 {
-                  question: "Do you accept medical aid?",
-                  answer: "No, we do not work with medical aid. We provide professional exercise and wellness programs rather than clinical medical treatment."
+                  question: "Do you accept health aid?",
+                  answer: "No, we do not work with health aid. We provide professional exercise and wellness programs rather than clinical health recovery session."
                 },
                 {
                   question: "What areas do you service?",

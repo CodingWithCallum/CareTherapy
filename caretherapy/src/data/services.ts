@@ -173,7 +173,7 @@ export const servicePackages: ServicePackage[] = [
     sessions: 20,
     discount: 15,
     price: 8500,
-    description: "For comprehensive long-term rehabilitation"
+    description: "For comprehensive long-term conditioning"
   }
 ];
 
