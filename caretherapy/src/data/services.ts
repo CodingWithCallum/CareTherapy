@@ -115,7 +115,7 @@ export const services: Service[] = [
       "Scar tissue management",
       "Return to sport/activity planning"
     ],
-    image: "/images/services/rehabilitation.jpg"
+    image: "/images/services/sports-recovery.jpg"
   },
   {
     id: "home-sessions",
