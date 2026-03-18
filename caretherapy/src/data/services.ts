@@ -115,6 +115,7 @@ export const services: Service[] = [
       "Scar tissue management",
       "Return to sport/activity planning"
     ],
+    // TODO: HPCSA Compliance Review - image URL contains restricted term "rehabilitation".
     image: "/images/services/rehabilitation.jpg"
   },
   {
