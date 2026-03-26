@@ -6,6 +6,7 @@
 export const SITE_CONFIG = {
   name: 'CARE Therapy',
   // TODO: HPCSA Compliance Review - check "Rehabilitative" in acronym CARE
+  // TODO: HPCSA Compliance Review - check "Rehabilitative" in fullName
   fullName: 'Centre for Adaptive Rehabilitative Exercise Therapy',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://caretherapy.co.za',
   description: 'Expert exercise therapy and conditioning services in Paarl and Val de Vie. Specializing in assisted stretching, older adults wellness, high-performance coaching, and mobile conditioning.',
@@ -29,6 +30,7 @@ export const DEFAULT_OG_IMAGE = '/logo.png';
 
 export const SOCIAL_LINKS = {
   instagram: 'https://www.instagram.com/care_therapy_sa/',
+  // TODO: HPCSA Compliance Review - check "rehabilitative" in LinkedIn URL
   linkedin: 'https://www.linkedin.com/company/care-therapy-centre-for-adaptive-rehabilitative-exercise-therapy/',
 } as const;
 
