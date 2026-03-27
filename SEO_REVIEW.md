@@ -111,3 +111,18 @@ You can add this to your blog post page component:
 3.  **Create a `robots.txt` file:** A simple but essential file for crawler management.
 4.  **Audit and Add Descriptive `alt` Text:** Go through all images and ensure they have meaningful alt text.
 5.  **Add Contextual Internal Links:** Edit your blog and service content to include links to other relevant pages on your site.
+
+---
+
+## 3. Search Result Discrepancies
+
+### 3.1. Outdated Location Information ("Johannesburg")
+
+**Issue:**
+- Google Search results for the website currently display a snippet mentioning "Johannesburg" and "Mobile physiotherapy".
+- Investigation confirms that this text **does not exist** in the current public-facing codebase or content files.
+- The current site correctly lists "Paarl" and "Val de Vie" as the service areas in all metadata and content.
+
+**Action:**
+- This is a caching issue on Google's end.
+- Use Google Search Console to request a re-indexing of the homepage and key service pages to update the search snippet with the current description.
