@@ -101,7 +101,7 @@ export const services: Service[] = [
     image: "/images/services/assessment.jpg"
   },
   {
-    id: "Sports Recover",
+    id: "sports-recovery",
     title: "Sports Recovery",
     description: "Our sports recovery programs help you safely return to your activities. We focus on progressive loading, movement re-education, and building resilience.",
     shortDescription: "Guided recovery programs to restore function.",
@@ -115,6 +115,7 @@ export const services: Service[] = [
       "Scar tissue management",
       "Return to sport/activity planning"
     ],
+    // TODO: HPCSA Compliance Review - check image path name "rehabilitation"
     image: "/images/services/rehabilitation.jpg"
   },
   {

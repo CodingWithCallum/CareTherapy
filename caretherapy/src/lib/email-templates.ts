@@ -47,6 +47,7 @@ export function getBusinessNotificationHtml(formData: ContactFormData, ip: strin
 /**
  * Generates the HTML for the user confirmation email
  */
+// TODO: HPCSA Compliance Review - check "Rehabilitative" in acronym CARE
 export function getUserConfirmationHtml(formData: ContactFormData): string {
   return `
     <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 600px; margin: 0 auto;">
