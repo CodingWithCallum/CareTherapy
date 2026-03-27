@@ -29,6 +29,7 @@ export const CONTACT_INFO = {
   },
   social: {
     instagram: 'https://www.instagram.com/care_therapy_sa/',
+    // TODO: HPCSA Compliance Review
     linkedin: 'https://www.linkedin.com/company/care-therapy-centre-for-adaptive-rehabilitative-exercise-therapy/',
   },
 } as const;
