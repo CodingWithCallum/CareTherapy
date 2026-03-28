@@ -43,7 +43,7 @@ export default config({
                     options: [
                         { label: 'General', value: 'General' },
                         { label: 'Adapted Exercise', value: 'Adapted Exercise' },
-                        { label: 'Rehabilitation', value: 'Rehabilitation' },
+                        { label: 'Conditioning', value: 'Conditioning' },
                         { label: 'Wellness', value: 'Wellness' },
                         { label: 'Ageing', value: 'Ageing' },
                         { label: 'Disability', value: 'Disability' },
@@ -55,7 +55,7 @@ export default config({
                 // 6. Tags
                 tags: fields.text({
                     label: 'Tags',
-                    description: 'Comma-separated tags (e.g. "ageing, exercise, rehabilitation")',
+                    description: 'Comma-separated tags (e.g. "ageing, exercise, conditioning")',
                     multiline: false,
                 }),
 
