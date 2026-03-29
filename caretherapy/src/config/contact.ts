@@ -29,6 +29,7 @@ export const CONTACT_INFO = {
   },
   social: {
     instagram: 'https://www.instagram.com/care_therapy_sa/',
+    // TODO: HPCSA Compliance Review - check "Rehabilitative" in acronym CARE
     linkedin: 'https://www.linkedin.com/company/care-therapy-centre-for-adaptive-rehabilitative-exercise-therapy/',
   },
 } as const;

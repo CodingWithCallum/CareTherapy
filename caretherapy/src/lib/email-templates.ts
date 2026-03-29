@@ -52,6 +52,7 @@ export function getUserConfirmationHtml(formData: ContactFormData): string {
     <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 600px; margin: 0 auto;">
       <div style="background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%); padding: 32px; text-align: center; border-radius: 8px 8px 0 0;">
         <h1 style="color: white; margin: 0; font-size: 24px;">CARE Therapy</h1>
+        ${/* TODO: HPCSA Compliance Review - check "Rehabilitative" in acronym CARE */ ''}
         <p style="color: rgba(255,255,255,0.9); margin: 8px 0 0 0; font-size: 14px;">Centre for Adaptive Rehabilitative Exercise Therapy</p>
       </div>
 
@@ -87,6 +88,7 @@ export function getUserConfirmationHtml(formData: ContactFormData): string {
 
         <div style="font-size: 12px; color: #6b7280; padding-top: 16px; border-top: 1px solid #e5e7eb;">
           <p style="margin: 4px 0; font-weight: 600; color: #1f2937;">CARE Therapy</p>
+          ${/* TODO: HPCSA Compliance Review - check "Rehabilitative" in acronym CARE */ ''}
           <p style="margin: 4px 0;">Centre for Adaptive Rehabilitative Exercise Therapy</p>
           <p style="margin: 4px 0;">Phone: <a href="tel:+27797908846" style="color: #2563eb; text-decoration: none;">+27 79 790 8846</a></p>
           <p style="margin: 4px 0;">Email: <a href="mailto:caretherapysa@gmail.com" style="color: #2563eb; text-decoration: none;">caretherapysa@gmail.com</a></p>
