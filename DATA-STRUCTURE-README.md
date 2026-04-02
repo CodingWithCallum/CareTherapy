@@ -196,7 +196,7 @@ Current categories:
 - Elderly Care
 - Sports Performance
 - Assessment
-- Rehabilitation
+- Conditioning
 - Equipment
 
 Add new categories carefully - they appear in filters.
