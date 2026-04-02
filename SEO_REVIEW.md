@@ -13,7 +13,7 @@ The website has a strong technical SEO foundation due to its use of Next.js, whi
 ### 1.1. Title Tags & Meta Descriptions
 
 **Analysis:**
-- The root layout (`layout.tsx`) sets a good, general title and description: `CareTherapy | Professional Exercise and Rehabilitation Services`.
+- The root layout (`layout.tsx`) sets a good, general title and description: `CareTherapy | Professional Exercise and Conditioning Services`.
 - The pages I created (`terms`, `privacy`, `sitemap`) and the blog posts (`[slug]/page.tsx` would need this) have unique `metadata` objects, which is excellent practice. Each page should have its own specific title and description.
 
 **Recommendations:**
@@ -44,7 +44,7 @@ The website has a strong technical SEO foundation due to its use of Next.js, whi
 - The blog posts in `blog-posts.ts` contain HTML content in a string.
 
 **Recommendations:**
-- **Contextual Internal Links:** Within the `content` of your blog posts and service descriptions, add links to other relevant pages on your site. For example, a blog post about "Post-Injury Rehabilitation" should link to your `/services#post-injury-rehabilitation` page. This helps distribute "link equity" throughout your site and guides users to relevant content.
+- **Contextual Internal Links:** Within the `content` of your blog posts and service descriptions, add links to other relevant pages on your site. For example, a blog post about "Post-Injury Conditioning" should link to your `/services#post-injury-conditioning` page. This helps distribute "link equity" throughout your site and guides users to relevant content.
 
 ---
 
@@ -67,7 +67,7 @@ The website has a strong technical SEO foundation due to its use of Next.js, whi
 - **Implement Schema Markup:**
     - **For Blog Posts:** Use `Article` or `BlogPosting` schema to mark up your blog posts. This can show publication dates and author information in search results.
     - **For Services:** Use `Service` schema for each of your services, including descriptions and pricing information.
-    - **For the Business:** Use `LocalBusiness` (or a more specific type like `MedicalBusiness`) schema on your homepage or contact page. This should include your business name, address, phone number, and opening hours.
+    - **For the Business:** Use `LocalBusiness` (or a more specific type like `HealthBusiness`) schema on your homepage or contact page. This should include your business name, address, phone number, and opening hours.
     - **For FAQs:** Use `FAQPage` schema on your `/faq` page to make your questions and answers eligible for display directly in search results.
 
 **Example for a Blog Post (using JSON-LD):**

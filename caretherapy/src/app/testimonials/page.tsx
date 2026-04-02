@@ -92,7 +92,7 @@ export default function TestimonialsPage() {
     {
       id: 4,
       name: "Tara Pohl",
-      // TODO: HPCSA Compliance Review - check "Health Officer - Intern" from "Medical Officer - Intern"
+      // TODO: HPCSA Compliance Review - check "Health Officer - Intern" from previous title
       role: "Health Officer - Intern",
       category: "Performance",
       location: "Val de Vie",

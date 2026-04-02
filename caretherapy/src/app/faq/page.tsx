@@ -76,7 +76,7 @@ export default function FAQPage() {
     {
       category: "Pricing",
       question: "Do you accept health aid?",
-      // TODO: HPCSA Compliance Review - "health recovery session" changed from "medical treatment", "health aids" from "medical aids"
+      // TODO: HPCSA Compliance Review - "health recovery session" changed from previous terms, "health aids" from previous terms
       answer: "No, we do not work with health aid. I am not a movement therapist or physical therapist, but a professional exercise professional in the health and wellness space. Therefore, as I do not provide clinical or health recovery session, we do not work with health aids."
     },
     {

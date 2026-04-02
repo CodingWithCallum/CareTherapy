@@ -2,7 +2,7 @@
 
 ## 🎉 Project Overview
 
-A modern, fully-functional Next.js 15 website for CareTherapy - a therapeutic exercise and rehabilitation service provider based in South Africa.
+A modern, fully-functional Next.js 15 website for CareTherapy - a therapeutic exercise and conditioning service provider based in South Africa.
 
 **Tech Stack:**
 - Next.js 15.5.4
@@ -62,7 +62,7 @@ A modern, fully-functional Next.js 15 website for CareTherapy - a therapeutic ex
 6. **CTA** - Buttons to Services and Contact
 
 **Content:**
-- Bridging gap between rehabilitation and fitness
+- Bridging gap between conditioning and fitness
 - Preventative care focus
 - Mobile service (we come to you)
 - Long-term movement health
@@ -74,7 +74,7 @@ A modern, fully-functional Next.js 15 website for CareTherapy - a therapeutic ex
 
 **Services Included:**
 1. **Therapeutic Exercise** - R500/session
-2. **Post-Injury Rehabilitation** - R600/session
+2. **Post-Injury Conditioning** - R600/session
 3. **Movement Assessment** - R750/assessment
 4. **Elderly Care & Mobility** - R450/session
 5. **Sports Performance Enhancement** - R650/session
@@ -116,7 +116,7 @@ A modern, fully-functional Next.js 15 website for CareTherapy - a therapeutic ex
 2. 5 Essential Mobility Tips for Seniors
 3. Preventing Sports Injuries
 4. Understanding Movement Assessment
-5. Post-Injury Rehabilitation Guide
+5. Post-Injury Conditioning Guide
 6. Home Exercise Equipment Guide
 
 **Post Cards Show:**
@@ -376,7 +376,7 @@ caretherapy/
 
 5. **Features**
    - [ ] Online booking system
-   - [ ] Patient portal
+   - [ ] Client portal
    - [ ] Video testimonials
    - [ ] Live chat support
    - [ ] Blog comments
