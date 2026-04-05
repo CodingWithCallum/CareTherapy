@@ -5,8 +5,7 @@
 
 export const SITE_CONFIG = {
   name: 'CARE Therapy',
-  // TODO: HPCSA Compliance Review - check "Rehabilitative" in acronym CARE
-  fullName: 'Centre for Adaptive Rehabilitative Exercise Therapy',
+  fullName: 'Centre for Adaptive Recovery Exercise Therapy',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://caretherapy.co.za',
   description: 'Expert exercise therapy and conditioning services in Paarl and Val de Vie. Specializing in assisted stretching, older adults wellness, high-performance coaching, and mobile conditioning.',
   locale: 'en_ZA',
